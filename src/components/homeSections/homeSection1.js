@@ -13,7 +13,7 @@ const Silk = dynamic(
 
 export default function Banner() {
   return (
-    <main className={Style.BannerContainer}>
+    <section className={Style.BannerContainer}>
 
       {/* SILK BACKGROUND */}
       <div className={Style.ditherBg}>
@@ -39,8 +39,8 @@ export default function Banner() {
             <span className={Style.mode}>Offline</span>
 </div>
           <div className={Style.courseActions}>
-            <Link href="/course#course-programs">
-              <button className={Style.exploreBtn}>Explore Our Courses</button>
+            <Link href="/course#course-programs" className={Style.exploreBtn}>
+              Explore Our Courses
             </Link>
             <PopupButton className={Style.careerBtn}>
               Talk to a Career Expert
@@ -52,9 +52,9 @@ export default function Banner() {
             {/* Enrolled Students */}
             <div className={Style.statBlock}>
               <div className={Style.avatarGroup}>
-                <Image src="/studentImages/student1.jpg" alt="Student 1" className={Style.avatar} width={40} height={40} priority sizes="40px" />
-                <Image src="/studentImages/student1 (2).jpg" alt="Student 2" className={Style.avatar} width={40} height={40} priority sizes="40px" />
-                <Image src="/studentImages/student1 (3).jpg" alt="Student 3" className={Style.avatar} width={40} height={40} priority sizes="40px" />
+                <Image src={encodeURI("/studentImages/Abhishek Rawat .png")} alt="Student 1" className={Style.avatar} width={40} height={40} priority sizes="40px" />
+                <Image src={encodeURI("/studentImages/Pallavi Yadav .webp")} alt="Student 2" className={Style.avatar} width={40} height={40} priority sizes="40px" />
+                <Image src={encodeURI("/studentImages/Priya Data .webp")} alt="Student 3" className={Style.avatar} width={40} height={40} priority sizes="40px" />
               </div>
               <span className={Style.statText}>25,000+ enrolled</span>
             </div>

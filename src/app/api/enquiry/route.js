@@ -1,14 +1,18 @@
 import { NextResponse } from "next/server";
 
-const SCRIPT_URL =
-  process.env.GOOGLE_APPS_SCRIPT_URL ||
-  "https://script.google.com/macros/s/AKfycbzCRHk31xizajqVOXHrjXr7MMMzNy00TjUoXcqGm99n2y-mDnND3OhHnAdjPSzxzWk/exec";
+const CRM_URL =
+  process.env.CRM_LEADS_URL ||
+  "https://leads.dizitaladda.com/api/public/leads";
+
+const CRM_DOMAIN = process.env.CRM_DOMAIN || "nidads";
+const CRM_SOURCE = process.env.CRM_SOURCE || "main website";
+
+const SCRIPT_URL = process.env.GOOGLE_APPS_SCRIPT_URL;
 
 function asText(value) {
   if (typeof value !== "string") {
     return "";
   }
-
   return value.trim();
 }
 
@@ -30,10 +34,12 @@ function buildDetails(payload) {
 function normalizePayload(payload) {
   const firstName = asText(payload.firstName);
   const lastName = asText(payload.lastName);
-  const fullName = asText(payload.name) || [firstName, lastName].filter(Boolean).join(" ");
+  const fullName =
+    asText(payload.name) || [firstName, lastName].filter(Boolean).join(" ");
   const email = asText(payload.email);
   const mobile = asText(payload.mobile) || asText(payload.phone);
-  const course = asText(payload.course) || asText(payload.program) || "General Enquiry";
+  const course =
+    asText(payload.course) || asText(payload.program) || "General Enquiry";
   const details = buildDetails(payload);
 
   return {
@@ -42,7 +48,7 @@ function normalizePayload(payload) {
     mobile,
     course,
     details,
-    source: asText(payload.source),
+    source: asText(payload.source) || CRM_SOURCE,
   };
 }
 
@@ -51,58 +57,97 @@ export async function POST(request) {
     const payload = await request.json().catch(() => null);
 
     if (!payload || typeof payload !== "object") {
-      return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
+      return NextResponse.json(
+        { error: "Invalid request body" },
+        { status: 400 }
+      );
     }
 
     const normalized = normalizePayload(payload);
 
-    if (!normalized.name || !normalized.email) {
-      return NextResponse.json({ error: "Name and email are required" }, { status: 400 });
+    if (!normalized.name) {
+      return NextResponse.json(
+        { error: "Name is required" },
+        { status: 400 }
+      );
     }
 
-    const upstreamResponse = await fetch(SCRIPT_URL, {
+    if (!normalized.email && !normalized.mobile) {
+      return NextResponse.json(
+        { error: "Email or mobile number is required" },
+        { status: 400 }
+      );
+    }
+
+    // 1. Prepare CRM Payload
+    const crmPayload = {
+      domain: CRM_DOMAIN,
+      source: CRM_SOURCE,
+      name: normalized.name,
+      full_name: normalized.name,
+      email: normalized.email,
+      mobile: normalized.mobile,
+      phone: normalized.mobile,
+      course: normalized.course,
+      interested_course: normalized.course,
+      remarks: normalized.details || undefined,
+    };
+
+    // 2. Submit to DizitalAdda CRM
+    const crmResponse = await fetch(CRM_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(normalized),
+      body: JSON.stringify(crmPayload),
       cache: "no-store",
     });
 
-    const upstreamText = await upstreamResponse.text();
-    let upstreamPayload = null;
-
-    if (upstreamText) {
+    const crmText = await crmResponse.text();
+    let crmResult = null;
+    if (crmText) {
       try {
-        upstreamPayload = JSON.parse(upstreamText);
+        crmResult = JSON.parse(crmText);
       } catch {
-        upstreamPayload = null;
+        crmResult = null;
       }
     }
 
-    if (!upstreamResponse.ok || upstreamPayload?.success === false) {
+    // 3. Optional fallback / backup to Google Apps Script if configured
+    if (SCRIPT_URL) {
+      fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(normalized),
+        cache: "no-store",
+      }).catch((err) => {
+        console.warn("Background Google Sheets sync failed:", err.message);
+      });
+    }
+
+    if (!crmResponse.ok || crmResult?.success === false) {
+      console.error("CRM response error:", crmResponse.status, crmText);
       return NextResponse.json(
         {
           error:
-            upstreamPayload?.error ||
-            "Unable to submit enquiry to Google Sheets",
+            crmResult?.message ||
+            crmResult?.error ||
+            "Unable to submit enquiry to CRM",
         },
         { status: 502 }
       );
     }
 
-    if (upstreamText && !upstreamPayload) {
-      return NextResponse.json(
-        {
-          error: "Google Apps Script returned a non-JSON response. Check the web app deployment and sheet permissions.",
-        },
-        { status: 502 }
-      );
-    }
-
-    return NextResponse.json({ success: true });
+    return NextResponse.json({
+      success: true,
+      message: "Lead submitted successfully",
+      leadId: crmResult?.data?.lead?.lead_code || crmResult?.data?.lead?.id,
+    });
   } catch (error) {
     console.error("POST /api/enquiry failed", error);
-    return NextResponse.json({ error: "Unable to submit enquiry" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Unable to submit enquiry" },
+      { status: 500 }
+    );
   }
 }
