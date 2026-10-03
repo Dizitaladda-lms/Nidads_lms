@@ -28,12 +28,12 @@ export default function HomeSection2() {
           <span style={{ color: "#38b6ff" }}>Data Science</span> Careers
         </h2>
 
-        <h2 className={styles.subheading} style={{ textAlign: "justify" }}>
+        <p className={styles.subheading} style={{ textAlign: "justify" }}>
           From foundational statistics to advanced AI, NIDADS offers hands-on
           programs in Data Science, Machine Learning, Data Analytics, and AI
           Engineering. We nurture talent and transform aspiring analysts into
           industry leaders.
-        </h2>
+        </p>
 
         <ul className={styles.featureList}>
           <li>Why 25,000+ Learners Chose Us</li>

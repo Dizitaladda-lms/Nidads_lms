@@ -4,7 +4,7 @@ const Hero7 = () => {
   const cards = [
     {
       id: 1,
-      image: '/studentImages/student1 (2).jpg',
+      image: encodeURI('/studentImages/Abhishek Rawat .png'),
       number: '25000+',
       label: 'Happy Students'
     },
@@ -57,7 +57,7 @@ const Hero7 = () => {
                 />
                 <div className={styles.overlay}></div>
                 <div className={styles.content}>
-                  <h2 className={styles.number}>{card.number}</h2>
+                  <p className={styles.number}>{card.number}</p>
                   <p className={styles.label}>{card.label}</p>
                 </div>
               </div>

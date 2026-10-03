@@ -23,7 +23,7 @@ export const courses = [
       name: "Miss. Shagun",
       title: "Lead Instructor, Data Science",
       bio: "PhD in AI with 15+ years of industry experience in machine learning and data science",
-      image: "/uploads/Shagun4-removebg-preview (1).png",
+      image: "/shagun.png",
       credentials: ["PhD in AI", "15+ Years Experience"]
     },
     topics: [
@@ -229,7 +229,7 @@ export const courses = [
       name: "Miss. Shagun",
       title: "Lead Instructor, Data Science",
       bio: "PhD in AI with 15+ years of industry experience",
-      image: "/uploads/Shagun4-removebg-preview (1).png",
+      image: "/shagun.png",
       credentials: ["PhD in AI", "15+ Years Experience"]
     },
     topics: [
@@ -464,7 +464,7 @@ export const courses = [
       name: "Miss. Shagun",
       title: "Lead Instructor, Data Science",
       bio: "PhD in AI with 15+ years of industry experience",
-      image: "/uploads/Shagun4-removebg-preview (1).png",
+      image: "/shagun.png",
       credentials: ["PhD in AI", "15+ Years Experience"]
     },
     topics: ["Advanced ML", "AI Deployment", "Statistical Techniques", "Deep Learning", "MLOps"],
@@ -586,7 +586,7 @@ export const courses = [
       name: "Miss. Shagun",
       title: "Lead Instructor, Data Science",
       bio: "PhD in AI with 15+ years of industry experience",
-      image: "/uploads/Shagun4-removebg-preview (1).png",
+      image: "/shagun.png",
       credentials: ["PhD in AI", "15+ Years Experience"]
     },
     topics: ["Data Modeling", "ML Applications", "Advanced Dashboards", "BI Tools", "Advanced Analytics"],
@@ -736,7 +736,7 @@ export const courses = [
       name: "Dr. Shagun",
       title: "Lead Instructor, Data Science",
       bio: "PhD in AI with 15+ years of industry experience",
-      image: "/uploads/Shagun4-removebg-preview (1).png",
+      image: "/shagun.png",
       credentials: ["PhD in AI", "15+ Years Experience"]
     },
     topics: ["Excel", "SQL", "Python Basics", "Data Visualization", "Statistical Analysis"],
@@ -852,7 +852,7 @@ export const courses = [
       name: "Dr. Shagun",
       title: "Lead Instructor, Data Science",
       bio: "PhD in AI with 15+ years of industry experience",
-      image: "/uploads/Shagun4-removebg-preview (1).png",
+      image: "/shagun.png",
       credentials: ["PhD in AI", "15+ Years Experience"]
     },
     topics: ["Python", "SQL", "Pandas", "NumPy", "Data Analysis", "Data Visualization"],
@@ -957,7 +957,7 @@ export const courses = [
       name: "Dr. Shagun",
       title: "Lead Instructor, Data Science",
       bio: "PhD in AI with 15+ years of industry experience",
-      image: "/uploads/Shagun4-removebg-preview (1).png",
+      image: "/shagun.png",
       credentials: ["PhD in AI", "15+ Years Experience"]
     },
     topics: ["Power BI", "DAX", "Data Modeling", "Interactive Dashboards", "BI Reporting"],
@@ -1086,7 +1086,7 @@ export const courses = [
       name: "Dr. Shagun",
       title: "Lead Instructor, Data Science",
       bio: "PhD in AI with 15+ years of industry experience",
-      image: "/uploads/Shagun4-removebg-preview (1).png",
+      image: "/shagun.png",
       credentials: ["PhD in AI", "15+ Years Experience"]
     },
     topics: ["Product Analytics", "A/B Testing", "KPIs", "User Data", "Data-Driven Decisions"],
@@ -1192,7 +1192,7 @@ export const courses = [
       name: "Miss. Shagun",
       title: "Lead Instructor, Data Science",
       bio: "PhD in AI with 15+ years of industry experience",
-      image: "/uploads/Shagun4-removebg-preview (1).png",
+      image: "/shagun.png",
       credentials: ["PhD in AI", "15+ Years Experience"]
     },
     topics: ["Tableau Advanced", "Power BI Advanced", "Data Storytelling", "Design Principles", "Visual Analytics"],
@@ -1296,7 +1296,7 @@ export const courses = [
       name: "Miss. Shagun",
       title: "Lead Instructor, AI & Data Science",
       bio: "PhD in AI with 15+ years of industry experience",
-      image: "/uploads/Shagun4-removebg-preview (1).png",
+      image: "/shagun.png",
       credentials: ["PhD in AI", "15+ Years Experience"]
     },
     topics: ["Python", "Machine Learning", "Deep Learning", "NLP", "MLOps", "Cloud AI"],
@@ -1354,7 +1354,7 @@ export const courses = [
       name: "Miss. Shagun",
       title: "PG Program Director, AI Research",
       bio: "PhD in AI with 15+ years of industry and research experience",
-      image: "/uploads/Shagun4-removebg-preview (1).png",
+      image: "/shagun.png",
       credentials: ["PhD in AI", "Published Researcher", "15+ Years Experience"]
     },
     topics: ["Advanced ML", "Generative AI", "LLMs", "Computer Vision", "Reinforcement Learning", "Research Methods"],
