@@ -153,7 +153,7 @@ export default function NewSection() {
                   <small>{currentStory.company}</small>
                 </div>
 
-                <p>"{currentStory.quote}"</p>
+                <p>&ldquo;{currentStory.quote}&rdquo;</p>
               </div>
             </article>
 

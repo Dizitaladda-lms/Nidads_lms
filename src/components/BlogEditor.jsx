@@ -166,25 +166,48 @@ const BlogEditor = ({ value, onChange }) => {
   }, [editorReady]);
 
   // Called when the user selects a file from the picker
-  const handleImageFileChange = useCallback((e) => {
+  const handleImageFileChange = useCallback(async (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
+
+    const editor = quillRef.current?.getEditor?.();
+    if (!editor) return;
+
+    // Reset so the same file can be re-selected if needed
+    e.target.value = "";
+
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+
+      const res = await fetch("/api/upload", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        if (data.url) {
+          const range = editor.getSelection(true);
+          const index = range ? range.index : editor.getLength();
+          editor.insertEmbed(index, "image", data.url, "user");
+          editor.setSelection(index + 1, 0);
+          return;
+        }
+      }
+    } catch (err) {
+      console.warn("Upload endpoint failed, falling back to local embed:", err);
+    }
 
     const reader = new FileReader();
     reader.onload = () => {
       const dataUrl = reader.result;
-      const editor = quillRef.current?.getEditor?.();
-      if (!editor) return;
-
       const range = editor.getSelection(true);
       const index = range ? range.index : editor.getLength();
       editor.insertEmbed(index, "image", dataUrl, "user");
       editor.setSelection(index + 1, 0);
     };
     reader.readAsDataURL(file);
-
-    // Reset so the same file can be re-selected if needed
-    e.target.value = "";
   }, []);
 
   const handlePaste = (event) => {

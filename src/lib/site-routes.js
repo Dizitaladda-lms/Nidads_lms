@@ -92,14 +92,6 @@ export const STATIC_ROUTES = [
     changeFreq: "yearly",
     icon: "📄",
   },
-  {
-    path: "/legal",
-    label: "Legal",
-    section: "Legal",
-    priority: 0.4,
-    changeFreq: "yearly",
-    icon: "⚖️",
-  },
 
   // ── Sitemap itself ─────────────────────────────────────────────────────────
   {

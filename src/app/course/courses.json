@@ -7,51 +7,559 @@
         "name": "Diploma in Data Science & AI",
         "image": "https://www.nidads.com/courseCards/1.webp",
         "description": "For beginners and working pros alike. Master Python, R, Machine Learning, Deep Learning, SQL, Statistics and BI tools through real projects.",
-        "brand": { "@type": "Brand", "name": "NIDADS" },
-        "offers": { "@type": "AggregateOffer", "url": "https://www.nidads.com/course/diploma-in-data-science-and-ai", "priceCurrency": "", "lowPrice": "" },
-        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "1043" }
+        "brand": {
+          "@type": "Brand",
+          "name": "NIDADS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": "https://www.nidads.com/course/diploma-in-data-science-and-ai",
+          "priceCurrency": "INR",
+          "lowPrice": "99999",
+          "highPrice": "99999"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1043"
+        }
       },
-      "breadcrumb": { "@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nidads.com/" }, { "@type": "ListItem", "position": 2, "name": "Course", "item": "https://www.nidads.com/course" }, { "@type": "ListItem", "position": 3, "name": "Diploma in Data Science & AI", "item": "https://www.nidads.com/course/diploma-in-data-science-and-ai" }] }
+      "breadcrumb": {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.nidads.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Course",
+            "item": "https://www.nidads.com/course"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Diploma in Data Science & AI",
+            "item": "https://www.nidads.com/course/diploma-in-data-science-and-ai"
+          }
+        ]
+      }
     },
     {
-      "product": { "@context": "https://schema.org/", "@type": "Product", "name": "Diploma in Data Analytics & AI", "image": "https://www.nidads.com/courseCards/2.webp", "description": "Ideal for future analysts. Learn Excel, SQL, Python, Statistics, Machine Learning and Power BI with business datasets.", "brand": { "@type": "Brand", "name": "NIDADS" }, "offers": { "@type": "AggregateOffer", "url": "https://www.nidads.com/course/diploma-in-data-analytics-and-ai", "priceCurrency": "", "lowPrice": "" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "1043" } },
-      "breadcrumb": { "@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nidads.com/" }, { "@type": "ListItem", "position": 2, "name": "Course", "item": "https://www.nidads.com/course" }, { "@type": "ListItem", "position": 3, "name": "Diploma in Data Analytics & AI", "item": "https://www.nidads.com/course/diploma-in-data-analytics-and-ai" }] }
+      "product": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Diploma in Data Analytics & AI",
+        "image": "https://www.nidads.com/courseCards/2.webp",
+        "description": "Ideal for future analysts. Learn Excel, SQL, Python, Statistics, Machine Learning and Power BI with business datasets.",
+        "brand": {
+          "@type": "Brand",
+          "name": "NIDADS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": "https://www.nidads.com/course/diploma-in-data-analytics-and-ai",
+          "priceCurrency": "INR",
+          "lowPrice": "89999",
+          "highPrice": "89999"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1043"
+        }
+      },
+      "breadcrumb": {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.nidads.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Course",
+            "item": "https://www.nidads.com/course"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Diploma in Data Analytics & AI",
+            "item": "https://www.nidads.com/course/diploma-in-data-analytics-and-ai"
+          }
+        ]
+      }
     },
     {
-      "product": { "@context": "https://schema.org/", "@type": "Product", "name": "Advanced Certification in Data Science & AI", "image": "https://www.nidads.com/courseCards/3.webp", "description": "For candidates with basic analytics knowledge. Deep-dive into advanced ML, AI model deployment and statistical techniques.", "brand": { "@type": "Brand", "name": "NIDADS" }, "offers": { "@type": "AggregateOffer", "url": "https://www.nidads.com/course/advanced-certification-in-data-science-and-ai", "priceCurrency": "", "lowPrice": "" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "1043" } },
-      "breadcrumb": { "@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nidads.com/" }, { "@type": "ListItem", "position": 2, "name": "Course", "item": "https://www.nidads.com/course" }, { "@type": "ListItem", "position": 3, "name": "Advanced Certification in Data Science & AI", "item": "https://www.nidads.com/course/advanced-certification-in-data-science-and-ai" }] }
+      "product": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Advanced Certification in Data Science & AI",
+        "image": "https://www.nidads.com/courseCards/3.webp",
+        "description": "For candidates with basic analytics knowledge. Deep-dive into advanced ML, AI model deployment and statistical techniques.",
+        "brand": {
+          "@type": "Brand",
+          "name": "NIDADS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": "https://www.nidads.com/course/advanced-certification-in-data-science-and-ai",
+          "priceCurrency": "INR",
+          "lowPrice": "79999",
+          "highPrice": "79999"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1043"
+        }
+      },
+      "breadcrumb": {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.nidads.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Course",
+            "item": "https://www.nidads.com/course"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Advanced Certification in Data Science & AI",
+            "item": "https://www.nidads.com/course/advanced-certification-in-data-science-and-ai"
+          }
+        ]
+      }
     },
     {
-      "product": { "@context": "https://schema.org/", "@type": "Product", "name": "Advanced Certification in Data Analytics & AI", "image": "https://www.nidads.com/courseCards/4.webp", "description": "For upskillers in analytics. Gain advanced expertise in data modeling, ML applications, dashboards and BI tools.", "brand": { "@type": "Brand", "name": "NIDADS" }, "offers": { "@type": "AggregateOffer", "url": "https://www.nidads.com/course/advanced-certification-in-data-analytics-and-ai", "priceCurrency": "", "lowPrice": "" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "1043" } },
-      "breadcrumb": { "@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nidads.com/" }, { "@type": "ListItem", "position": 2, "name": "Course", "item": "https://www.nidads.com/course" }, { "@type": "ListItem", "position": 3, "name": "Advanced Certification in Data Analytics & AI", "item": "https://www.nidads.com/course/advanced-certification-in-data-analytics-and-ai" }] }
+      "product": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Advanced Certification in Data Analytics & AI",
+        "image": "https://www.nidads.com/courseCards/4.webp",
+        "description": "For upskillers in analytics. Gain advanced expertise in data modeling, ML applications, dashboards and BI tools.",
+        "brand": {
+          "@type": "Brand",
+          "name": "NIDADS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": "https://www.nidads.com/course/advanced-certification-in-data-analytics-and-ai",
+          "priceCurrency": "INR",
+          "lowPrice": "69999",
+          "highPrice": "69999"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1043"
+        }
+      },
+      "breadcrumb": {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.nidads.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Course",
+            "item": "https://www.nidads.com/course"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Advanced Certification in Data Analytics & AI",
+            "item": "https://www.nidads.com/course/advanced-certification-in-data-analytics-and-ai"
+          }
+        ]
+      }
     },
     {
-      "product": { "@context": "https://schema.org/", "@type": "Product", "name": "Certification in Data Analytics & AI", "image": "https://www.nidads.com/courseCards/5.webp", "description": "Intensive fundamentals course. Cover Excel, SQL, Python basics, data visualization and statistical analysis.", "brand": { "@type": "Brand", "name": "NIDADS" }, "offers": { "@type": "AggregateOffer", "url": "https://www.nidads.com/course/certification-in-data-analytics-and-ai", "priceCurrency": "", "lowPrice": "" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "1043" } },
-      "breadcrumb": { "@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nidads.com/" }, { "@type": "ListItem", "position": 2, "name": "Course", "item": "https://www.nidads.com/course" }, { "@type": "ListItem", "position": 3, "name": "Certification in Data Analytics & AI", "item": "https://www.nidads.com/course/certification-in-data-analytics-and-ai" }] }
+      "product": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Certification in Data Analytics & AI",
+        "image": "https://www.nidads.com/courseCards/5.webp",
+        "description": "Intensive fundamentals course. Cover Excel, SQL, Python basics, data visualization and statistical analysis.",
+        "brand": {
+          "@type": "Brand",
+          "name": "NIDADS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": "https://www.nidads.com/course/certification-in-data-analytics-and-ai",
+          "priceCurrency": "INR",
+          "lowPrice": "49999",
+          "highPrice": "49999"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1043"
+        }
+      },
+      "breadcrumb": {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.nidads.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Course",
+            "item": "https://www.nidads.com/course"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Certification in Data Analytics & AI",
+            "item": "https://www.nidads.com/course/certification-in-data-analytics-and-ai"
+          }
+        ]
+      }
     },
     {
-      "product": { "@context": "https://schema.org/", "@type": "Product", "name": "Applied Data Analytics with Python & SQL", "image": "https://www.nidads.com/courseCards/6.webp", "description": "Focused training on Python data libraries and SQL querying. Analyze and visualize data to derive insights.", "brand": { "@type": "Brand", "name": "NIDADS" }, "offers": { "@type": "AggregateOffer", "url": "https://www.nidads.com/course/applied-data-analytics-with-python-and-sql", "priceCurrency": "", "lowPrice": "" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "1043" } },
-      "breadcrumb": { "@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nidads.com/" }, { "@type": "ListItem", "position": 2, "name": "Course", "item": "https://www.nidads.com/course" }, { "@type": "ListItem", "position": 3, "name": "Applied Data Analytics with Python & SQL", "item": "https://www.nidads.com/course/applied-data-analytics-with-python-and-sql" }] }
+      "product": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Applied Data Analytics with Python & SQL",
+        "image": "https://www.nidads.com/courseCards/6.webp",
+        "description": "Focused training on Python data libraries and SQL querying. Analyze and visualize data to derive insights.",
+        "brand": {
+          "@type": "Brand",
+          "name": "NIDADS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": "https://www.nidads.com/course/applied-data-analytics-with-python-and-sql",
+          "priceCurrency": "INR",
+          "lowPrice": "39999",
+          "highPrice": "39999"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1043"
+        }
+      },
+      "breadcrumb": {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.nidads.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Course",
+            "item": "https://www.nidads.com/course"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Applied Data Analytics with Python & SQL",
+            "item": "https://www.nidads.com/course/applied-data-analytics-with-python-and-sql"
+          }
+        ]
+      }
     },
     {
-      "product": { "@context": "https://schema.org/", "@type": "Product", "name": "Business Intelligence with Power BI", "image": "https://www.nidads.com/courseCards/7.webp", "description": "Become a Power BI expert. Learn data modeling, DAX formulas and interactive dashboard design.", "brand": { "@type": "Brand", "name": "NIDADS" }, "offers": { "@type": "AggregateOffer", "url": "https://www.nidads.com/course/business-intelligence-with-power-bi", "priceCurrency": "", "lowPrice": "" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "1043" } },
-      "breadcrumb": { "@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nidads.com/" }, { "@type": "ListItem", "position": 2, "name": "Course", "item": "https://www.nidads.com/course" }, { "@type": "ListItem", "position": 3, "name": "Business Intelligence with Power BI", "item": "https://www.nidads.com/course/business-intelligence-with-power-bi" }] }
+      "product": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Business Intelligence with Power BI",
+        "image": "https://www.nidads.com/courseCards/7.webp",
+        "description": "Become a Power BI expert. Learn data modeling, DAX formulas and interactive dashboard design.",
+        "brand": {
+          "@type": "Brand",
+          "name": "NIDADS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": "https://www.nidads.com/course/business-intelligence-with-power-bi",
+          "priceCurrency": "INR",
+          "lowPrice": "29999",
+          "highPrice": "29999"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1043"
+        }
+      },
+      "breadcrumb": {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.nidads.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Course",
+            "item": "https://www.nidads.com/course"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Business Intelligence with Power BI",
+            "item": "https://www.nidads.com/course/business-intelligence-with-power-bi"
+          }
+        ]
+      }
     },
     {
-      "product": { "@context": "https://schema.org/", "@type": "Product", "name": "Data Science for Product Managers", "image": "https://www.nidads.com/courseCards/8.webp", "description": "Analytics for PMs. Learn to use data in product decisions, run A/B tests, track KPIs, and interpret user data.", "brand": { "@type": "Brand", "name": "NIDADS" }, "offers": { "@type": "AggregateOffer", "url": "https://www.nidads.com/course/data-science-for-product-managers", "priceCurrency": "", "lowPrice": "" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "1043" } },
-      "breadcrumb": { "@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nidads.com/" }, { "@type": "ListItem", "position": 2, "name": "Course", "item": "https://www.nidads.com/course" }, { "@type": "ListItem", "position": 3, "name": "Data Science for Product Managers", "item": "https://www.nidads.com/course/data-science-for-product-managers" }] }
+      "product": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Data Science for Product Managers",
+        "image": "https://www.nidads.com/courseCards/8.webp",
+        "description": "Analytics for PMs. Learn to use data in product decisions, run A/B tests, track KPIs, and interpret user data.",
+        "brand": {
+          "@type": "Brand",
+          "name": "NIDADS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": "https://www.nidads.com/course/data-science-for-product-managers",
+          "priceCurrency": "INR",
+          "lowPrice": "34999",
+          "highPrice": "34999"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1043"
+        }
+      },
+      "breadcrumb": {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.nidads.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Course",
+            "item": "https://www.nidads.com/course"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Data Science for Product Managers",
+            "item": "https://www.nidads.com/course/data-science-for-product-managers"
+          }
+        ]
+      }
     },
     {
-      "product": { "@context": "https://schema.org/", "@type": "Product", "name": "Advanced Data Visualization", "image": "https://www.nidads.com/courseCards/9.webp", "description": "Elevate your storytelling. Master Tableau and Power BI advanced techniques to present data clearly and persuasively.", "brand": { "@type": "Brand", "name": "NIDADS" }, "offers": { "@type": "AggregateOffer", "url": "https://www.nidads.com/course/advanced-data-visualization", "priceCurrency": "", "lowPrice": "" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "1043" } },
-      "breadcrumb": { "@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nidads.com/" }, { "@type": "ListItem", "position": 2, "name": "Course", "item": "https://www.nidads.com/course" }, { "@type": "ListItem", "position": 3, "name": "Advanced Data Visualization", "item": "https://www.nidads.com/course/advanced-data-visualization" }] }
+      "product": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Advanced Data Visualization",
+        "image": "https://www.nidads.com/courseCards/9.webp",
+        "description": "Elevate your storytelling. Master Tableau and Power BI advanced techniques to present data clearly and persuasively.",
+        "brand": {
+          "@type": "Brand",
+          "name": "NIDADS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": "https://www.nidads.com/course/advanced-data-visualization",
+          "priceCurrency": "INR",
+          "lowPrice": "44999",
+          "highPrice": "44999"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1043"
+        }
+      },
+      "breadcrumb": {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.nidads.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Course",
+            "item": "https://www.nidads.com/course"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Advanced Data Visualization",
+            "item": "https://www.nidads.com/course/advanced-data-visualization"
+          }
+        ]
+      }
     },
     {
-      "product": { "@context": "https://schema.org/", "@type": "Product", "name": "Degree Program in Artificial Intelligence", "image": "https://www.nidads.com/Nidads-2.webp", "description": "Earn a UGC-approved university degree while mastering cutting-edge AI skills. Choose from DU SOL or Amity University Online with NIDADS AI specialization.", "brand": { "@type": "Brand", "name": "NIDADS" }, "offers": { "@type": "AggregateOffer", "url": "https://www.nidads.com/course/degree-program-in-ai", "priceCurrency": "", "lowPrice": "" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "1043" } },
-      "breadcrumb": { "@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nidads.com/" }, { "@type": "ListItem", "position": 2, "name": "Course", "item": "https://www.nidads.com/course" }, { "@type": "ListItem", "position": 3, "name": "Degree Program in Artificial Intelligence", "item": "https://www.nidads.com/course/degree-program-in-ai" }] }
+      "product": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Degree Program in Artificial Intelligence",
+        "image": "https://www.nidads.com/Nidads-2.webp",
+        "description": "Earn a UGC-approved university degree while mastering cutting-edge AI skills. Choose from DU SOL or Amity University Online with NIDADS AI specialization.",
+        "brand": {
+          "@type": "Brand",
+          "name": "NIDADS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": "https://www.nidads.com/course/degree-program-in-ai",
+          "priceCurrency": "INR",
+          "lowPrice": "99999",
+          "highPrice": "99999"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1043"
+        }
+      },
+      "breadcrumb": {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.nidads.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Course",
+            "item": "https://www.nidads.com/course"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Degree Program in Artificial Intelligence",
+            "item": "https://www.nidads.com/course/degree-program-in-ai"
+          }
+        ]
+      }
     },
     {
-      "product": { "@context": "https://schema.org/", "@type": "Product", "name": "Post Graduation Program in Artificial Intelligence", "image": "https://www.nidads.com/Nidads-2.webp", "description": "Advance from practitioner to expert with a 2-year postgraduate program combining a UGC-approved master's degree and advanced AI curriculum.", "brand": { "@type": "Brand", "name": "NIDADS" }, "offers": { "@type": "AggregateOffer", "url": "https://www.nidads.com/course/pg-program-in-ai", "priceCurrency": "", "lowPrice": "" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "bestRating": "5", "worstRating": "1", "ratingCount": "1043" } },
-      "breadcrumb": { "@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nidads.com/" }, { "@type": "ListItem", "position": 2, "name": "Course", "item": "https://www.nidads.com/course" }, { "@type": "ListItem", "position": 3, "name": "Post Graduation Program in Artificial Intelligence", "item": "https://www.nidads.com/course/pg-program-in-ai" }] }
+      "product": {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Post Graduation Program in Artificial Intelligence",
+        "image": "https://www.nidads.com/Nidads-2.webp",
+        "description": "Advance from practitioner to expert with a 2-year postgraduate program combining a UGC-approved master's degree and advanced AI curriculum.",
+        "brand": {
+          "@type": "Brand",
+          "name": "NIDADS"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "url": "https://www.nidads.com/course/pg-program-in-ai",
+          "priceCurrency": "INR",
+          "lowPrice": "129999",
+          "highPrice": "129999"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1043"
+        }
+      },
+      "breadcrumb": {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.nidads.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Course",
+            "item": "https://www.nidads.com/course"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Post Graduation Program in Artificial Intelligence",
+            "item": "https://www.nidads.com/course/pg-program-in-ai"
+          }
+        ]
+      }
     }
   ]
 }

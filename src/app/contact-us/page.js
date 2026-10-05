@@ -49,30 +49,14 @@ const breadcrumbSchema = {
   ]
 };
 
-const personSchema = {
-  "@context": "https://schema.org/",
-  "@type": "Person",
-  "name": "Nidads",
-  "url": "https://www.nidads.com/contact-us",
-  "image": "https://www.nidads.com/Nidads-2.webp",
-  "sameAs": [
-    "https://www.instagram.com/nidads_official/",
-    "https://in.linkedin.com/in/national-institute-of-data-analytics-and-data-science-28b709381"
-  ],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Data analytics and data science"
-  }
-};
-
 const professionalServiceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Nidads",
   "image": "https://www.nidads.com/Nidads-2.webp",
   "@id": "https://maps.app.goo.gl/jKRJLQA2zwRaeJMu9",
-  "url": "",
-  "telephone": "919205436796",
+  "url": "https://www.nidads.com/contact-us",
+  "telephone": "+919205436796",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Savitri Cinema, Space time building, Greater Kailash II",
@@ -96,7 +80,6 @@ export default function ContactPage() {
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collegeOrUniversitySchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }} />
       <ContactSection />
     </main>

@@ -134,47 +134,6 @@ export default function Home() {
       <Hero9 />
       <FormEnd />
       <Hero8 />
-      {/* SEO: visually hidden keyword-rich section for on-page signal */}
-      <section
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          width: "1px",
-          height: "1px",
-          padding: 0,
-          margin: "-1px",
-          overflow: "hidden",
-          clip: "rect(0,0,0,0)",
-          whiteSpace: "nowrap",
-          border: 0,
-        }}
-      >
-        <h2>Data Science and Data Analytics Course</h2>
-        <p>
-          NIDADS offers a <strong>data science course</strong> and a
-          <strong> data analytics course</strong> designed for learners who want a
-          <strong> Data Science and Data Analytics Course</strong> with practical skills,
-          mentorship, and career support. The curriculum includes
-          <strong> python for data science</strong> and
-          <strong> artificial intelligence and data science</strong> to build job-ready
-          capabilities.
-        </p>
-        <p>
-          Students looking for a <strong>data science course for beginners</strong> or a
-          <strong> data analytics course for beginners</strong> can start with structured
-          modules and live projects. We also provide a
-          <strong> Data Science Course with Placement</strong> and a
-          <strong> Data Analytics Course with Placement</strong> for students focused on
-          interview readiness and role transitions.
-        </p>
-        <p>
-          NIDADS is known for its <strong>data science Course in Delhi</strong> and
-          <strong> data analyst course in delhi</strong>. If you are searching for a
-          <strong> data science institute in delhi</strong> or a
-          <strong> data analytics institute in delhi</strong>, the home page highlights
-          the programs, mentorship, and placement support available in Delhi.
-        </p>
-      </section>
     </>
   );
 }

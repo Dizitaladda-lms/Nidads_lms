@@ -12,6 +12,7 @@ export default function BlogThemeToggle() {
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     const initial = saved === "light" ? "light" : "dark";
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(initial);
     setMounted(true);
   }, []);

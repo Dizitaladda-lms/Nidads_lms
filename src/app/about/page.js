@@ -67,39 +67,12 @@ const collegeOrUniversitySchema = {
   ]
 };
 
-const productSchema = {
-  "@context": "https://schema.org/",
-  "@type": "Product",
-  "name": "National institute of data analytics and data science",
-  "image": "https://www.nidads.com/Nidads-2.webp",
-  "description": "Learn Data Analytics, Data Science, Artificial Intelligence, and Machine Learning through practical projects, expert guidance, and career-focused training in New Delhi.",
-  "brand": {
-    "@type": "Brand",
-    "name": "nidads"
-  },
-  "sku": "About",
-  "offers": {
-    "@type": "AggregateOffer",
-    "url": "",
-    "priceCurrency": "",
-    "lowPrice": ""
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "bestRating": "5",
-    "worstRating": "1",
-    "ratingCount": "1032"
-  }
-};
-
 export default function AboutPage() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collegeOrUniversitySchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <Section1About />
       <AboutSection2 />
       <AboutSection3 />
@@ -110,50 +83,6 @@ export default function AboutPage() {
       <StatsSection />
       <MissionSection />
       <Form />
-      {/* SEO: visually hidden keyword-rich section for on-page signal */}
-      <section
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          width: "1px",
-          height: "1px",
-          padding: 0,
-          margin: "-1px",
-          overflow: "hidden",
-          clip: "rect(0,0,0,0)",
-          whiteSpace: "nowrap",
-          border: 0,
-        }}
-      >
-        <h2>About NIDADS — Best Data Science and Data Analytics Institute</h2>
-        <p>
-          Learn <strong>about nidads</strong>, a leading
-          <strong> data science and data analytics institute</strong> known as the
-          <strong> Best institute for data science and data analytics course</strong>
-          for learners building strong technical and placement-focused careers.
-        </p>
-        <p>
-          As the <strong>Best Data Science Institute</strong> and
-          <strong> Best Data Analytics Institute</strong>, NIDADS is recognized as a
-          <strong> best data science training institute</strong> offering a
-          <strong> Data Science Institute with Placement</strong> and a
-          <strong> Data Analytics Institute with Placement</strong> pathway for
-          students who want structured guidance and hiring support.
-        </p>
-        <p>
-          We offer a comprehensive <strong>Data Science Certification Program</strong> and
-          <strong> Data Analytics Certification Program</strong> for learners who want
-          applied projects, expert mentorship, and recognized credentials. You can also
-          enroll in our <strong>Advanced Data Science Program</strong> to deepen your
-          machine learning and analytics skills.
-        </p>
-        <p>
-          If you are searching for the <strong>best data science institute near me</strong>
-          or the <strong>best data analytics institute near me</strong>, NIDADS presents
-          an industry-aligned institute model built around outcomes, mentoring, and
-          placement support in Delhi.
-        </p>
-      </section>
     </main>
   );
 }

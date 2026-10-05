@@ -86,6 +86,9 @@ export function buildMeta({
  */
 export function buildCourseSchema(course, baseUrl = BASE_URL) {
   const courseUrl = `${baseUrl}/course/${course.slug}`;
+  const numericPrice = course.price ? course.price.replace(/[^\d]/g, "") : "";
+  const price = numericPrice || "29999";
+
   return {
     "@context": "https://schema.org/",
     "@type": "Product",
@@ -101,8 +104,9 @@ export function buildCourseSchema(course, baseUrl = BASE_URL) {
     offers: {
       "@type": "AggregateOffer",
       url: courseUrl,
-      priceCurrency: "",
-      lowPrice: "",
+      priceCurrency: "INR",
+      lowPrice: price,
+      highPrice: price,
     },
     aggregateRating: {
       "@type": "AggregateRating",

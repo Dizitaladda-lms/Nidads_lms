@@ -13,10 +13,10 @@ const companies = [
   { name: "L&T Financial Services", logo: "/logo/6.png" },
   { name: "AB InBev", logo: "/logo/7.png" },
   { name: "WNS", logo: "/logo/8.png" },
-  { name: "TVS", logo: "/logo/adobe.png" },
-  { name: "TVS Credit", logo: "/logo/amazon.jpg" },
-  { name: "Sevilla FC", logo: "/logo/apple.png" },
-  { name: "SAP", logo: "/logo/meta.png" },
+  { name: "Adobe", logo: "/logo/adobe.png" },
+  { name: "Amazon", logo: "/logo/amazon.jpg" },
+  { name: "Apple", logo: "/logo/apple.png" },
+  { name: "Meta", logo: "/logo/meta.png" },
 ];
 
 export default function TrustedCompanies() {
