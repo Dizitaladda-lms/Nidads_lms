@@ -1,6 +1,6 @@
 .blog-page {
   min-height: 100vh;
-  overflow-x: clip;   /* clip prevents horizontal scroll without breaking position:sticky on children */
+  overflow-x: clip;
   background:
     radial-gradient(ellipse 70% 55% at 20% 20%, rgba(56, 182, 255, 0.18) 0%, transparent 60%),
     radial-gradient(ellipse 60% 50% at 80% 75%, rgba(36, 80, 255, 0.16) 0%, transparent 55%),
@@ -826,7 +826,7 @@
   margin: 31px auto;
   padding: 4rem 1.5rem 5rem;
   color: #d7e5ff;
-  overflow-x: clip;   /* clip avoids breaking position:sticky on sidebar */
+  overflow-x: clip;
 }
 
 .blog-detail__layout {
@@ -845,13 +845,11 @@
   min-width: 0;
 }
 
-/* Sidebar — sticky on desktop, static on mobile (overridden in media query ≤1024px) */
 .blog-detail__sidebar {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  position: sticky;
-  top: 5rem;
+  position: static;
 }
 
 .blog-detail header {

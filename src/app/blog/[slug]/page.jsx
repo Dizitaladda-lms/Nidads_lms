@@ -111,44 +111,19 @@ const fetchBlog = async (slug) => {
   }
 };
 
-const fetchRelated = async (slug, blogId) => {
+const fetchLatestPosts = async (blogId) => {
   try {
-    const reference = await prisma.blog.findUnique({
-      where: { slug },
-      select: { id: true, tags: true, category: true },
-    });
-
-    if (!reference) {
-      return { data: [], isFallback: true };
-    }
-
-    const filters = [];
-    const excludedIds = [reference.id];
-
-    if (blogId) excludedIds.push(blogId);
-
-    if (reference.category) {
-      filters.push({ category: { equals: reference.category, mode: "insensitive" } });
-    }
-    if (reference.tags?.length) {
-      filters.push({ tags: { hasSome: reference.tags } });
-    }
-
-    const where = filters.length
-      ? { AND: [{ id: { notIn: excludedIds } }, { OR: filters }] }
-      : { id: { notIn: excludedIds } };
-
     const data = await prisma.blog.findMany({
-      where,
+      where: { id: { not: blogId } },
       select: LIST_SELECT,
       orderBy: { createdAt: "desc" },
       take: 4,
     });
 
-    return { data, isFallback: data.length === 0 };
+    return { data };
   } catch (error) {
-    console.error("fetchRelated request failed", error);
-    return { data: [], isFallback: true };
+    console.error("fetchLatestPosts request failed", error);
+    return { data: [], error: true };
   }
 };
 
@@ -247,7 +222,7 @@ export default async function BlogDetails(props) {
     notFound();
   }
 
-  const related = await fetchRelated(slug, blog.id);
+  const latestPosts = await fetchLatestPosts(blog.id);
   const cover = blog.coverImg?.trim();
   const isExternalCover = Boolean(cover && /^(https?:)?\/\//i.test(cover));
   const hasCover = Boolean(cover);
@@ -345,13 +320,11 @@ export default async function BlogDetails(props) {
           {/* ── Sidebar column ── */}
           <aside className="blog-detail__sidebar">
             {/* Recommended / Latest posts */}
-            {related?.data?.length ? (
+            {latestPosts?.data?.length ? (
               <div className="sidebar-card sidebar-recommended">
-                <p className="sidebar-card__label">
-                  {related.isFallback ? "Latest Posts" : "Recommended Posts"}
-                </p>
+                <p className="sidebar-card__label">Latest Posts</p>
                 <ul className="sidebar-recommended__list">
-                  {related.data.map((item) => {
+                  {latestPosts.data.map((item) => {
                     const rawCover = item.coverImg?.trim();
                     const hasImg = Boolean(rawCover);
                     const isExt = Boolean(rawCover && /^(https?:)?\/\//i.test(rawCover));
