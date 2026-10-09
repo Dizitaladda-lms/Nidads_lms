@@ -851,7 +851,8 @@
   flex-direction: column;
   gap: 1.25rem;
   position: sticky;
-  top: 5rem;
+  top: auto;
+  bottom: 1.25rem;
 }
 
 .blog-detail header {
