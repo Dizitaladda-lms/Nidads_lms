@@ -1132,6 +1132,12 @@
 }
 
 /* Category sidebar card */
+.sidebar-category__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .sidebar-category__chip {
   display: inline-flex;
   align-items: center;
@@ -1151,6 +1157,11 @@
   background: linear-gradient(135deg, rgba(56, 182, 255, 0.2), rgba(36, 80, 255, 0.22));
   border-color: rgba(56, 182, 255, 0.6);
   transform: translateY(-2px);
+}
+
+.sidebar-category__chip--active {
+  background: linear-gradient(135deg, rgba(56, 182, 255, 0.22), rgba(36, 80, 255, 0.28));
+  border-color: rgba(56, 182, 255, 0.6);
 }
 
 /* Recommended posts sidebar */
@@ -2393,6 +2404,11 @@
 .blog-page[data-theme="light"] .sidebar-category__chip:hover {
   background: linear-gradient(135deg, rgba(26, 114, 232, 0.16), rgba(14, 72, 180, 0.2));
   border-color: rgba(26, 114, 232, 0.5);
+}
+
+.blog-page[data-theme="light"] .sidebar-category__chip--active {
+  background: linear-gradient(135deg, rgba(26, 114, 232, 0.18), rgba(14, 72, 180, 0.2));
+  border-color: rgba(26, 114, 232, 0.55);
 }
 
 .blog-page[data-theme="light"] .sidebar-recommended__item {

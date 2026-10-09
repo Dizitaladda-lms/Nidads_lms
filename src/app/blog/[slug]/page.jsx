@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import prisma from "@/lib/prisma";
 import { getBaseUrl } from "@/lib/base-url";
 import BlogBackGuard from "@/components/BlogBackGuard";
 import BlogEnquiryForm from "@/components/BlogEnquiryForm";
 import BlogThemeToggle from "@/components/BlogThemeToggle";
+import { BLOG_CATEGORIES } from "@/lib/blog-categories";
 import "@/styles/blog.css";
 
 export const revalidate = 300;
@@ -364,18 +366,22 @@ export default async function BlogDetails(props) {
               <BlogEnquiryForm compact={true} />
             </div>
             {/* Category card */}
-            {blog.category ? (
-              <div className="sidebar-card sidebar-category">
-                <p className="sidebar-card__label">Category</p>
-                <a
-                  href={`/blog?category=${encodeURIComponent(blog.category)}`}
-                  className="sidebar-category__chip"
-                >
-                  {blog.category}
-                </a>
-                <p className="sidebar-card__hint">Browse all posts in this category</p>
-              </div>
-            ) : null}
+            <div className="sidebar-card sidebar-category">
+              <p className="sidebar-card__label">Categories</p>
+              <nav className="sidebar-category__list" aria-label="Blog categories">
+                {BLOG_CATEGORIES.map((category) => (
+                  <Link
+                    key={category}
+                    href={`/blog?category=${encodeURIComponent(category)}`}
+                    className={`sidebar-category__chip${blog.category?.toLowerCase() === category.toLowerCase() ? " sidebar-category__chip--active" : ""}`}
+                    aria-current={blog.category?.toLowerCase() === category.toLowerCase() ? "page" : undefined}
+                  >
+                    {category}
+                  </Link>
+                ))}
+              </nav>
+              <p className="sidebar-card__hint">Choose a category to browse its posts</p>
+            </div>
 
 
 
