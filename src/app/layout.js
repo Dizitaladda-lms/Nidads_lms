@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Jost } from "next/font/google";
 import Script from "next/script";
 import "../styles/globals.css";
 import Navbar from "@/components/layout/navbar";
@@ -15,6 +15,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const jost = Jost({
+  variable: "--font-jost",
   subsets: ["latin"],
 });
 
@@ -130,7 +135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="preconnect" href="https://nidads.com" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} app-shell`}
+        className={`${geistSans.variable} ${geistMono.variable} ${jost.variable} app-shell`}
         suppressHydrationWarning
       >
         {/* Google Tag Manager (noscript) */}
