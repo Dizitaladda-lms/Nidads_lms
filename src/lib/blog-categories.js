@@ -1,5 +1,6 @@
 export const BLOG_CATEGORIES = [
-  "Product Based",
+  "Data Science",
+  "Data Analytics",
   "Career and Course",
   "Brand Strategy",
   "Tools and Resources",

@@ -54,15 +54,7 @@ const fetchBlogs = async (searchParams) => {
   }
 
   if (category) {
-    const words = category.toLowerCase().split(/\s+/).filter(Boolean);
-    filters.push({
-      OR: [
-        { category: { equals: category, mode: "insensitive" } },
-        { tags: { hasSome: words } },
-        { title: { contains: category, mode: "insensitive" } },
-        { content: { contains: category, mode: "insensitive" } },
-      ],
-    });
+    filters.push({ category: { equals: category, mode: "insensitive" } });
   }
 
   const where = filters.length ? { AND: filters } : undefined;
