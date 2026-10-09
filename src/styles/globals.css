@@ -331,3 +331,34 @@ a:hover {
     justify-content: center;
   }
 }
+
+/* Blog pages use a light navbar, unlike the site's default dark navbar. */
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav {
+  background: rgba(255, 255, 255, 0.88) !important;
+  box-shadow: 0 1px 0 rgba(0, 60, 160, 0.1);
+}
+
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav a,
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav li a {
+  color: #0d1f3c !important;
+}
+
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav a:hover,
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav li a:hover {
+  color: #1a72e8 !important;
+}
+
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav > a:first-child img {
+  filter: brightness(0) saturate(100%);
+}
+
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav button[aria-label="Open menu"],
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav button[aria-label="Close menu"] {
+  color: #0d1f3c !important;
+}
+
+@media (max-width: 768px) {
+  :is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav #navbar-menu {
+    background: rgba(255, 255, 255, 0.96);
+  }
+}
