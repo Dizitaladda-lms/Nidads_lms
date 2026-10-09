@@ -1009,8 +1009,8 @@
 }
 
 .blog-detail .content {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.75;
   font-weight: 400;
   color: rgba(201, 213, 240, 0.9);
   word-break: normal;
@@ -1032,23 +1032,23 @@
 }
 
 .blog-detail .content h1 {
-  font-size: clamp(1.85rem, 3vw, 2.15rem) !important;
+  font-size: clamp(1.65rem, 2.6vw, 1.9rem) !important;
   font-weight: 700 !important;
   margin: 1.5rem 0 0.5rem !important;
 }
 
 .blog-detail .content h2 {
-  font-size: clamp(1.5rem, 2.3vw, 1.7rem) !important;
+  font-size: clamp(1.35rem, 2vw, 1.55rem) !important;
   margin: 1.25rem 0 0.45rem !important;
 }
 
 .blog-detail .content h3 {
-  font-size: clamp(1.25rem, 2vw, 1.45rem) !important;
+  font-size: clamp(1.15rem, 1.7vw, 1.3rem) !important;
   margin: 1rem 0 0.4rem !important;
 }
 
 .blog-detail .content h4 {
-  font-size: clamp(1.1rem, 1.7vw, 1.25rem) !important;
+  font-size: clamp(1.05rem, 1.5vw, 1.15rem) !important;
   margin: 0.85rem 0 0.35rem !important;
 }
 
@@ -1538,7 +1538,7 @@
 
   /* Prevent content from breaking layout */
   .blog-detail .content {
-    font-size: 0.97rem;
+    font-size: 0.95rem;
     overflow-x: hidden;
   }
 
