@@ -24,6 +24,10 @@ model Blog {
   metaTitle       String?
   metaDescription String?
   publisher       String?
+  authorName      String?
+  authorRole      String?
+  authorBio       String?
+  authorImage     String?
   category        String?
   tags            String[]
   keywords        String[]

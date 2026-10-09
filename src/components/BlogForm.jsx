@@ -14,6 +14,10 @@ const baseState = {
   metaTitle: "",
   metaDescription: "",
   publisher: "Team Nidads",
+  authorName: "Team Nidads",
+  authorRole: "",
+  authorBio: "",
+  authorImage: "",
   category: "",
   tags: "",
   keywords: "",
@@ -55,6 +59,10 @@ const BlogForm = ({ initialData = null, mode = "create" }) => {
     metaTitle: initialData?.metaTitle || "",
     metaDescription: initialData?.metaDescription || "",
     publisher: initialData?.publisher || "Team Nidads",
+    authorName: initialData?.authorName || initialData?.publisher || "Team Nidads",
+    authorRole: initialData?.authorRole || "",
+    authorBio: initialData?.authorBio || "",
+    authorImage: initialData?.authorImage || "",
   }));
   const [slugTouched, setSlugTouched] = useState(Boolean(initialData?.slug));
   const [status, setStatus] = useState({ type: null, message: "" });
@@ -97,7 +105,7 @@ const BlogForm = ({ initialData = null, mode = "create" }) => {
     }));
   };
 
-  const handleFileChange = async (event) => {
+  const handleFileChange = async (event, field = "coverImg") => {
     const file = event.target.files?.[0];
     if (!file) return;
 
@@ -121,7 +129,7 @@ const BlogForm = ({ initialData = null, mode = "create" }) => {
       if (!response.ok) {
         throw new Error(result.error || "Upload failed");
       }
-      setField("coverImg", result.url);
+      setField(field, result.url);
       setStatus({ type: "success", message: "Image uploaded" });
     } catch (error) {
       setStatus({ type: "error", message: error.message });
@@ -148,6 +156,10 @@ const BlogForm = ({ initialData = null, mode = "create" }) => {
         metaTitle: formValues.metaTitle?.trim() || "",
         metaDescription: formValues.metaDescription?.trim() || "",
         publisher: formValues.publisher?.trim() || "Team Nidads",
+        authorName: formValues.authorName?.trim() || "",
+        authorRole: formValues.authorRole?.trim() || "",
+        authorBio: formValues.authorBio?.trim() || "",
+        authorImage: formValues.authorImage?.trim() || "",
         category: formValues.category?.trim() || "",
         tags: formValues.tags,
         keywords: formValues.keywords,
@@ -257,6 +269,63 @@ const BlogForm = ({ initialData = null, mode = "create" }) => {
             onChange={(event) => setField("publisher", event.target.value)}
           />
           <small>Publisher name used in the article metadata and BlogPosting schema.</small>
+        </label>
+
+        <label>
+          Author Name
+          <input
+            type="text"
+            name="authorName"
+            value={formValues.authorName}
+            onChange={(event) => setField("authorName", event.target.value)}
+          />
+        </label>
+
+        <label>
+          Author Role
+          <input
+            type="text"
+            name="authorRole"
+            placeholder="Writer, Designer, Editor..."
+            value={formValues.authorRole}
+            onChange={(event) => setField("authorRole", event.target.value)}
+          />
+        </label>
+
+        <label>
+          Author Bio
+          <textarea
+            name="authorBio"
+            rows="4"
+            value={formValues.authorBio}
+            onChange={(event) => setField("authorBio", event.target.value)}
+          />
+        </label>
+
+        <label>
+          Author Photo URL
+          <input
+            type="text"
+            name="authorImage"
+            placeholder="https://"
+            value={formValues.authorImage}
+            onChange={(event) => setField("authorImage", event.target.value)}
+          />
+        </label>
+
+        <label>
+          Or upload author photo
+          <input
+            type="file"
+            accept="image/png,image/jpeg,image/webp"
+            onChange={(event) => handleFileChange(event, "authorImage")}
+            disabled={uploading}
+          />
+          <small>
+            {uploading
+              ? "Uploading..."
+              : "Upload a JPEG, PNG, or WebP author photo."}
+          </small>
         </label>
 
         <label>

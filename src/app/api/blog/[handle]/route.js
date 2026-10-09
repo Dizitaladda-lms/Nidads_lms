@@ -84,6 +84,10 @@ const PUBLIC_BLOG_SELECT = {
   metaTitle: true,
   metaDescription: true,
   publisher: true,
+  authorName: true,
+  authorRole: true,
+  authorBio: true,
+  authorImage: true,
   category: true,
   tags: true,
   keywords: true,
@@ -140,7 +144,24 @@ export async function PUT(request, context) {
     }
 
     const payload = await request.json();
-    const { title, content, coverImg, ogImage, metaTitle, metaDescription, publisher, category, tags, keywords, slug, schemas } = payload;
+    const {
+      title,
+      content,
+      coverImg,
+      ogImage,
+      metaTitle,
+      metaDescription,
+      publisher,
+      authorName,
+      authorRole,
+      authorBio,
+      authorImage,
+      category,
+      tags,
+      keywords,
+      slug,
+      schemas,
+    } = payload;
 
     if (!title?.trim() || !content?.trim()) {
       return NextResponse.json({ error: "Title and content are required" }, { status: 400 });
@@ -185,6 +206,10 @@ export async function PUT(request, context) {
       metaTitle: metaTitle?.trim() || null,
       metaDescription: metaDescription?.trim() || null,
       publisher: publisher?.trim() || "Team Nidads",
+      authorName: authorName?.trim() || null,
+      authorRole: authorRole?.trim() || null,
+      authorBio: authorBio?.trim() || null,
+      authorImage: authorImage?.trim() || null,
       category: preparedCategory,
       tags: preparedTags,
       slug: resolvedSlug,

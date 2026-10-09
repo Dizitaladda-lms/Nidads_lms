@@ -26,6 +26,10 @@ const BLOG_SELECT = {
   metaTitle: true,
   metaDescription: true,
   publisher: true,
+  authorName: true,
+  authorRole: true,
+  authorBio: true,
+  authorImage: true,
   category: true,
   tags: true,
   keywords: true,
@@ -269,7 +273,10 @@ export default async function BlogDetails(props) {
     dateModified: blog.updatedAt ?? blog.createdAt,
     author: {
       "@type": "Person",
-      name: "Editorial Team",
+      name: blog.authorName?.trim() || blog.publisher?.trim() || "Editorial Team",
+      ...(blog.authorRole?.trim() ? { jobTitle: blog.authorRole.trim() } : {}),
+      ...(blog.authorBio?.trim() ? { description: blog.authorBio.trim() } : {}),
+      ...(blog.authorImage?.trim() ? { image: blog.authorImage.trim() } : {}),
     },
     publisher: {
       "@type": "Organization",
@@ -322,6 +329,29 @@ export default async function BlogDetails(props) {
             ) : null}
 
             <div className="content" dangerouslySetInnerHTML={{ __html: blogContent }} />
+            {(blog.authorName || blog.authorRole || blog.authorBio || blog.authorImage || blog.publisher) ? (
+              <section className="blog-author" aria-labelledby="blog-author-title">
+                <h2 id="blog-author-title">About the author</h2>
+                <div className="blog-author__details">
+                  {blog.authorImage ? (
+                    <Image
+                      className="blog-author__image"
+                      src={blog.authorImage}
+                      alt={blog.authorName?.trim() || blog.publisher?.trim() || "Blog author"}
+                      width={88}
+                      height={88}
+                      sizes="88px"
+                      unoptimized
+                    />
+                  ) : null}
+                  <div className="blog-author__copy">
+                    <h3>{blog.authorName?.trim() || blog.publisher?.trim() || "Editorial Team"}</h3>
+                    {blog.authorRole ? <p className="blog-author__role">{blog.authorRole}</p> : null}
+                    {blog.authorBio ? <p>{blog.authorBio}</p> : null}
+                  </div>
+                </div>
+              </section>
+            ) : null}
           </article>
 
           {/* ── Sidebar column ── */}
