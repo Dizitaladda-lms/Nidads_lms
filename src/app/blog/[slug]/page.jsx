@@ -232,7 +232,7 @@ export default async function BlogDetails(props) {
 
   if (blogResult.error) {
     return (
-      <div className="blog-page">
+      <div className="blog-page" data-theme="light">
         <main id="main-content" className="blog-detail" role="main">
           <div className="blog-error">
             <h1>Blog unavailable</h1>
@@ -291,7 +291,7 @@ export default async function BlogDetails(props) {
   };
 
   return (
-    <div className="blog-page">
+    <div className="blog-page" data-theme="light">
       <main id="main-content" className="blog-detail" role="main">
         {/* Intercepts browser back/forward to force hard reload instead of
           React DOM reconciliation — prevents insertBefore crash from

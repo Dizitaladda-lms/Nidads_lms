@@ -296,7 +296,7 @@ html {
    The navbar is position:fixed and lives outside .blog-page,
    so we target it from body here instead.
    ══════════════════════════════════════════════════════════════ */
-body[data-blog-theme="light"] nav {
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav {
   background: rgba(255, 255, 255, 0.82) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -304,21 +304,25 @@ body[data-blog-theme="light"] nav {
 }
 
 /* bottom border line */
-body[data-blog-theme="light"] nav::after {
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav::after {
   background: rgba(0, 80, 200, 0.15) !important;
 }
 
 /* all nav links */
-body[data-blog-theme="light"] nav a {
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav a {
   color: #0d1f3c !important;
 }
 
-body[data-blog-theme="light"] nav a:hover {
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav a:hover {
   color: #1a72e8 !important;
 }
 
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav > a:first-child img {
+  filter: brightness(0) saturate(100%);
+}
+
 /* hamburger icon on mobile */
-body[data-blog-theme="light"] nav button[aria-label="Open menu"],
-body[data-blog-theme="light"] nav button[aria-label="Close menu"] {
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav button[aria-label="Open menu"],
+:is(body[data-blog-theme="light"], body:has(.blog-page[data-theme="light"])) nav button[aria-label="Close menu"] {
   color: #0d1f3c !important;
 }

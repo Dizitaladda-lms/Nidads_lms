@@ -122,7 +122,7 @@ export default async function BlogPage({ searchParams }) {
   const data = await fetchBlogs({ ...params, page });
 
   return (
-    <div className="blog-page">
+    <div className="blog-page" data-theme="light">
       <main id="main-content" className="blog-index blog-index--simple" role="main">
 
         {/* ── Compact header ── */}
