@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { unstable_cache } from "next/cache";
 import { notFound } from "next/navigation";
 import prisma from "@/lib/prisma";
 import { getBaseUrl } from "@/lib/base-url";
@@ -104,29 +105,40 @@ const prepareBlogContent = (html) => {
   return { content, headings };
 };
 
-const fetchBlog = async (slug) => {
-  try {
-    const blog = await prisma.blog.findUnique({
+const getCachedBlog = unstable_cache(
+  async (slug) =>
+    prisma.blog.findUnique({
       where: { slug },
       select: BLOG_SELECT,
-    });
-    return { blog };
+    }),
+  ["public-blog-post"],
+  { revalidate: 300, tags: ["blogs"] }
+);
+
+const fetchBlog = async (slug) => {
+  try {
+    return { blog: await getCachedBlog(slug) };
   } catch (error) {
     console.error("fetchBlog request failed", error);
     return { error: true };
   }
 };
 
-const fetchLatestPosts = async (blogId) => {
-  try {
-    const data = await prisma.blog.findMany({
+const getCachedLatestPosts = unstable_cache(
+  async (blogId) =>
+    prisma.blog.findMany({
       where: { id: { not: blogId } },
       select: LIST_SELECT,
       orderBy: { createdAt: "desc" },
       take: 4,
-    });
+    }),
+  ["public-blog-latest-posts"],
+  { revalidate: 300, tags: ["blogs"] }
+);
 
-    return { data };
+const fetchLatestPosts = async (blogId) => {
+  try {
+    return { data: await getCachedLatestPosts(blogId) };
   } catch (error) {
     console.error("fetchLatestPosts request failed", error);
     return { data: [], error: true };

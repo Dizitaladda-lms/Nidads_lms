@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { revalidateTag } from "next/cache";
 import prisma from "@/lib/prisma";
 import { generateUniqueSlug } from "@/lib/slugify";
 import { normalizeTags } from "@/lib/tags";
@@ -310,6 +311,7 @@ export async function POST(request) {
         slug: finalSlug,
       },
     });
+    revalidateTag("blogs", "max");
 
     const ip = await getClientIp(request);
     await recordAudit("blog.create", {
@@ -346,6 +348,7 @@ export async function DELETE(request) {
     const deleted = await prisma.blog.delete({
       where: id ? { id } : { slug },
     });
+    revalidateTag("blogs", "max");
     const ip = await getClientIp(request);
     await recordAudit("blog.delete", {
       actor: session.sub,

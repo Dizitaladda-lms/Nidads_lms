@@ -1,4 +1,5 @@
 import prisma from "@/lib/prisma";
+import { unstable_cache } from "next/cache";
 import BlogCard from "@/components/BlogCard";
 import BlogThemeToggle from "@/components/BlogThemeToggle";
 import Link from "next/link";
@@ -31,35 +32,27 @@ export const metadata = {
 
 const CATEGORIES = BLOG_CATEGORIES.map((category) => ({ label: category, value: category }));
 
-/* ─── data fetch — select only the columns BlogCard actually needs ─ */
-const fetchBlogs = async (searchParams) => {
-  const params = searchParams || {};
-  const page = Number(params.page) || 1;
-  const limit = 12;
-  const skip = (page - 1) * limit;
-  const search = params.search?.trim();
-  const category = params.category?.trim();
+const getCachedBlogListing = unstable_cache(
+  async (page, search, category) => {
+    const limit = 12;
+    const filters = [];
 
-  const filters = [];
+    if (search) {
+      filters.push({
+        OR: [
+          { title: { contains: search, mode: "insensitive" } },
+          { content: { contains: search, mode: "insensitive" } },
+          { tags: { has: search.toLowerCase() } },
+          { keywords: { has: search.toLowerCase() } },
+        ],
+      });
+    }
 
-  if (search) {
-    filters.push({
-      OR: [
-        { title: { contains: search, mode: "insensitive" } },
-        { content: { contains: search, mode: "insensitive" } },
-        { tags: { has: search.toLowerCase() } },
-        { keywords: { has: search.toLowerCase() } },
-      ],
-    });
-  }
+    if (category) {
+      filters.push({ category: { equals: category, mode: "insensitive" } });
+    }
 
-  if (category) {
-    filters.push({ category: { equals: category, mode: "insensitive" } });
-  }
-
-  const where = filters.length ? { AND: filters } : undefined;
-
-  try {
+    const where = filters.length ? { AND: filters } : undefined;
     const [data, count] = await Promise.all([
       prisma.blog.findMany({
         where,
@@ -73,7 +66,7 @@ const fetchBlogs = async (searchParams) => {
           updatedAt: true,
         },
         orderBy: { createdAt: "desc" },
-        skip,
+        skip: (page - 1) * limit,
         take: limit,
       }),
       prisma.blog.count({ where }),
@@ -88,6 +81,21 @@ const fetchBlogs = async (searchParams) => {
         totalPages: Math.max(1, Math.ceil(count / limit)),
       },
     };
+  },
+  ["public-blog-listing"],
+  { revalidate: 300, tags: ["blogs"] }
+);
+
+/* ─── data fetch — select only the columns BlogCard actually needs ─ */
+const fetchBlogs = async (searchParams) => {
+  const params = searchParams || {};
+  const page = Number(params.page) || 1;
+  const limit = 12;
+  const search = params.search?.trim();
+  const category = params.category?.trim();
+
+  try {
+    return await getCachedBlogListing(page, search || "", category || "");
   } catch (error) {
     console.error("Unable to fetch blog posts from the database", error);
     return {
