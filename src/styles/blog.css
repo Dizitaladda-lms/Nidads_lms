@@ -850,7 +850,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  position: static;
+  position: sticky;
+  top: 5rem;
 }
 
 .blog-detail header {
