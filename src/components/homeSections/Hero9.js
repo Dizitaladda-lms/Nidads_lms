@@ -81,39 +81,60 @@ const TestimonialCard = ({ text, image, name, role }) => (
 
 const TestimonialsColumn = ({ testimonials, speed, isPaused }) => {
   const columnRef = useRef(null);
-  const isMobile = useRef(false);
 
   useEffect(() => {
-    isMobile.current =
-      typeof window !== "undefined" && window.innerWidth <= 768;
-  }, []);
-
-  useEffect(() => {
-    if (isMobile.current) return;
-
     const column = columnRef.current;
-    if (!column) return;
+    if (!column || window.matchMedia("(max-width: 768px)").matches) return;
 
-    let animationId;
+    let animationId = null;
     let translateY = 0;
+    let isVisible = false;
 
-    const animate = () => {
-      if (!isPaused.current) {
-        translateY += speed;
-
-        if (translateY >= column.scrollHeight / 2) {
-          translateY = 0;
-        }
-
-        column.style.transform = `translateY(-${translateY}px)`;
+    const shouldAnimate = () => isVisible && !isPaused && !document.hidden;
+    const stopAnimation = () => {
+      if (animationId !== null) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
       }
-
-      animationId = requestAnimationFrame(animate);
     };
 
-    animationId = requestAnimationFrame(animate);
+    const animate = () => {
+      animationId = null;
+      if (!shouldAnimate()) return;
 
-    return () => cancelAnimationFrame(animationId);
+      translateY += speed;
+
+      if (translateY >= column.scrollHeight / 2) {
+        translateY = 0;
+      }
+
+      column.style.transform = `translateY(-${translateY}px)`;
+
+      if (shouldAnimate()) animationId = requestAnimationFrame(animate);
+    };
+
+    const syncAnimation = () => {
+      if (shouldAnimate() && animationId === null) {
+        animationId = requestAnimationFrame(animate);
+      } else if (!shouldAnimate()) {
+        stopAnimation();
+      }
+    };
+
+    const visibilityObserver = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting;
+      syncAnimation();
+    });
+    visibilityObserver.observe(column);
+
+    const handleVisibilityChange = () => syncAnimation();
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      stopAnimation();
+      visibilityObserver.disconnect();
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
   }, [speed, isPaused]);
 
   return (
@@ -132,13 +153,13 @@ const TestimonialsColumn = ({ testimonials, speed, isPaused }) => {
 };
 
 const Hero9 = () => {
-  const isPaused = useRef(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   return (
     <section
       className={styles.hero}
-      onMouseEnter={() => (isPaused.current = true)}
-      onMouseLeave={() => (isPaused.current = false)}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
     >
       <div className={styles.container}>
         <div className={styles.header}>
