@@ -988,6 +988,22 @@
   color: #38b6ff;
 }
 
+.blog-toc__view-more {
+  margin: 0.75rem 0 0 1.5rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #38b6ff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.blog-toc__view-more:hover {
+  text-decoration: underline;
+}
+
 .blog-toc__item--h2 {
   padding-left: 1rem;
 }
@@ -2341,6 +2357,10 @@
 }
 
 .blog-page[data-theme="light"] .blog-toc a:hover {
+  color: #1a72e8;
+}
+
+.blog-page[data-theme="light"] .blog-toc__view-more {
   color: #1a72e8;
 }
 

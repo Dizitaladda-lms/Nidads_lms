@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 
-const BlogEnquiryForm = ({ compact = false }) => {
+const BlogEnquiryForm = ({ compact = false, courseOptions = [] }) => {
+  const defaultCourse = courseOptions[0] || "Data Science";
   const [form, setForm] = useState({
     name: "",
     email: "",
     mobile: "",
-    course: "Data Science",
+    course: defaultCourse,
   });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
@@ -65,7 +66,7 @@ const BlogEnquiryForm = ({ compact = false }) => {
         throw new Error(payload?.error || "Unable to submit enquiry");
       }
       setSubmitted(true);
-      setForm({ name: "", email: "", mobile: "", course: "Data Science" });
+      setForm({ name: "", email: "", mobile: "", course: defaultCourse });
     } catch (error) {
       setSubmitError(error.message || "Something went wrong. Please try again.");
     } finally {
@@ -162,8 +163,9 @@ const BlogEnquiryForm = ({ compact = false }) => {
             value={form.course}
             onChange={handleChange}
           >
-            <option value="Data Science">Data Science</option>
-            <option value="Data Analytics">Data Analytics</option>
+            {courseOptions.map((course) => (
+              <option key={course} value={course}>{course}</option>
+            ))}
           </select>
           {errors.course && <span className="beform__field-error">⚠ {errors.course}</span>}
         </div>

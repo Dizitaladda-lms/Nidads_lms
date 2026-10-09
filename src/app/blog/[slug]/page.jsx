@@ -5,11 +5,15 @@ import prisma from "@/lib/prisma";
 import { getBaseUrl } from "@/lib/base-url";
 import BlogBackGuard from "@/components/BlogBackGuard";
 import BlogEnquiryForm from "@/components/BlogEnquiryForm";
+import BlogTableOfContents from "@/components/BlogTableOfContents";
 import BlogThemeToggle from "@/components/BlogThemeToggle";
 import { BLOG_CATEGORIES } from "@/lib/blog-categories";
+import { courses } from "@/data/courses";
 import "@/styles/blog.css";
 
 export const revalidate = 300;
+
+const COURSE_OPTIONS = courses.map(({ title }) => title);
 
 const BLOG_SELECT = {
   id: true,
@@ -302,18 +306,7 @@ export default async function BlogDetails(props) {
             </div>
 
             {headings.length ? (
-              <details className="blog-toc">
-                <summary>Table of contents</summary>
-                <nav aria-label="Table of contents">
-                  <ol>
-                    {headings.map((heading) => (
-                      <li key={heading.id} className={`blog-toc__item--h${heading.level}`}>
-                        <a href={`#${heading.id}`}>{heading.title}</a>
-                      </li>
-                    ))}
-                  </ol>
-                </nav>
-              </details>
+              <BlogTableOfContents headings={headings} />
             ) : null}
 
             <div className="content" dangerouslySetInnerHTML={{ __html: blogContent }} />
@@ -363,7 +356,7 @@ export default async function BlogDetails(props) {
 
             {/* ── Enquiry form — right sidebar, between category and recommended ── */}
             <div className="sidebar-card sidebar-enquiry-form">
-              <BlogEnquiryForm compact={true} />
+              <BlogEnquiryForm compact={true} courseOptions={COURSE_OPTIONS} />
             </div>
             {/* Category card */}
             <div className="sidebar-card sidebar-category">
