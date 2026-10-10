@@ -1,0 +1,385 @@
+﻿<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+  <meta charset="utf-8" />
+  <title>AI vs Machine Learning vs Deep Learning: Intelligence Decoded</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <w:WordDocument>
+      <w:View>Print</w:View>
+      <w:Zoom>100</w:Zoom>
+      <w:DoNotOptimizeForBrowser/>
+    </w:WordDocument>
+  </xml>
+  <![endif]-->
+  <style>
+    @page {
+      size: 21cm 29.7cm;
+      margin: 2cm;
+    }
+    body {
+      font-family: Arial, Calibri, sans-serif;
+      font-size: 11pt;
+      color: #0f172a;
+      line-height: 1.5;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 10px 0;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f1f5f9;
+      font-weight: bold;
+    }
+    h1 { font-size: 20pt; color: #0f172a; margin-top: 16pt; margin-bottom: 8pt; }
+    h2 { font-size: 15pt; color: #1e293b; margin-top: 14pt; margin-bottom: 6pt; }
+    h3 { font-size: 13pt; color: #334155; margin-top: 12pt; margin-bottom: 4pt; }
+    h4 { font-size: 11.5pt; color: #475569; margin-top: 10pt; margin-bottom: 4pt; }
+    p { margin-top: 0; margin-bottom: 8pt; }
+    ul, ol { margin-top: 4pt; margin-bottom: 8pt; padding-left: 24pt; }
+    li { margin-bottom: 4pt; }
+    blockquote {
+      border-left: 3pt solid #0284c7;
+      padding-left: 10pt;
+      margin-left: 0;
+      color: #334155;
+      font-style: italic;
+    }
+    a { color: #0284c7; text-decoration: underline; }
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+  
+    <div class="blog-post-wrapper" style="page-break-after: always; margin-bottom: 40px;">
+      <h1 style="font-size: 22pt; color: #0f172a; border-bottom: 3px solid #0284c7; padding-bottom: 8px; margin-bottom: 16px;">
+        AI vs Machine Learning vs Deep Learning: Intelligence Decoded
+      </h1>
+
+      <h2 style="font-size: 14pt; color: #0369a1; margin-top: 20px; margin-bottom: 10px;">
+        1. Blog Form Fields (Copy &amp; Paste into Form)
+      </h2>
+
+      <table border="1" cellspacing="0" cellpadding="8" style="width: 100%; border-collapse: collapse; border: 1px solid #cbd5e1; font-family: Arial, sans-serif; font-size: 10.5pt;">
+        <tbody>
+          <tr>
+            <td style="width: 28%; font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Title</td>
+            <td style="width: 72%; color: #0f172a;">AI vs Machine Learning vs Deep Learning: Intelligence Decoded</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Slug</td>
+            <td style="color: #0f172a; font-family: Consolas, monospace;">ai-vs-machine-learning-vs-deep-learning</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Meta Title (SEO)</td>
+            <td style="color: #0f172a;">AI vs Machine Learning vs Deep Learning: Intelligence Decode</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Meta Description (SEO)</td>
+            <td style="color: #0f172a;">AI vs Machine Learning vs Deep Learning: See what sets them apart, how they work, and which technology powers today’s smartest AI applications</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Publisher</td>
+            <td style="color: #0f172a;">Shagun</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Author Name</td>
+            <td style="color: #0f172a;">Shagun</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Author Role</td>
+            <td style="color: #0f172a;"></td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Author Bio</td>
+            <td style="color: #0f172a;"></td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Author Photo URL</td>
+            <td style="color: #0284c7; word-break: break-all;"></td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Category</td>
+            <td style="color: #0f172a;">Machine Learning</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Tags (Comma-separated)</td>
+            <td style="color: #0f172a;">ai vs machine learning vs deep learning</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Keywords (SEO)</td>
+            <td style="color: #0f172a;">&quot;artificial intelligence vs machine learning machine learning vs deep learning difference between ai ml and dl ai machine learning deep learning comparison artificial intelligence vs deep learning&quot;</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Cover Image URL</td>
+            <td style="color: #0284c7; word-break: break-all;">https://i.ibb.co/G3M1q0PY/AI-vs-Machine-Learning-vs-Deep-Learning.webp</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">OG Image URL (Social Sharing)</td>
+            <td style="color: #0284c7; word-break: break-all;"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 style="font-size: 14pt; color: #0369a1; margin-top: 24px; margin-bottom: 10px;">
+        2. Structured Data Schemas (JSON-LD)
+      </h2>
+      
+          <div style="margin-bottom: 14px;">
+            <p style="font-weight: bold; margin-bottom: 4px; color: #1e293b;">Schema 1:</p>
+            <pre style="background-color: #f8fafc; border: 1px solid #cbd5e1; padding: 10px; font-family: Consolas, monospace; font-size: 9pt; white-space: pre-wrap; word-wrap: break-word;">{
+  &quot;@graph&quot;: [
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/ai-vs-machine-learning-vs-deep-learning#blogposting&quot;,
+      &quot;url&quot;: &quot;https://www.nidads.com/blog/ai-vs-machine-learning-vs-deep-learning&quot;,
+      &quot;@type&quot;: &quot;BlogPosting&quot;,
+      &quot;image&quot;: {
+        &quot;url&quot;: &quot;https://i.ibb.co/G3M1q0PY/AI-vs-Machine-Learning-vs-Deep-Learning.webp&quot;,
+        &quot;@type&quot;: &quot;ImageObject&quot;
+      },
+      &quot;author&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/about#shagun&quot;
+      },
+      &quot;headline&quot;: &quot;AI vs Machine Learning vs Deep Learning: Intelligence Decoded&quot;,
+      &quot;keywords&quot;: &quot;artificial intelligence vs machine learning, machine learning vs deep learning, difference between ai ml and dl, ai machine learning deep learning comparison, artificial intelligence vs deep learning&quot;,
+      &quot;publisher&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/#organization&quot;,
+        &quot;url&quot;: &quot;https://www.nidads.com/&quot;,
+        &quot;logo&quot;: {
+          &quot;url&quot;: &quot;https://www.nidads.com/Nidads-2.webp&quot;,
+          &quot;@type&quot;: &quot;ImageObject&quot;
+        },
+        &quot;name&quot;: &quot;NIDADS&quot;,
+        &quot;@type&quot;: &quot;Organization&quot;
+      },
+      &quot;description&quot;: &quot;AI vs Machine Learning vs Deep Learning: See what sets them apart, how they work, and which technology powers today's smartest AI applications&quot;,
+      &quot;dateModified&quot;: &quot;2026-08-11&quot;,
+      &quot;datePublished&quot;: &quot;2026-08-11&quot;,
+      &quot;articleSection&quot;: &quot;Machine Learning&quot;,
+      &quot;mainEntityOfPage&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/blog/ai-vs-machine-learning-vs-deep-learning&quot;,
+        &quot;@type&quot;: &quot;WebPage&quot;
+      }
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/about#shagun&quot;,
+      &quot;name&quot;: &quot;Shagun&quot;,
+      &quot;@type&quot;: &quot;Person&quot;,
+      &quot;alumniOf&quot;: {
+        &quot;name&quot;: &quot;B.Tech, Data Science and Data Analytics Program&quot;,
+        &quot;@type&quot;: &quot;EducationalOrganization&quot;
+      },
+      &quot;jobTitle&quot;: &quot;Senior Data Science Trainer&quot;,
+      &quot;worksFor&quot;: {
+        &quot;url&quot;: &quot;https://www.nidads.com/&quot;,
+        &quot;name&quot;: &quot;NIDADS (National Institute of Data Analytics &amp; Data Science)&quot;,
+        &quot;@type&quot;: &quot;Organization&quot;
+      },
+      &quot;knowsAbout&quot;: [
+        &quot;Data Science&quot;,
+        &quot;Data Analytics&quot;,
+        &quot;Artificial Intelligence&quot;,
+        &quot;Machine Learning&quot;,
+        &quot;Data Engineering&quot;,
+        &quot;Deep Learning&quot;
+      ],
+      &quot;description&quot;: &quot;The best way to learn data science isn't just solving problems — it's understanding why the solution works. That's what I try to teach every single day.&quot;,
+      &quot;homeLocation&quot;: {
+        &quot;name&quot;: &quot;Delhi&quot;,
+        &quot;@type&quot;: &quot;Place&quot;
+      }
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/ai-vs-machine-learning-vs-deep-learning#breadcrumb&quot;,
+      &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+      &quot;itemListElement&quot;: [
+        {
+          &quot;item&quot;: &quot;https://www.nidads.com/&quot;,
+          &quot;name&quot;: &quot;Home&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 1
+        },
+        {
+          &quot;item&quot;: &quot;https://www.nidads.com/blog&quot;,
+          &quot;name&quot;: &quot;Blog&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 2
+        },
+        {
+          &quot;item&quot;: &quot;https://www.nidads.com/blog?category=Machine%20Learning&quot;,
+          &quot;name&quot;: &quot;Machine Learning&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 3
+        },
+        {
+          &quot;item&quot;: &quot;https://www.nidads.com/blog/ai-vs-machine-learning-vs-deep-learning&quot;,
+          &quot;name&quot;: &quot;AI vs Machine Learning vs Deep Learning: Intelligence Decoded&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 4
+        }
+      ]
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/ai-vs-machine-learning-vs-deep-learning#recommendedposts&quot;,
+      &quot;name&quot;: &quot;Recommended Posts&quot;,
+      &quot;@type&quot;: &quot;ItemList&quot;,
+      &quot;itemListElement&quot;: [
+        {
+          &quot;url&quot;: &quot;https://www.nidads.com/blog/supervised-vs-unsupervised-learning&quot;,
+          &quot;name&quot;: &quot;Supervised vs Unsupervised Learning: Who Guides AI?&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 1
+        },
+        {
+          &quot;url&quot;: &quot;https://www.nidads.com/blog/mlops-course-2026&quot;,
+          &quot;name&quot;: &quot;MLOPS Course: Turn ML Models into Production AI&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 2
+        },
+        {
+          &quot;url&quot;: &quot;https://www.nidads.com/blog/machine-learning-course&quot;,
+          &quot;name&quot;: &quot;Machine Learning Course: Beyond Algorithms, Toward Intelligence&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 3
+        }
+      ]
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/ai-vs-machine-learning-vs-deep-learning#faq&quot;,
+      &quot;@type&quot;: &quot;FAQPage&quot;,
+      &quot;mainEntity&quot;: [
+        {
+          &quot;name&quot;: &quot;Is Deep Learning just a fancier name for Machine Learning?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;No — it's a subset of Machine Learning using multi-layered neural networks. All Deep Learning is Machine Learning, but most Machine Learning isn't Deep Learning.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        },
+        {
+          &quot;name&quot;: &quot;Do I need to learn Machine Learning before Deep Learning?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;Pretty much, yes. Overfitting, train/test splits, evaluation metrics — all of that underpins both, and it's just easier to grasp with simpler ML models first.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        },
+        {
+          &quot;name&quot;: &quot;Can AI exist without any Machine Learning at all?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;It can. Rule-based expert systems and search algorithms count as AI, no data-driven learning involved.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        },
+        {
+          &quot;name&quot;: &quot;Is ChatGPT AI, ML, or Deep Learning?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;Honestly, all three. It's an AI system, built with Machine Learning, specifically through a Deep Learning transformer architecture.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        },
+        {
+          &quot;name&quot;: &quot;Which one is easier for a beginner to start with?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;Machine Learning, usually. Less advanced math, smaller datasets, and you get a working result faster than training a neural network from scratch.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        },
+        {
+          &quot;name&quot;: &quot;Does Deep Learning always need a GPU?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;Beyond toy datasets, effectively yes — though cloud GPU services have made this a lot more accessible without owning hardware.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        },
+        {
+          &quot;name&quot;: &quot;What is the fastest-growing segment of the AI market right now?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;Deep Learning. It's the engine behind the current generative AI boom — chatbots, image generation, voice systems.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        },
+        {
+          &quot;name&quot;: &quot;Is Machine Learning still relevant if Deep Learning exists?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;Very much. On small, structured, spreadsheet-style datasets, classical ML tends to be cheaper, faster to train, and easier to explain.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/ai-vs-machine-learning-vs-deep-learning#speakable&quot;,
+      &quot;url&quot;: &quot;https://www.nidads.com/blog/ai-vs-machine-learning-vs-deep-learning&quot;,
+      &quot;@type&quot;: &quot;WebPage&quot;,
+      &quot;speakable&quot;: {
+        &quot;@type&quot;: &quot;SpeakableSpecification&quot;,
+        &quot;cssSelector&quot;: [
+          &quot;h1&quot;,
+          &quot;.key-takeaways&quot;,
+          &quot;.faq-section h3&quot;
+        ]
+      }
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/ai-vs-machine-learning-vs-deep-learning#howto&quot;,
+      &quot;name&quot;: &quot;How to Decide Which One You Actually Need: AI, ML, or Deep Learning&quot;,
+      &quot;step&quot;: [
+        {
+          &quot;name&quot;: &quot;Start with your data&quot;,
+          &quot;text&quot;: &quot;Look at your data type first, not the trend. Structured, tabular data points toward classical Machine Learning. Unstructured data — images, audio, free text — points toward Deep Learning.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 1
+        },
+        {
+          &quot;name&quot;: &quot;Assess data volume and compute cost&quot;,
+          &quot;text&quot;: &quot;Be honest about how much data you have, and weigh the compute cost of Deep Learning (often GPU/TPU-heavy) against what you're actually trying to achieve.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 2
+        },
+        {
+          &quot;name&quot;: &quot;Weigh explainability against performance&quot;,
+          &quot;text&quot;: &quot;If someone needs to know why a decision was made — such as in regulated industries — lean toward interpretable classical Machine Learning over harder-to-explain Deep Learning models.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 3
+        },
+        {
+          &quot;name&quot;: &quot;Build one small project&quot;,
+          &quot;text&quot;: &quot;Before committing to a learning path, build a small project such as a spam classifier or a basic image classifier to get hands-on clarity.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 4
+        }
+      ],
+      &quot;@type&quot;: &quot;HowTo&quot;,
+      &quot;description&quot;: &quot;A practical decision process for choosing between Artificial Intelligence, Machine Learning, and Deep Learning based on your data and goals.&quot;
+    }
+  ],
+  &quot;@context&quot;: &quot;https://schema.org&quot;
+}</pre>
+          </div>
+        
+
+      <h2 style="font-size: 14pt; color: #0369a1; margin-top: 24px; margin-bottom: 10px;">
+        3. Content (Rich Text — Copy &amp; Paste Directly into Blog Editor)
+      </h2>
+      <div class="blog-rich-content" style="border: 1px solid #cbd5e1; padding: 18px; background-color: #ffffff; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #0f172a;">
+        <h2><strong>AI&nbsp;vs&nbsp;Machine&nbsp;Learning&nbsp;vs&nbsp;Deep&nbsp;Learning:&nbsp;Decode&nbsp;the&nbsp;Complete&nbsp;Intelligence&nbsp;Hierarchy&nbsp;Behind&nbsp;ChatGPT,&nbsp;Generative&nbsp;AI,&nbsp;Neural&nbsp;Networks&nbsp;and&nbsp;Tomorrow&#39;s&nbsp;Intelligent&nbsp;Systems</strong></h2><p>AI,&nbsp;Machine&nbsp;Learning,&nbsp;and&nbsp;Deep&nbsp;Learning&nbsp;aren&#39;t&nbsp;three&nbsp;separate&nbsp;technologies&nbsp;fighting&nbsp;for&nbsp;the&nbsp;same&nbsp;job.&nbsp;They&#39;re&nbsp;layers,&nbsp;one&nbsp;sitting&nbsp;inside&nbsp;the&nbsp;next.&nbsp;AI&nbsp;is&nbsp;the&nbsp;broad&nbsp;goal:&nbsp;get&nbsp;a&nbsp;machine&nbsp;to&nbsp;act&nbsp;intelligently.&nbsp;Machine&nbsp;Learning&nbsp;is&nbsp;the&nbsp;slice&nbsp;of&nbsp;AI&nbsp;that&nbsp;learns&nbsp;from&nbsp;data&nbsp;rather&nbsp;than&nbsp;following&nbsp;fixed&nbsp;rules.&nbsp;Deep&nbsp;Learning&nbsp;is&nbsp;the&nbsp;slice&nbsp;of&nbsp;Machine&nbsp;Learning&nbsp;that&nbsp;uses&nbsp;stacked&nbsp;neural&nbsp;networks&nbsp;to&nbsp;learn&nbsp;straight&nbsp;from&nbsp;raw&nbsp;data&nbsp;—&nbsp;images,&nbsp;audio,&nbsp;text.&nbsp;Most&nbsp;of&nbsp;the&nbsp;confusion&nbsp;here&nbsp;comes&nbsp;from&nbsp;treating&nbsp;these&nbsp;as&nbsp;three&nbsp;competing&nbsp;options&nbsp;instead&nbsp;of&nbsp;one&nbsp;hierarchy.</p><h2><strong>Key&nbsp;Takeaways</strong></h2><p>●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AI&nbsp;is&nbsp;the&nbsp;umbrella&nbsp;term.&nbsp;ML&nbsp;and&nbsp;Deep&nbsp;Learning&nbsp;live&nbsp;inside&nbsp;it.</p><p>●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not&nbsp;every&nbsp;AI&nbsp;system&nbsp;uses&nbsp;Machine&nbsp;Learning.&nbsp;Not&nbsp;every&nbsp;ML&nbsp;model&nbsp;counts&nbsp;as&nbsp;Deep&nbsp;Learning&nbsp;either.</p><p>●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deep&nbsp;Learning&nbsp;is&nbsp;the&nbsp;fastest-growing&nbsp;slice&nbsp;of&nbsp;the&nbsp;AI&nbsp;market&nbsp;right&nbsp;now&nbsp;—&nbsp;generative&nbsp;AI&nbsp;is&nbsp;most&nbsp;of&nbsp;the&nbsp;reason&nbsp;why.</p><p>●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Classical&nbsp;ML&nbsp;still&nbsp;beats&nbsp;Deep&nbsp;Learning&nbsp;on&nbsp;small,&nbsp;structured,&nbsp;spreadsheet-style&nbsp;data.</p><p>●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python&nbsp;and&nbsp;statistics&nbsp;travel&nbsp;with&nbsp;you&nbsp;across&nbsp;all&nbsp;three.</p><h2><strong>What&nbsp;Actually&nbsp;Separates&nbsp;AI,&nbsp;ML,&nbsp;and&nbsp;Deep&nbsp;Learning</strong></h2><p>Think&nbsp;of&nbsp;three&nbsp;circles,&nbsp;one&nbsp;inside&nbsp;the&nbsp;other.&nbsp;Simple&nbsp;as&nbsp;that,&nbsp;really.&nbsp;The&nbsp;outer,&nbsp;biggest&nbsp;one&nbsp;is&nbsp;Artificial&nbsp;Intelligence&nbsp;—&nbsp;the&nbsp;overall&nbsp;goal&nbsp;of&nbsp;getting&nbsp;a&nbsp;machine&nbsp;to&nbsp;behave&nbsp;intelligently,&nbsp;however&nbsp;it&nbsp;gets&nbsp;there.&nbsp;Inside&nbsp;that&nbsp;sits&nbsp;Machine&nbsp;Learning,&nbsp;where&nbsp;the&nbsp;system&nbsp;works&nbsp;out&nbsp;its&nbsp;own&nbsp;behaviour&nbsp;from&nbsp;data&nbsp;instead&nbsp;of&nbsp;being&nbsp;told&nbsp;exactly&nbsp;what&nbsp;to&nbsp;do.&nbsp;And&nbsp;inside&nbsp;Machine&nbsp;Learning&nbsp;sits&nbsp;Deep&nbsp;Learning,&nbsp;which&nbsp;uses&nbsp;stacked&nbsp;layers&nbsp;of&nbsp;artificial&nbsp;neurons&nbsp;to&nbsp;pull&nbsp;patterns&nbsp;straight&nbsp;out&nbsp;of&nbsp;raw&nbsp;data.</p><p>That&nbsp;last&nbsp;part&nbsp;is&nbsp;really&nbsp;the&nbsp;dividing&nbsp;line.&nbsp;In&nbsp;classical&nbsp;Machine&nbsp;Learning,&nbsp;someone&nbsp;still&nbsp;decides&nbsp;what&nbsp;matters&nbsp;—&nbsp;income,&nbsp;credit&nbsp;history,&nbsp;existing&nbsp;debt,&nbsp;for&nbsp;a&nbsp;loan-default&nbsp;model.&nbsp;In&nbsp;Deep&nbsp;Learning,&nbsp;that&nbsp;step&nbsp;mostly&nbsp;disappears.&nbsp;Feed&nbsp;a&nbsp;neural&nbsp;network&nbsp;raw&nbsp;pixels&nbsp;and&nbsp;its&nbsp;early&nbsp;layers&nbsp;pick&nbsp;out&nbsp;edges&nbsp;on&nbsp;their&nbsp;own.&nbsp;The&nbsp;next&nbsp;layers&nbsp;combine&nbsp;those&nbsp;edges&nbsp;into&nbsp;shapes.&nbsp;Deeper&nbsp;layers&nbsp;combine&nbsp;shapes&nbsp;into&nbsp;something&nbsp;recognisable.&nbsp;Nobody&nbsp;wrote&nbsp;code&nbsp;for&nbsp;that;&nbsp;the&nbsp;network&nbsp;worked&nbsp;it&nbsp;out&nbsp;from&nbsp;examples.</p><p>Numbers&nbsp;back&nbsp;this&nbsp;up.&nbsp;Deep&nbsp;learning&nbsp;was&nbsp;the&nbsp;biggest&nbsp;revenue-generating&nbsp;slice&nbsp;of&nbsp;the&nbsp;global&nbsp;AI&nbsp;market&nbsp;in&nbsp;2025,&nbsp;and&nbsp;the&nbsp;overall&nbsp;AI&nbsp;market&nbsp;is&nbsp;on&nbsp;track&nbsp;for&nbsp;roughly&nbsp;$539.5&nbsp;billion&nbsp;in&nbsp;2026,&nbsp;growing&nbsp;over&nbsp;30%&nbsp;a&nbsp;year,&nbsp;per&nbsp;Grand&nbsp;View&nbsp;Research.&nbsp;Machine&nbsp;learning&nbsp;on&nbsp;its&nbsp;own&nbsp;sits&nbsp;closer&nbsp;to&nbsp;$105&nbsp;billion&nbsp;today,&nbsp;expected&nbsp;to&nbsp;pass&nbsp;$560&nbsp;billion&nbsp;by&nbsp;2031.&nbsp;That&nbsp;gap&nbsp;says&nbsp;something&nbsp;—&nbsp;Deep&nbsp;Learning&nbsp;keeps&nbsp;eating&nbsp;a&nbsp;bigger&nbsp;share&nbsp;of&nbsp;AI&nbsp;spending&nbsp;because&nbsp;it&#39;s&nbsp;the&nbsp;engine&nbsp;behind&nbsp;most&nbsp;generative&nbsp;AI&nbsp;tools&nbsp;people&nbsp;actually&nbsp;touch&nbsp;day&nbsp;to&nbsp;day.</p><p>A&nbsp;rule-based&nbsp;chess&nbsp;engine&nbsp;from&nbsp;the&nbsp;1990s&nbsp;counts&nbsp;as&nbsp;AI,&nbsp;but&nbsp;not&nbsp;ML&nbsp;—&nbsp;it&nbsp;evaluates&nbsp;moves&nbsp;with&nbsp;fixed&nbsp;logic,&nbsp;never&nbsp;learning&nbsp;from&nbsp;data.&nbsp;A&nbsp;spam&nbsp;filter&nbsp;trained&nbsp;on&nbsp;labelled&nbsp;emails&nbsp;is&nbsp;AI&nbsp;and&nbsp;ML,&nbsp;but&nbsp;probably&nbsp;not&nbsp;Deep&nbsp;Learning,&nbsp;likely&nbsp;running&nbsp;something&nbsp;closer&nbsp;to&nbsp;logistic&nbsp;regression.&nbsp;A&nbsp;modern&nbsp;transformer-based&nbsp;chatbot&nbsp;is&nbsp;all&nbsp;three&nbsp;at&nbsp;once.</p><h2><strong>Visual:&nbsp;How&nbsp;AI,&nbsp;ML,&nbsp;and&nbsp;Deep&nbsp;Learning&nbsp;Nest&nbsp;Together</strong></h2><h2><img src="data:image/webp;base64,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"><strong>Comparison&nbsp;at&nbsp;a&nbsp;Glance</strong></h2><p>Here&#39;s&nbsp;the&nbsp;short&nbsp;version,&nbsp;side&nbsp;by&nbsp;side.</p><table><tbody><tr><td data-row="1"><strong>Factor</strong></td><td data-row="1"><strong>Artificial&nbsp;Intelligence</strong></td><td data-row="1"><strong>Machine&nbsp;Learning</strong></td><td data-row="1"><strong>Deep&nbsp;Learning</strong></td></tr><tr><td data-row="2">What&nbsp;it&nbsp;is</td><td data-row="2">Broad&nbsp;goal&nbsp;of&nbsp;intelligent&nbsp;behaviour</td><td data-row="2">Learns&nbsp;patterns&nbsp;from&nbsp;data</td><td data-row="2">Learns&nbsp;patterns&nbsp;via&nbsp;layered&nbsp;neural&nbsp;networks</td></tr><tr><td data-row="3">Feature&nbsp;selection</td><td data-row="3">N/A&nbsp;or&nbsp;manual</td><td data-row="3">Usually&nbsp;manual</td><td data-row="3">Largely&nbsp;automatic</td></tr><tr><td data-row="4">Data&nbsp;needed</td><td data-row="4">Varies&nbsp;by&nbsp;approach</td><td data-row="4">Works&nbsp;with&nbsp;smaller,&nbsp;structured&nbsp;sets</td><td data-row="4">Often&nbsp;benefits&nbsp;from&nbsp;large&nbsp;datasets,&nbsp;though&nbsp;transfer&nbsp;learning&nbsp;reduces&nbsp;this</td></tr><tr><td data-row="5">Hardware</td><td data-row="5">CPU&nbsp;is&nbsp;usually&nbsp;fine</td><td data-row="5">CPU&nbsp;is&nbsp;usually&nbsp;fine</td><td data-row="5">GPUs/TPUs&nbsp;common&nbsp;at&nbsp;scale;&nbsp;smaller&nbsp;models&nbsp;can&nbsp;run&nbsp;on&nbsp;CPU</td></tr><tr><td data-row="6">Explainability</td><td data-row="6">Depends&nbsp;on&nbsp;approach</td><td data-row="6">Often&nbsp;fairly&nbsp;transparent</td><td data-row="6">Frequently&nbsp;harder&nbsp;to&nbsp;interpret</td></tr><tr><td data-row="7">Typical&nbsp;example</td><td data-row="7">Rule-based&nbsp;chess&nbsp;engine</td><td data-row="7">Credit&nbsp;scoring,&nbsp;fraud&nbsp;flags</td><td data-row="7">Image&nbsp;recognition,&nbsp;transformer&nbsp;models</td></tr></tbody></table><p>&nbsp;</p><p>Machine&nbsp;Learning&nbsp;still&nbsp;holds&nbsp;its&nbsp;ground&nbsp;where&nbsp;Deep&nbsp;Learning&nbsp;doesn&#39;t&nbsp;make&nbsp;much&nbsp;sense&nbsp;—&nbsp;tabular&nbsp;data&nbsp;with&nbsp;a&nbsp;few&nbsp;thousand&nbsp;rows.&nbsp;Training&nbsp;a&nbsp;neural&nbsp;network&nbsp;there&nbsp;is&nbsp;usually&nbsp;overkill.&nbsp;A&nbsp;decision&nbsp;tree&nbsp;or&nbsp;gradient-boosted&nbsp;model&nbsp;often&nbsp;matches&nbsp;its&nbsp;accuracy&nbsp;in&nbsp;a&nbsp;fraction&nbsp;of&nbsp;the&nbsp;time,&nbsp;and&nbsp;you&nbsp;can&nbsp;actually&nbsp;explain&nbsp;the&nbsp;result&nbsp;to&nbsp;a&nbsp;compliance&nbsp;officer.</p><p>Across&nbsp;industries,&nbsp;there&#39;s&nbsp;a&nbsp;fairly&nbsp;consistent&nbsp;split.&nbsp;AI&nbsp;and&nbsp;classical&nbsp;ML&nbsp;handle&nbsp;scoring,&nbsp;forecasting,&nbsp;and&nbsp;rule-based&nbsp;routing:&nbsp;patient&nbsp;risk&nbsp;scoring,&nbsp;credit&nbsp;scoring,&nbsp;demand&nbsp;forecasting,&nbsp;predictive&nbsp;maintenance,&nbsp;call&nbsp;routing.&nbsp;Deep&nbsp;Learning&nbsp;takes&nbsp;over&nbsp;once&nbsp;the&nbsp;input&nbsp;turns&nbsp;messy&nbsp;and&nbsp;unstructured&nbsp;—&nbsp;X-rays&nbsp;and&nbsp;MRIs,&nbsp;fraud&nbsp;patterns&nbsp;in&nbsp;transaction&nbsp;sequences,&nbsp;visual&nbsp;search,&nbsp;real-time&nbsp;object&nbsp;detection&nbsp;for&nbsp;self-driving&nbsp;cars,&nbsp;visual&nbsp;defects&nbsp;on&nbsp;a&nbsp;production&nbsp;line.&nbsp;Healthcare&nbsp;is&nbsp;worth&nbsp;watching:&nbsp;the&nbsp;AI-in-healthcare&nbsp;market&nbsp;is&nbsp;on&nbsp;a&nbsp;path&nbsp;from&nbsp;roughly&nbsp;$25.9&nbsp;billion&nbsp;in&nbsp;2025&nbsp;to&nbsp;nearly&nbsp;$195&nbsp;billion&nbsp;by&nbsp;2031,&nbsp;and&nbsp;deep&nbsp;learning&#39;s&nbsp;ability&nbsp;to&nbsp;read&nbsp;scans&nbsp;faster&nbsp;than&nbsp;manual&nbsp;review&nbsp;is&nbsp;a&nbsp;big&nbsp;part&nbsp;of&nbsp;why.</p><h2><strong>Which&nbsp;One&nbsp;Should&nbsp;You&nbsp;Learn&nbsp;in&nbsp;2026?</strong></h2><p>Skip&nbsp;the&nbsp;philosophy&nbsp;for&nbsp;a&nbsp;second.&nbsp;Here&#39;s&nbsp;what&nbsp;to&nbsp;actually&nbsp;study,&nbsp;based&nbsp;on&nbsp;where&nbsp;you&nbsp;want&nbsp;to&nbsp;end&nbsp;up.</p><table><tbody><tr><td data-row="1"><strong>Your&nbsp;Goal</strong></td><td data-row="1"><strong>Start&nbsp;With</strong></td></tr><tr><td data-row="2">Data&nbsp;Analyst</td><td data-row="2">Python,&nbsp;Statistics,&nbsp;SQL</td></tr><tr><td data-row="3">Data&nbsp;Scientist</td><td data-row="3">Python,&nbsp;Statistics,&nbsp;Machine&nbsp;Learning</td></tr><tr><td data-row="4">ML&nbsp;Engineer</td><td data-row="4">Python,&nbsp;Machine&nbsp;Learning,&nbsp;MLOps</td></tr><tr><td data-row="5">GenAI&nbsp;Engineer</td><td data-row="5">Machine&nbsp;Learning,&nbsp;Deep&nbsp;Learning,&nbsp;Transformers</td></tr><tr><td data-row="6">Computer&nbsp;Vision</td><td data-row="6">Deep&nbsp;Learning,&nbsp;CNNs</td></tr><tr><td data-row="7">NLP</td><td data-row="7">Deep&nbsp;Learning,&nbsp;Transformers</td></tr></tbody></table><p>&nbsp;</p><p>This&nbsp;decision&nbsp;tree&nbsp;probably&nbsp;matters&nbsp;more&nbsp;than&nbsp;a&nbsp;generic&nbsp;&quot;AI&nbsp;vs&nbsp;ML&nbsp;vs&nbsp;DL&quot;&nbsp;explanation,&nbsp;because&nbsp;most&nbsp;people&nbsp;aren&#39;t&nbsp;picking&nbsp;a&nbsp;field&nbsp;in&nbsp;the&nbsp;abstract.&nbsp;They&#39;re&nbsp;deciding&nbsp;where&nbsp;to&nbsp;spend&nbsp;six&nbsp;months&nbsp;of&nbsp;study&nbsp;time.</p><h2><strong>Common&nbsp;Mistakes&nbsp;People&nbsp;Make&nbsp;Comparing&nbsp;AI,&nbsp;ML,&nbsp;and&nbsp;DL</strong></h2><p>A&nbsp;few&nbsp;habits&nbsp;trip&nbsp;people&nbsp;up&nbsp;here&nbsp;more&nbsp;than&nbsp;anything.&nbsp;Biggest&nbsp;one:&nbsp;assuming&nbsp;Deep&nbsp;Learning&nbsp;always&nbsp;wins.&nbsp;On&nbsp;small,&nbsp;structured&nbsp;datasets,&nbsp;a&nbsp;well-tuned&nbsp;decision&nbsp;tree&nbsp;often&nbsp;beats&nbsp;it&nbsp;on&nbsp;speed&nbsp;and&nbsp;accuracy.&nbsp;Close&nbsp;behind:&nbsp;treating&nbsp;&quot;AI&quot;&nbsp;and&nbsp;&quot;Machine&nbsp;Learning&quot;&nbsp;as&nbsp;interchangeable&nbsp;in&nbsp;job&nbsp;postings&nbsp;or&nbsp;pitches&nbsp;—&nbsp;recruiters&nbsp;notice&nbsp;when&nbsp;someone&nbsp;can&#39;t&nbsp;tell&nbsp;the&nbsp;two&nbsp;apart.</p><p>Compute&nbsp;cost&nbsp;gets&nbsp;ignored&nbsp;a&nbsp;lot&nbsp;too.&nbsp;A&nbsp;Deep&nbsp;Learning&nbsp;model&nbsp;needing&nbsp;a&nbsp;GPU&nbsp;cluster&nbsp;for&nbsp;weeks&nbsp;isn&#39;t&nbsp;automatically&nbsp;the&nbsp;better&nbsp;choice&nbsp;if&nbsp;a&nbsp;lighter&nbsp;ML&nbsp;model&nbsp;already&nbsp;gets&nbsp;95%&nbsp;of&nbsp;the&nbsp;accuracy&nbsp;overnight.&nbsp;There&#39;s&nbsp;also&nbsp;a&nbsp;habit&nbsp;of&nbsp;assuming&nbsp;every&nbsp;AI&nbsp;headline&nbsp;is&nbsp;about&nbsp;generative&nbsp;AI,&nbsp;when&nbsp;plenty&nbsp;of&nbsp;production&nbsp;systems&nbsp;in&nbsp;banking&nbsp;and&nbsp;logistics&nbsp;are&nbsp;still&nbsp;rule-based&nbsp;or&nbsp;classical&nbsp;ML,&nbsp;by&nbsp;design.&nbsp;Last&nbsp;one:&nbsp;skipping&nbsp;interpretability.&nbsp;In&nbsp;regulated&nbsp;industries,&nbsp;a&nbsp;model&nbsp;nobody&nbsp;can&nbsp;explain&nbsp;is&nbsp;often&nbsp;more&nbsp;liability&nbsp;than&nbsp;asset.</p><h2><strong>How&nbsp;to&nbsp;Decide&nbsp;Which&nbsp;One&nbsp;You&nbsp;Actually&nbsp;Need</strong></h2><p>Start&nbsp;with&nbsp;your&nbsp;data,&nbsp;not&nbsp;the&nbsp;trend&nbsp;—&nbsp;that&#39;s&nbsp;really&nbsp;the&nbsp;whole&nbsp;trick.&nbsp;Structured,&nbsp;tabular&nbsp;data&nbsp;points&nbsp;toward&nbsp;classical&nbsp;Machine&nbsp;Learning.&nbsp;Unstructured&nbsp;data&nbsp;—&nbsp;images,&nbsp;audio,&nbsp;free&nbsp;text&nbsp;—&nbsp;points&nbsp;toward&nbsp;Deep&nbsp;Learning.&nbsp;Not&nbsp;sure&nbsp;which&nbsp;layer&nbsp;fits&nbsp;your&nbsp;goals?&nbsp;A<a href="https://www.nidads.com/blog/artificial-intelligence-course" rel="noopener noreferrer" target="_blank">&nbsp;artificial&nbsp;intelligence&nbsp;course</a>&nbsp;is&nbsp;a&nbsp;reasonable&nbsp;place&nbsp;to&nbsp;begin,&nbsp;since&nbsp;it&nbsp;usually&nbsp;walks&nbsp;through&nbsp;where&nbsp;each&nbsp;layer&nbsp;fits&nbsp;before&nbsp;asking&nbsp;you&nbsp;to&nbsp;specialise.</p><p>Be&nbsp;honest&nbsp;about&nbsp;your&nbsp;data&nbsp;volume,&nbsp;and&nbsp;weigh&nbsp;compute&nbsp;cost&nbsp;against&nbsp;what&nbsp;you&#39;re&nbsp;trying&nbsp;to&nbsp;achieve.&nbsp;GPU&nbsp;time&nbsp;isn&#39;t&nbsp;free.&nbsp;If&nbsp;you&nbsp;already&nbsp;know&nbsp;you&nbsp;want&nbsp;to&nbsp;build&nbsp;models&nbsp;rather&nbsp;than&nbsp;just&nbsp;use&nbsp;them,&nbsp;a<a href="https://www.nidads.com/blog/machine-learning-course" rel="noopener noreferrer" target="_blank">&nbsp;machine&nbsp;learning&nbsp;course</a>&nbsp;covers&nbsp;the&nbsp;statistics&nbsp;and&nbsp;modelling&nbsp;groundwork&nbsp;both&nbsp;ML&nbsp;and&nbsp;DL&nbsp;sit&nbsp;on&nbsp;top&nbsp;of.</p><p>Weigh&nbsp;explainability&nbsp;against&nbsp;raw&nbsp;performance&nbsp;too&nbsp;—&nbsp;if&nbsp;someone&nbsp;needs&nbsp;to&nbsp;know&nbsp;why&nbsp;a&nbsp;decision&nbsp;got&nbsp;made,&nbsp;lean&nbsp;toward&nbsp;interpretable&nbsp;ML.&nbsp;Interested&nbsp;in&nbsp;building&nbsp;the&nbsp;pipelines&nbsp;that&nbsp;feed&nbsp;these&nbsp;models,&nbsp;rather&nbsp;than&nbsp;the&nbsp;models&nbsp;themselves?&nbsp;A<a href="https://www.nidads.com/blog/data-engineer-course" rel="noopener noreferrer" target="_blank">&nbsp;data&nbsp;engineer</a>&nbsp;&nbsp;covers&nbsp;the&nbsp;infrastructure&nbsp;layer&nbsp;everything&nbsp;else&nbsp;depends&nbsp;on.&nbsp;Before&nbsp;committing&nbsp;to&nbsp;a&nbsp;path,&nbsp;build&nbsp;one&nbsp;small&nbsp;project&nbsp;—&nbsp;a&nbsp;spam&nbsp;classifier&nbsp;or&nbsp;a&nbsp;basic&nbsp;image&nbsp;classifier&nbsp;teaches&nbsp;more&nbsp;than&nbsp;any&nbsp;roadmap,&nbsp;this&nbsp;article&nbsp;included.</p><h2><strong>Conclusion</strong></h2><p>Not&nbsp;really&nbsp;a&nbsp;contest,&nbsp;when&nbsp;you&nbsp;get&nbsp;down&nbsp;to&nbsp;it.&nbsp;It&#39;s&nbsp;about&nbsp;matching&nbsp;the&nbsp;right&nbsp;level&nbsp;of&nbsp;complexity&nbsp;to&nbsp;your&nbsp;actual&nbsp;problem.&nbsp;AI&nbsp;is&nbsp;the&nbsp;destination.&nbsp;Machine&nbsp;Learning&nbsp;is&nbsp;the&nbsp;most&nbsp;common&nbsp;road&nbsp;there,&nbsp;learning&nbsp;from&nbsp;data&nbsp;instead&nbsp;of&nbsp;hand-written&nbsp;rules.&nbsp;Deep&nbsp;Learning&nbsp;is&nbsp;the&nbsp;specialised&nbsp;lane&nbsp;built&nbsp;for&nbsp;messy,&nbsp;unstructured&nbsp;data&nbsp;that&nbsp;classical&nbsp;algorithms&nbsp;struggle&nbsp;with.&nbsp;Tabular&nbsp;data,&nbsp;modest&nbsp;size?&nbsp;Machine&nbsp;Learning&nbsp;will&nbsp;probably&nbsp;serve&nbsp;you&nbsp;better&nbsp;and&nbsp;cheaper.&nbsp;Images,&nbsp;audio,&nbsp;or&nbsp;language&nbsp;at&nbsp;scale?&nbsp;Deep&nbsp;Learning&nbsp;is&nbsp;doing&nbsp;the&nbsp;heavy&nbsp;lifting&nbsp;behind&nbsp;most&nbsp;of&nbsp;the&nbsp;impressive&nbsp;AI&nbsp;you&#39;re&nbsp;using&nbsp;right&nbsp;now.</p><p>Want&nbsp;the&nbsp;deeper&nbsp;numbers?&nbsp;Grand&nbsp;View&nbsp;Research&#39;s<a href="https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-market" rel="noopener noreferrer" target="_blank">&nbsp;AI&nbsp;market&nbsp;report</a>&nbsp;and<a href="https://www.marketsandmarkets.com/Market-Reports/artificial-intelligence-healthcare-market-54679303.html" rel="noopener noreferrer" target="_blank">&nbsp;MarketsandMarkets&#39;&nbsp;healthcare&nbsp;AI&nbsp;coverage</a>&nbsp;both&nbsp;publish&nbsp;updated&nbsp;data,&nbsp;worth&nbsp;checking&nbsp;directly&nbsp;rather&nbsp;than&nbsp;taking&nbsp;any&nbsp;single&nbsp;article&#39;s&nbsp;word&nbsp;for&nbsp;it.</p><h2><strong>Frequently&nbsp;Asked&nbsp;Questions</strong></h2><p><strong>Is&nbsp;Deep&nbsp;Learning&nbsp;just&nbsp;a&nbsp;fancier&nbsp;name&nbsp;for&nbsp;Machine&nbsp;Learning?</strong></p><p>No&nbsp;—&nbsp;it&#39;s&nbsp;a&nbsp;subset&nbsp;of&nbsp;Machine&nbsp;Learning&nbsp;using&nbsp;multi-layered&nbsp;neural&nbsp;networks.&nbsp;All&nbsp;Deep&nbsp;Learning&nbsp;is&nbsp;Machine&nbsp;Learning,&nbsp;but&nbsp;most&nbsp;Machine&nbsp;Learning&nbsp;isn&#39;t&nbsp;Deep&nbsp;Learning.</p><p><strong>Do&nbsp;I&nbsp;need&nbsp;to&nbsp;learn&nbsp;Machine&nbsp;Learning&nbsp;before&nbsp;Deep&nbsp;Learning?</strong></p><p>Pretty&nbsp;much,&nbsp;yes.&nbsp;Overfitting,&nbsp;train/test&nbsp;splits,&nbsp;evaluation&nbsp;metrics&nbsp;—&nbsp;all&nbsp;of&nbsp;that&nbsp;underpins&nbsp;both,&nbsp;and&nbsp;it&#39;s&nbsp;just&nbsp;easier&nbsp;to&nbsp;grasp&nbsp;with&nbsp;simpler&nbsp;ML&nbsp;models&nbsp;first.</p><p><strong>Can&nbsp;AI&nbsp;exist&nbsp;without&nbsp;any&nbsp;Machine&nbsp;Learning&nbsp;at&nbsp;all?</strong></p><p>It&nbsp;can.&nbsp;Rule-based&nbsp;expert&nbsp;systems&nbsp;and&nbsp;search&nbsp;algorithms&nbsp;count&nbsp;as&nbsp;AI,&nbsp;no&nbsp;data-driven&nbsp;learning&nbsp;involved.</p><p><strong>Is&nbsp;ChatGPT&nbsp;AI,&nbsp;ML,&nbsp;or&nbsp;Deep&nbsp;Learning?</strong></p><p>Honestly,&nbsp;all&nbsp;three.&nbsp;It&#39;s&nbsp;an&nbsp;AI&nbsp;system,&nbsp;built&nbsp;with&nbsp;Machine&nbsp;Learning,&nbsp;specifically&nbsp;through&nbsp;a&nbsp;Deep&nbsp;Learning&nbsp;transformer&nbsp;architecture.</p><p><strong>Which&nbsp;one&nbsp;is&nbsp;easier&nbsp;for&nbsp;a&nbsp;beginner&nbsp;to&nbsp;start&nbsp;with?</strong></p><p>Machine&nbsp;Learning,&nbsp;usually.&nbsp;Less&nbsp;advanced&nbsp;math,&nbsp;smaller&nbsp;datasets,&nbsp;and&nbsp;you&nbsp;get&nbsp;a&nbsp;working&nbsp;result&nbsp;faster&nbsp;than&nbsp;training&nbsp;a&nbsp;neural&nbsp;network&nbsp;from&nbsp;scratch.</p><p><strong>Does&nbsp;Deep&nbsp;Learning&nbsp;always&nbsp;need&nbsp;a&nbsp;GPU?</strong></p><p>Beyond&nbsp;toy&nbsp;datasets,&nbsp;effectively&nbsp;yes&nbsp;—&nbsp;though&nbsp;cloud&nbsp;GPU&nbsp;services&nbsp;have&nbsp;made&nbsp;this&nbsp;a&nbsp;lot&nbsp;more&nbsp;accessible&nbsp;without&nbsp;owning&nbsp;hardware.</p><p><strong>What&nbsp;is&nbsp;the&nbsp;fastest-growing&nbsp;segment&nbsp;of&nbsp;the&nbsp;AI&nbsp;market&nbsp;right&nbsp;now?</strong></p><p>Deep&nbsp;Learning.&nbsp;It&#39;s&nbsp;the&nbsp;engine&nbsp;behind&nbsp;the&nbsp;current&nbsp;generative&nbsp;AI&nbsp;boom&nbsp;—&nbsp;chatbots,&nbsp;image&nbsp;generation,&nbsp;voice&nbsp;systems.</p><p><strong>Is&nbsp;Machine&nbsp;Learning&nbsp;still&nbsp;relevant&nbsp;if&nbsp;Deep&nbsp;Learning&nbsp;exists?</strong></p><p>Very&nbsp;much.&nbsp;On&nbsp;small,&nbsp;structured,&nbsp;spreadsheet-style&nbsp;datasets,&nbsp;classical&nbsp;ML&nbsp;tends&nbsp;to&nbsp;be&nbsp;cheaper,&nbsp;faster&nbsp;to&nbsp;train,&nbsp;and&nbsp;easier&nbsp;to&nbsp;explain.</p><h2><strong>About&nbsp;the&nbsp;Author</strong></h2><p>Quick&nbsp;facts</p><p><strong>Name:</strong>&nbsp;Shagun</p><p><strong>From:</strong>&nbsp;Delhi</p><p><strong>Education:</strong>&nbsp;B.Tech</p><p><strong>Program:</strong>&nbsp;Data&nbsp;Science&nbsp;and&nbsp;Data&nbsp;Analytics</p><p><strong>Placed&nbsp;in:</strong>&nbsp;NIDADS&nbsp;(National&nbsp;Institute&nbsp;of&nbsp;Data&nbsp;Analytics&nbsp;&amp;&nbsp;Data&nbsp;Science)</p><p><strong>Covers&nbsp;topics:</strong>&nbsp;Data&nbsp;Science,&nbsp;Data&nbsp;Analytics,&nbsp;Artificial&nbsp;Intelligence,&nbsp;Machine&nbsp;Learning,&nbsp;Data&nbsp;Engineering,&nbsp;Deep&nbsp;Learning</p><p><strong>Currently&nbsp;working&nbsp;as:&nbsp;</strong>Senior&nbsp;Data&nbsp;Science&nbsp;Trainer</p><p><strong>In&nbsp;her&nbsp;words</strong>:&nbsp;&quot;The&nbsp;best&nbsp;way&nbsp;to&nbsp;learn&nbsp;data&nbsp;science&nbsp;isn&#39;t&nbsp;just&nbsp;solving&nbsp;problems&nbsp;—&nbsp;it&#39;s&nbsp;understanding&nbsp;why&nbsp;the&nbsp;solution&nbsp;works.&nbsp;That&#39;s&nbsp;what&nbsp;I&nbsp;try&nbsp;to&nbsp;teach&nbsp;every&nbsp;single&nbsp;day.&quot;</p>
+      </div>
+    </div>
+  
+</body>
+</html>

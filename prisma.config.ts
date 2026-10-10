@@ -4,10 +4,14 @@ import { fileURLToPath } from "url";
 import { defineConfig, env } from "prisma/config";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: path.join(__dirname, ".env") });
 dotenv.config({ path: path.join(__dirname, ".env.local"), override: true });
 
 // Build URL from env to ensure all pgBouncer params are included
 const rawUrl = process.env.DATABASE_URL || "";
+if (!process.env.DIRECT_URL && rawUrl) {
+  process.env.DIRECT_URL = rawUrl;
+}
 // Ensure pgbouncer and statement_cache_size are set for pooler connections
 let dbUrl = rawUrl;
 try {

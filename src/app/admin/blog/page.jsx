@@ -28,9 +28,14 @@ export default async function AdminBlogPage() {
           <h1>Blogs</h1>
           <p>Manage every article powering your multi-site deployments from a single dashboard.</p>
         </div>
-        <Link href="/admin/blog/create" className="btn btn--primary">
-          + New Post
-        </Link>
+        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", alignItems: "center" }}>
+          <a href="/api/blog/export-doc" className="btn" download>
+            📥 Export All Blogs (.doc)
+          </a>
+          <Link href="/admin/blog/create" className="btn btn--primary">
+            + New Post
+          </Link>
+        </div>
       </header>
 
       {databaseUnavailable ? (
@@ -58,6 +63,9 @@ export default async function AdminBlogPage() {
                   <Link href={`/blog/${blog.slug}`} className="btn btn--ghost" target="_blank" rel="noreferrer">
                     View
                   </Link>
+                  <a href={`/api/blog/export-doc?id=${blog.id}`} className="btn btn--ghost" download>
+                    Export .doc
+                  </a>
                   <Link href={`/admin/blog/edit/${blog.id}`} className="btn">
                     Edit
                   </Link>

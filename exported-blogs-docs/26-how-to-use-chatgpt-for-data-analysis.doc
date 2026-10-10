@@ -1,0 +1,342 @@
+﻿<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+  <meta charset="utf-8" />
+  <title>How to Use ChatGPT for Data Analysis: Prompts, Use Cases &amp; Practical Guide (2026)</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <w:WordDocument>
+      <w:View>Print</w:View>
+      <w:Zoom>100</w:Zoom>
+      <w:DoNotOptimizeForBrowser/>
+    </w:WordDocument>
+  </xml>
+  <![endif]-->
+  <style>
+    @page {
+      size: 21cm 29.7cm;
+      margin: 2cm;
+    }
+    body {
+      font-family: Arial, Calibri, sans-serif;
+      font-size: 11pt;
+      color: #0f172a;
+      line-height: 1.5;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 10px 0;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f1f5f9;
+      font-weight: bold;
+    }
+    h1 { font-size: 20pt; color: #0f172a; margin-top: 16pt; margin-bottom: 8pt; }
+    h2 { font-size: 15pt; color: #1e293b; margin-top: 14pt; margin-bottom: 6pt; }
+    h3 { font-size: 13pt; color: #334155; margin-top: 12pt; margin-bottom: 4pt; }
+    h4 { font-size: 11.5pt; color: #475569; margin-top: 10pt; margin-bottom: 4pt; }
+    p { margin-top: 0; margin-bottom: 8pt; }
+    ul, ol { margin-top: 4pt; margin-bottom: 8pt; padding-left: 24pt; }
+    li { margin-bottom: 4pt; }
+    blockquote {
+      border-left: 3pt solid #0284c7;
+      padding-left: 10pt;
+      margin-left: 0;
+      color: #334155;
+      font-style: italic;
+    }
+    a { color: #0284c7; text-decoration: underline; }
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+  
+    <div class="blog-post-wrapper" style="page-break-after: always; margin-bottom: 40px;">
+      <h1 style="font-size: 22pt; color: #0f172a; border-bottom: 3px solid #0284c7; padding-bottom: 8px; margin-bottom: 16px;">
+        How to Use ChatGPT for Data Analysis: Prompts, Use Cases &amp; Practical Guide (2026)
+      </h1>
+
+      <h2 style="font-size: 14pt; color: #0369a1; margin-top: 20px; margin-bottom: 10px;">
+        1. Blog Form Fields (Copy &amp; Paste into Form)
+      </h2>
+
+      <table border="1" cellspacing="0" cellpadding="8" style="width: 100%; border-collapse: collapse; border: 1px solid #cbd5e1; font-family: Arial, sans-serif; font-size: 10.5pt;">
+        <tbody>
+          <tr>
+            <td style="width: 28%; font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Title</td>
+            <td style="width: 72%; color: #0f172a;">How to Use ChatGPT for Data Analysis: Prompts, Use Cases &amp; Practical Guide (2026)</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Slug</td>
+            <td style="color: #0f172a; font-family: Consolas, monospace;">how-to-use-chatgpt-for-data-analysis</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Meta Title (SEO)</td>
+            <td style="color: #0f172a;">How to Use ChatGPT for Data Analysis: Practical Guide (2026)</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Meta Description (SEO)</td>
+            <td style="color: #0f172a;">How to Use ChatGPT for Data Analysis: Turn raw Excel and CSV data into clear insights, charts, trends, and decisions using powerful AI prompts.</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Publisher</td>
+            <td style="color: #0f172a;">Team Nidads</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Author Name</td>
+            <td style="color: #0f172a;">Team Nidads</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Author Role</td>
+            <td style="color: #0f172a;"></td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Author Bio</td>
+            <td style="color: #0f172a;"></td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Author Photo URL</td>
+            <td style="color: #0284c7; word-break: break-all;"></td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Category</td>
+            <td style="color: #0f172a;">Data Analytics</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Tags (Comma-separated)</td>
+            <td style="color: #0f172a;">chatgpt for data analysis, chatgpt prompts for data analysts, chatgpt advanced data analysis, how to analyze csv with chatgpt</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Keywords (SEO)</td>
+            <td style="color: #0f172a;">chatgpt for data analysis, chatgpt prompts for data analysts, chatgpt advanced data analysis, how to analyze csv with chatgpt</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Cover Image URL</td>
+            <td style="color: #0284c7; word-break: break-all;">https://i.ibb.co/Y7V27H5C/How-to-Use-Chat-GPT-for-Data-Analysis.webp</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">OG Image URL (Social Sharing)</td>
+            <td style="color: #0284c7; word-break: break-all;"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 style="font-size: 14pt; color: #0369a1; margin-top: 24px; margin-bottom: 10px;">
+        2. Structured Data Schemas (JSON-LD)
+      </h2>
+      
+          <div style="margin-bottom: 14px;">
+            <p style="font-weight: bold; margin-bottom: 4px; color: #1e293b;">Schema 1:</p>
+            <pre style="background-color: #f8fafc; border: 1px solid #cbd5e1; padding: 10px; font-family: Consolas, monospace; font-size: 9pt; white-space: pre-wrap; word-wrap: break-word;">{
+  &quot;@graph&quot;: [
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/how-to-use-chatgpt-for-data-analysis#blogposting&quot;,
+      &quot;url&quot;: &quot;https://www.nidads.com/blog/how-to-use-chatgpt-for-data-analysis&quot;,
+      &quot;@type&quot;: &quot;BlogPosting&quot;,
+      &quot;image&quot;: {
+        &quot;url&quot;: &quot;https://i.ibb.co/Y7V27H5C/How-to-Use-Chat-GPT-for-Data-Analysis.webp&quot;,
+        &quot;@type&quot;: &quot;ImageObject&quot;
+      },
+      &quot;author&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/blog/how-to-use-chatgpt-for-data-analysis#author&quot;
+      },
+      &quot;headline&quot;: &quot;How to Use ChatGPT for Data Analysis: Prompts, Use Cases &amp; Practical Guide (2026)&quot;,
+      &quot;keywords&quot;: &quot;chatgpt for data analysis, chatgpt prompts for data analysts, chatgpt advanced data analysis, how to analyze csv with chatgpt&quot;,
+      &quot;publisher&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/#organization&quot;
+      },
+      &quot;speakable&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/blog/how-to-use-chatgpt-for-data-analysis#speakable&quot;
+      },
+      &quot;description&quot;: &quot;How to Use ChatGPT for Data Analysis: Turn raw Excel and CSV data into clear insights, charts, trends, and decisions using powerful AI prompts.&quot;,
+      &quot;dateModified&quot;: &quot;2026-09-03&quot;,
+      &quot;datePublished&quot;: &quot;2026-06-07&quot;,
+      &quot;articleSection&quot;: &quot;Data Analytics&quot;,
+      &quot;mainEntityOfPage&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/blog/how-to-use-chatgpt-for-data-analysis&quot;,
+        &quot;@type&quot;: &quot;WebPage&quot;
+      }
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/how-to-use-chatgpt-for-data-analysis#author&quot;,
+      &quot;name&quot;: &quot;Deepanshu&quot;,
+      &quot;@type&quot;: &quot;Person&quot;,
+      &quot;alumniOf&quot;: {
+        &quot;name&quot;: &quot;MCA Program&quot;,
+        &quot;@type&quot;: &quot;CollegeOrUniversity&quot;
+      },
+      &quot;jobTitle&quot;: &quot;Senior Data Analyst&quot;,
+      &quot;worksFor&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/#organization&quot;
+      },
+      &quot;knowsAbout&quot;: [
+        &quot;Data Science&quot;,
+        &quot;Data Analytics&quot;,
+        &quot;Artificial Intelligence&quot;,
+        &quot;Machine Learning&quot;,
+        &quot;Data Engineering&quot;,
+        &quot;Deep Learning&quot;
+      ],
+      &quot;description&quot;: &quot;Deepanshu completed his program in Data Science and Data Analytics and was placed at NIDADS (National Institute of Data Analytics &amp; Data Science). He now works as a Senior Data Analyst, covering Data Science, Data Analytics, Artificial Intelligence, Machine Learning, Data Engineering, and Deep Learning.&quot;,
+      &quot;homeLocation&quot;: {
+        &quot;name&quot;: &quot;Delhi&quot;,
+        &quot;@type&quot;: &quot;Place&quot;
+      }
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/#organization&quot;,
+      &quot;url&quot;: &quot;https://www.nidads.com/&quot;,
+      &quot;logo&quot;: {
+        &quot;url&quot;: &quot;https://www.nidads.com/Nidads-2.webp&quot;,
+        &quot;@type&quot;: &quot;ImageObject&quot;
+      },
+      &quot;name&quot;: &quot;NIDADS&quot;,
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;sameAs&quot;: [
+        &quot;https://www.instagram.com/nidads_official/&quot;,
+        &quot;https://www.linkedin.com/in/national-institute-of-data-analytics-and-data-science-28b709381/&quot;
+      ],
+      &quot;legalName&quot;: &quot;National Institute of Data Analytics &amp; Data Science&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/how-to-use-chatgpt-for-data-analysis#breadcrumb&quot;,
+      &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+      &quot;itemListElement&quot;: [
+        {
+          &quot;item&quot;: &quot;https://www.nidads.com/&quot;,
+          &quot;name&quot;: &quot;Home&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 1
+        },
+        {
+          &quot;item&quot;: &quot;https://www.nidads.com/blog&quot;,
+          &quot;name&quot;: &quot;Blog&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 2
+        },
+        {
+          &quot;item&quot;: &quot;https://www.nidads.com/blog/how-to-use-chatgpt-for-data-analysis&quot;,
+          &quot;name&quot;: &quot;How to Use ChatGPT for Data Analysis&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 3
+        }
+      ]
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/how-to-use-chatgpt-for-data-analysis#prompt-reference&quot;,
+      &quot;name&quot;: &quot;ChatGPT Prompts for Data Analysis — Quick Reference&quot;,
+      &quot;@type&quot;: &quot;ItemList&quot;,
+      &quot;itemListElement&quot;: [
+        {
+          &quot;name&quot;: &quot;Data cleaning — Write Pandas code to clean this dataset&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 1
+        },
+        {
+          &quot;name&quot;: &quot;EDA — What EDA should I run on this data and how?&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 2
+        },
+        {
+          &quot;name&quot;: &quot;Visualisation — Generate a bar chart comparing these columns&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 3
+        },
+        {
+          &quot;name&quot;: &quot;Debugging code — I'm getting this error, here's my code and data&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 4
+        },
+        {
+          &quot;name&quot;: &quot;Report writing — Summarise these findings for a non-technical audience&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 5
+        },
+        {
+          &quot;name&quot;: &quot;SQL queries — Write a SQL query to find the top 5 customers by revenue&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 6
+        },
+        {
+          &quot;name&quot;: &quot;Outlier detection — Identify outliers in this dataset using the IQR method&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 7
+        }
+      ]
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/how-to-use-chatgpt-for-data-analysis#speakable&quot;,
+      &quot;@type&quot;: &quot;SpeakableSpecification&quot;,
+      &quot;xpath&quot;: [
+        &quot;/html/head/title&quot;,
+        &quot;//*[@id='tldr']&quot;,
+        &quot;//*[@id='use-cases']&quot;
+      ],
+      &quot;cssSelector&quot;: [
+        &quot;h1&quot;,
+        &quot;.tldr&quot;,
+        &quot;.use-cases&quot;
+      ]
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/how-to-use-chatgpt-for-data-analysis#howto&quot;,
+      &quot;name&quot;: &quot;How to Use ChatGPT for Data Analysis&quot;,
+      &quot;step&quot;: [
+        {
+          &quot;name&quot;: &quot;Clean and preprocess data&quot;,
+          &quot;text&quot;: &quot;Ask ChatGPT to write Pandas code that standardizes formats and fills missing values.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 1
+        },
+        {
+          &quot;name&quot;: &quot;Run exploratory data analysis&quot;,
+          &quot;text&quot;: &quot;Ask ChatGPT which EDA steps to follow and have it generate summary statistics and a correlation heatmap.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 2
+        },
+        {
+          &quot;name&quot;: &quot;Write and debug Python code&quot;,
+          &quot;text&quot;: &quot;Paste an error and your dataframe so ChatGPT can identify the issue and give corrected code with an explanation.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 3
+        },
+        {
+          &quot;name&quot;: &quot;Analyze CSV or Excel files directly&quot;,
+          &quot;text&quot;: &quot;Upload the file in ChatGPT Plus and ask questions in plain English to get answers and charts without writing code.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 4
+        },
+        {
+          &quot;name&quot;: &quot;Generate a data analysis report&quot;,
+          &quot;text&quot;: &quot;Paste key findings and have ChatGPT draft a short summary highlighting the top insights and a next step.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 5
+        }
+      ],
+      &quot;@type&quot;: &quot;HowTo&quot;,
+      &quot;description&quot;: &quot;Five practical ways to use ChatGPT for data analysis tasks, from cleaning to reporting.&quot;
+    }
+  ],
+  &quot;@context&quot;: &quot;https://schema.org&quot;
+}</pre>
+          </div>
+        
+
+      <h2 style="font-size: 14pt; color: #0369a1; margin-top: 24px; margin-bottom: 10px;">
+        3. Content (Rich Text — Copy &amp; Paste Directly into Blog Editor)
+      </h2>
+      <div class="blog-rich-content" style="border: 1px solid #cbd5e1; padding: 18px; background-color: #ffffff; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #0f172a;">
+        <p>If&nbsp;you&#39;ve&nbsp;been&nbsp;spending&nbsp;hours&nbsp;cleaning&nbsp;data,&nbsp;writing&nbsp;Python&nbsp;code,&nbsp;or&nbsp;staring&nbsp;at&nbsp;a&nbsp;messy&nbsp;Excel&nbsp;sheet&nbsp;trying&nbsp;to&nbsp;figure&nbsp;out&nbsp;where&nbsp;to&nbsp;start&nbsp;—&nbsp;ChatGPT&nbsp;can&nbsp;genuinely&nbsp;save&nbsp;you&nbsp;a&nbsp;lot&nbsp;of&nbsp;that&nbsp;time.</p><p>This&nbsp;isn&#39;t&nbsp;about&nbsp;replacing&nbsp;your&nbsp;skills.&nbsp;It&#39;s&nbsp;about&nbsp;making&nbsp;your&nbsp;work&nbsp;faster,&nbsp;smarter,&nbsp;and&nbsp;a&nbsp;lot&nbsp;less&nbsp;frustrating.</p><p>In&nbsp;this&nbsp;guide,&nbsp;you&#39;ll&nbsp;learn&nbsp;exactly&nbsp;how&nbsp;data&nbsp;analysts&nbsp;use&nbsp;ChatGPT&nbsp;at&nbsp;work&nbsp;—&nbsp;with&nbsp;real&nbsp;prompts&nbsp;you&nbsp;can&nbsp;copy,&nbsp;practical&nbsp;use&nbsp;cases,&nbsp;and&nbsp;honest&nbsp;advice&nbsp;on&nbsp;where&nbsp;it&nbsp;helps&nbsp;and&nbsp;where&nbsp;it&nbsp;falls&nbsp;short.</p><p><strong>TL;DR</strong></p><ul><li>ChatGPT&#39;s&nbsp;Advanced&nbsp;Data&nbsp;Analysis&nbsp;feature&nbsp;lets&nbsp;you&nbsp;upload&nbsp;CSVs/Excel&nbsp;files&nbsp;and&nbsp;get&nbsp;insights,&nbsp;charts,&nbsp;and&nbsp;cleaned&nbsp;data&nbsp;—&nbsp;no&nbsp;code&nbsp;needed&nbsp;(Plus&nbsp;plan)</li><li>Free&nbsp;plan&nbsp;users&nbsp;can&nbsp;still&nbsp;use&nbsp;it&nbsp;to&nbsp;generate&nbsp;Python&nbsp;and&nbsp;SQL&nbsp;code&nbsp;on&nbsp;demand</li><li>Top&nbsp;use&nbsp;cases:&nbsp;data&nbsp;cleaning,&nbsp;EDA,&nbsp;code&nbsp;debugging,&nbsp;file&nbsp;analysis,&nbsp;and&nbsp;report&nbsp;writing</li><li>Always&nbsp;verify&nbsp;outputs&nbsp;—&nbsp;ChatGPT&nbsp;can&nbsp;hallucinate,&nbsp;so&nbsp;treat&nbsp;it&nbsp;as&nbsp;a&nbsp;fast&nbsp;first&nbsp;draft,&nbsp;not&nbsp;a&nbsp;final&nbsp;answer</li></ul><h2><strong>What&nbsp;Is&nbsp;ChatGPT&#39;s&nbsp;Advanced&nbsp;Data&nbsp;Analysis&nbsp;Feature?</strong></h2><p>Before&nbsp;jumping&nbsp;into&nbsp;prompts,&nbsp;it&nbsp;helps&nbsp;to&nbsp;know&nbsp;what&nbsp;you&#39;re&nbsp;working&nbsp;with.</p><p>ChatGPT&nbsp;(Plus&nbsp;and&nbsp;above)&nbsp;comes&nbsp;with&nbsp;a&nbsp;built-in&nbsp;<strong>Advanced&nbsp;Data&nbsp;Analysis</strong>&nbsp;feature&nbsp;that&nbsp;lets&nbsp;you&nbsp;upload&nbsp;files&nbsp;—&nbsp;CSVs,&nbsp;Excel&nbsp;sheets,&nbsp;PDFs&nbsp;—&nbsp;and&nbsp;ask&nbsp;questions&nbsp;about&nbsp;them&nbsp;directly.&nbsp;It&nbsp;can&nbsp;run&nbsp;Python&nbsp;code&nbsp;in&nbsp;the&nbsp;background,&nbsp;generate&nbsp;charts,&nbsp;clean&nbsp;data,&nbsp;and&nbsp;give&nbsp;you&nbsp;outputs&nbsp;without&nbsp;you&nbsp;writing&nbsp;a&nbsp;single&nbsp;line&nbsp;of&nbsp;code&nbsp;yourself.</p><p>For&nbsp;free&nbsp;users,&nbsp;ChatGPT&nbsp;can&nbsp;still&nbsp;help&nbsp;with&nbsp;data&nbsp;analysis&nbsp;through&nbsp;text-based&nbsp;prompts&nbsp;—&nbsp;writing&nbsp;Python&nbsp;or&nbsp;SQL&nbsp;code&nbsp;you&nbsp;can&nbsp;run&nbsp;yourself,&nbsp;explaining&nbsp;datasets,&nbsp;or&nbsp;helping&nbsp;you&nbsp;structure&nbsp;your&nbsp;analysis.</p><table><tbody><tr><td data-row="1">India,&nbsp;notably,&nbsp;uses&nbsp;ChatGPT&nbsp;for&nbsp;data&nbsp;analysis&nbsp;at&nbsp;four&nbsp;times&nbsp;the&nbsp;global&nbsp;average.&nbsp;If&nbsp;you&#39;re&nbsp;a&nbsp;student&nbsp;or&nbsp;working&nbsp;professional&nbsp;here&nbsp;and&nbsp;not&nbsp;using&nbsp;it&nbsp;yet,&nbsp;you&#39;re&nbsp;leaving&nbsp;a&nbsp;serious&nbsp;productivity&nbsp;advantage&nbsp;on&nbsp;the&nbsp;table.<strong><a href="https://www.nidads.com/blog/python-and-data-science-jobs-in-2026" rel="noopener noreferrer" target="_blank">python&nbsp;and&nbsp;data&nbsp;science</a></strong></td><td data-row="1"></td></tr></tbody></table><p></p><h2><strong>5&nbsp;Practical&nbsp;Use&nbsp;Cases&nbsp;of&nbsp;ChatGPT&nbsp;for&nbsp;Data&nbsp;Analysis</strong></h2><h3><strong>1.&nbsp;Data&nbsp;Cleaning&nbsp;and&nbsp;Preprocessing</strong></h3><p>Messy&nbsp;data&nbsp;is&nbsp;the&nbsp;reality&nbsp;for&nbsp;every&nbsp;analyst.&nbsp;Inconsistent&nbsp;date&nbsp;formats,&nbsp;blank&nbsp;cells,&nbsp;duplicate&nbsp;rows&nbsp;—&nbsp;it&nbsp;eats&nbsp;time.</p><p><strong>Prompt&nbsp;to&nbsp;try:</strong></p><p>&quot;I&nbsp;have&nbsp;a&nbsp;CSV&nbsp;with&nbsp;sales&nbsp;data.&nbsp;The&nbsp;&#39;Date&#39;&nbsp;column&nbsp;has&nbsp;mixed&nbsp;formats&nbsp;(DD-MM-YYYY&nbsp;and&nbsp;MM/DD/YYYY),&nbsp;and&nbsp;there&nbsp;are&nbsp;blank&nbsp;rows&nbsp;in&nbsp;the&nbsp;&#39;Revenue&#39;&nbsp;column.&nbsp;Write&nbsp;Python&nbsp;code&nbsp;using&nbsp;Pandas&nbsp;to&nbsp;standardise&nbsp;the&nbsp;date&nbsp;format&nbsp;and&nbsp;fill&nbsp;missing&nbsp;revenue&nbsp;values&nbsp;with&nbsp;the&nbsp;column&nbsp;median.&quot;</p><p>ChatGPT&nbsp;will&nbsp;give&nbsp;you&nbsp;clean,&nbsp;working&nbsp;code.&nbsp;You&nbsp;run&nbsp;it,&nbsp;the&nbsp;data&nbsp;is&nbsp;fixed.&nbsp;Done&nbsp;in&nbsp;two&nbsp;minutes&nbsp;instead&nbsp;of&nbsp;twenty.</p><h3><strong>2.&nbsp;Exploratory&nbsp;Data&nbsp;Analysis&nbsp;(EDA)</strong></h3><p>EDA&nbsp;is&nbsp;often&nbsp;where&nbsp;beginners&nbsp;feel&nbsp;stuck&nbsp;—&nbsp;they&nbsp;have&nbsp;data&nbsp;but&nbsp;don&#39;t&nbsp;know&nbsp;where&nbsp;to&nbsp;begin.&nbsp;ChatGPT&nbsp;is&nbsp;genuinely&nbsp;useful&nbsp;here.</p><p><strong>Prompt&nbsp;to&nbsp;try:</strong></p><p>&quot;I&#39;ve&nbsp;uploaded&nbsp;a&nbsp;CSV&nbsp;of&nbsp;customer&nbsp;purchase&nbsp;data&nbsp;with&nbsp;columns:&nbsp;CustomerID,&nbsp;Age,&nbsp;City,&nbsp;ProductCategory,&nbsp;PurchaseAmount,&nbsp;Date.&nbsp;What&nbsp;EDA&nbsp;steps&nbsp;should&nbsp;I&nbsp;follow,&nbsp;and&nbsp;can&nbsp;you&nbsp;write&nbsp;the&nbsp;Python&nbsp;code&nbsp;to&nbsp;generate&nbsp;summary&nbsp;statistics&nbsp;and&nbsp;a&nbsp;correlation&nbsp;heatmap?&quot;</p><p>It&nbsp;will&nbsp;walk&nbsp;you&nbsp;through&nbsp;the&nbsp;analysis&nbsp;logic&nbsp;and&nbsp;produce&nbsp;ready-to-run&nbsp;code.&nbsp;A&nbsp;great&nbsp;way&nbsp;to&nbsp;learn&nbsp;while&nbsp;doing.</p><h3><strong>3.&nbsp;Writing&nbsp;and&nbsp;Debugging&nbsp;Python&nbsp;Code&nbsp;for&nbsp;Analysis</strong></h3><p>This&nbsp;is&nbsp;where&nbsp;ChatGPT&nbsp;for&nbsp;data&nbsp;analysts&nbsp;really&nbsp;shines.&nbsp;Whether&nbsp;you&#39;re&nbsp;a&nbsp;beginner&nbsp;who&nbsp;struggles&nbsp;with&nbsp;syntax&nbsp;or&nbsp;an&nbsp;intermediate&nbsp;analyst&nbsp;hitting&nbsp;a&nbsp;Pandas&nbsp;error&nbsp;—&nbsp;ChatGPT&nbsp;fixes&nbsp;it&nbsp;fast.</p><p><strong>Prompt&nbsp;to&nbsp;try:</strong></p><p>&quot;I&#39;m&nbsp;getting&nbsp;a&nbsp;KeyError&nbsp;when&nbsp;running&nbsp;this&nbsp;line:&nbsp;df[&#39;profit&#39;]&nbsp;=&nbsp;df[&#39;revenue&#39;]&nbsp;-&nbsp;df[&#39;cost&#39;].&nbsp;Here&#39;s&nbsp;my&nbsp;dataframe&nbsp;head:&nbsp;[paste&nbsp;your&nbsp;data].&nbsp;What&#39;s&nbsp;wrong&nbsp;and&nbsp;how&nbsp;do&nbsp;I&nbsp;fix&nbsp;it?&quot;</p><p>It&nbsp;reads&nbsp;your&nbsp;data,&nbsp;identifies&nbsp;the&nbsp;issue,&nbsp;and&nbsp;gives&nbsp;you&nbsp;corrected&nbsp;code&nbsp;with&nbsp;an&nbsp;explanation.&nbsp;Much&nbsp;faster&nbsp;than&nbsp;20&nbsp;minutes&nbsp;on&nbsp;Stack&nbsp;Overflow.</p><h3><strong>4.&nbsp;Analysing&nbsp;CSV&nbsp;Files&nbsp;and&nbsp;Excel&nbsp;Data&nbsp;Directly</strong></h3><p>If&nbsp;you&nbsp;have&nbsp;a&nbsp;ChatGPT&nbsp;Plus&nbsp;account,&nbsp;upload&nbsp;your&nbsp;file&nbsp;directly&nbsp;and&nbsp;ask&nbsp;questions&nbsp;in&nbsp;plain&nbsp;English&nbsp;—&nbsp;no&nbsp;code&nbsp;needed.</p><p><strong>Prompt&nbsp;to&nbsp;try:&nbsp;</strong><a href="https://www.nidads.com/blog/big-data-course-2026" rel="noopener noreferrer" target="_blank">big&nbsp;data&nbsp;course</a></p><p>&quot;Here&#39;s&nbsp;my&nbsp;sales&nbsp;data&nbsp;for&nbsp;Q1&nbsp;2026.&nbsp;Which&nbsp;product&nbsp;category&nbsp;had&nbsp;the&nbsp;highest&nbsp;average&nbsp;revenue?&nbsp;Show&nbsp;me&nbsp;a&nbsp;bar&nbsp;chart&nbsp;comparing&nbsp;all&nbsp;categories.&quot;</p><p>ChatGPT&nbsp;will&nbsp;process&nbsp;the&nbsp;file,&nbsp;calculate&nbsp;the&nbsp;answer,&nbsp;and&nbsp;generate&nbsp;the&nbsp;chart&nbsp;—&nbsp;all&nbsp;within&nbsp;the&nbsp;chat&nbsp;window.&nbsp;This&nbsp;is&nbsp;especially&nbsp;useful&nbsp;for&nbsp;quick&nbsp;business&nbsp;reporting&nbsp;or&nbsp;when&nbsp;you&nbsp;need&nbsp;insights&nbsp;without&nbsp;setting&nbsp;up&nbsp;a&nbsp;Python&nbsp;environment.</p><h3><strong>5.&nbsp;Generating&nbsp;Data&nbsp;Analysis&nbsp;Reports</strong></h3><p>Writing&nbsp;a&nbsp;summary&nbsp;after&nbsp;your&nbsp;analysis&nbsp;is&nbsp;often&nbsp;the&nbsp;part&nbsp;analysts&nbsp;dread&nbsp;most.&nbsp;ChatGPT&nbsp;can&nbsp;help&nbsp;you&nbsp;turn&nbsp;raw&nbsp;findings&nbsp;into&nbsp;a&nbsp;clean,&nbsp;readable&nbsp;report.</p><p><strong>Prompt&nbsp;to&nbsp;try:</strong></p><p>&quot;Based&nbsp;on&nbsp;this&nbsp;data:&nbsp;[paste&nbsp;key&nbsp;findings],&nbsp;write&nbsp;a&nbsp;short&nbsp;data&nbsp;analysis&nbsp;summary&nbsp;for&nbsp;a&nbsp;business&nbsp;stakeholder.&nbsp;Use&nbsp;simple&nbsp;language,&nbsp;highlight&nbsp;the&nbsp;top&nbsp;3&nbsp;insights,&nbsp;and&nbsp;suggest&nbsp;one&nbsp;next&nbsp;step.&quot;</p><p>The&nbsp;output&nbsp;won&#39;t&nbsp;always&nbsp;be&nbsp;perfect,&nbsp;but&nbsp;it&nbsp;gives&nbsp;you&nbsp;a&nbsp;solid&nbsp;draft&nbsp;in&nbsp;seconds&nbsp;that&nbsp;you&nbsp;can&nbsp;edit&nbsp;—&nbsp;rather&nbsp;than&nbsp;starting&nbsp;from&nbsp;a&nbsp;blank&nbsp;page.</p><h2><strong>ChatGPT&nbsp;vs&nbsp;Python&nbsp;for&nbsp;Data&nbsp;Analysis:&nbsp;What&#39;s&nbsp;the&nbsp;Difference?</strong></h2><p>A&nbsp;question&nbsp;that&nbsp;comes&nbsp;up&nbsp;a&nbsp;lot,&nbsp;especially&nbsp;among&nbsp;beginners.</p><p>The&nbsp;honest&nbsp;answer&nbsp;is:&nbsp;<strong>they&nbsp;work&nbsp;better&nbsp;together&nbsp;than&nbsp;apart.</strong></p><p>ChatGPT&nbsp;is&nbsp;not&nbsp;replacing&nbsp;Python.&nbsp;What&nbsp;it&nbsp;does&nbsp;is&nbsp;dramatically&nbsp;lower&nbsp;the&nbsp;barrier&nbsp;to&nbsp;using&nbsp;Python.&nbsp;You&nbsp;describe&nbsp;what&nbsp;you&nbsp;want&nbsp;in&nbsp;plain&nbsp;English,&nbsp;and&nbsp;it&nbsp;writes&nbsp;the&nbsp;code.&nbsp;You&nbsp;still&nbsp;run&nbsp;the&nbsp;code.&nbsp;You&nbsp;still&nbsp;understand&nbsp;the&nbsp;output.&nbsp;But&nbsp;you&nbsp;spend&nbsp;far&nbsp;less&nbsp;time&nbsp;on&nbsp;syntax&nbsp;and&nbsp;far&nbsp;more&nbsp;time&nbsp;on&nbsp;actual&nbsp;thinking.</p><p>For&nbsp;someone&nbsp;learning&nbsp;data&nbsp;analysis&nbsp;in&nbsp;India&nbsp;right&nbsp;now&nbsp;—&nbsp;whether&nbsp;you&#39;re&nbsp;fresh&nbsp;out&nbsp;of&nbsp;12th&nbsp;grade&nbsp;or&nbsp;switching&nbsp;careers&nbsp;—&nbsp;pairing&nbsp;ChatGPT&nbsp;with&nbsp;a&nbsp;structured&nbsp;Python&nbsp;course&nbsp;gives&nbsp;you&nbsp;a&nbsp;real&nbsp;edge&nbsp;in&nbsp;interviews&nbsp;and&nbsp;on&nbsp;the&nbsp;job.&nbsp;<a href="https://www.nidads.com/blog/data-analyst-roadmap" rel="noopener noreferrer" target="_blank">data&nbsp;analyst&nbsp;roadmap&nbsp;for&nbsp;beginners</a></p><h2><strong>Prompts&nbsp;That&nbsp;Actually&nbsp;Work:&nbsp;A&nbsp;Quick&nbsp;Reference</strong></h2><p>Here&#39;s&nbsp;a&nbsp;summary&nbsp;of&nbsp;the&nbsp;most&nbsp;useful&nbsp;ChatGPT&nbsp;prompts&nbsp;for&nbsp;data&nbsp;analysis&nbsp;tasks:</p><p class="ql-align-center"><strong>Task</strong></p><p class="ql-align-center"><strong>Prompt&nbsp;Starter</strong></p><p>Data&nbsp;cleaning</p><p>&quot;Write&nbsp;Pandas&nbsp;code&nbsp;to&nbsp;clean&nbsp;this&nbsp;dataset...&quot;</p><p>EDA</p><p>&quot;What&nbsp;EDA&nbsp;should&nbsp;I&nbsp;run&nbsp;on&nbsp;this&nbsp;data&nbsp;and&nbsp;how?&quot;</p><p>Visualisation</p><p>&quot;Generate&nbsp;a&nbsp;bar&nbsp;chart&nbsp;comparing&nbsp;these&nbsp;columns...&quot;</p><p>Debugging&nbsp;code</p><p>&quot;I&#39;m&nbsp;getting&nbsp;this&nbsp;error.&nbsp;Here&#39;s&nbsp;my&nbsp;code&nbsp;and&nbsp;data...&quot;</p><p>Report&nbsp;writing</p><p>&quot;Summarise&nbsp;these&nbsp;findings&nbsp;for&nbsp;a&nbsp;non-technical&nbsp;audience...&quot;</p><p>SQL&nbsp;queries</p><p>&quot;Write&nbsp;a&nbsp;SQL&nbsp;query&nbsp;to&nbsp;find&nbsp;the&nbsp;top&nbsp;5&nbsp;customers&nbsp;by&nbsp;revenue...&quot;</p><p>Outlier&nbsp;detection&nbsp;<a href="https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt?utm_source=chatgpt.com" rel="noopener noreferrer" target="_blank">ChatGPT&nbsp;data&nbsp;analysis</a></p><p>&quot;Identify&nbsp;outliers&nbsp;in&nbsp;this&nbsp;dataset&nbsp;using&nbsp;the&nbsp;IQR&nbsp;method...&quot;</p><p>Save&nbsp;these.&nbsp;You&#39;ll&nbsp;use&nbsp;them&nbsp;more&nbsp;than&nbsp;you&nbsp;think.</p><h2><strong>Limitations&nbsp;to&nbsp;Be&nbsp;Aware&nbsp;Of</strong></h2><p>ChatGPT&nbsp;is&nbsp;powerful,&nbsp;but&nbsp;it&#39;s&nbsp;not&nbsp;perfect&nbsp;—&nbsp;and&nbsp;knowing&nbsp;its&nbsp;limits&nbsp;makes&nbsp;you&nbsp;a&nbsp;better&nbsp;analyst,&nbsp;not&nbsp;a&nbsp;worse&nbsp;one.</p><p><strong>It&nbsp;can&nbsp;hallucinate.</strong>&nbsp;Sometimes&nbsp;it&nbsp;generates&nbsp;code&nbsp;that&nbsp;looks&nbsp;right&nbsp;but&nbsp;has&nbsp;a&nbsp;subtle&nbsp;bug.&nbsp;Always&nbsp;run&nbsp;and&nbsp;verify&nbsp;the&nbsp;output.</p><p><strong>It&nbsp;doesn&#39;t&nbsp;have&nbsp;your&nbsp;data&nbsp;context.</strong>&nbsp;The&nbsp;more&nbsp;specific&nbsp;and&nbsp;detailed&nbsp;your&nbsp;prompt,&nbsp;the&nbsp;better&nbsp;the&nbsp;response.&nbsp;Vague&nbsp;inputs&nbsp;give&nbsp;vague&nbsp;outputs.</p><p><strong>It&#39;s&nbsp;not&nbsp;a&nbsp;substitute&nbsp;for&nbsp;understanding.</strong>&nbsp;If&nbsp;you&nbsp;use&nbsp;ChatGPT&nbsp;to&nbsp;complete&nbsp;analysis&nbsp;without&nbsp;understanding&nbsp;what&nbsp;it&#39;s&nbsp;doing,&nbsp;you&nbsp;won&#39;t&nbsp;be&nbsp;able&nbsp;to&nbsp;explain&nbsp;it&nbsp;in&nbsp;an&nbsp;interview&nbsp;or&nbsp;adapt&nbsp;it&nbsp;for&nbsp;a&nbsp;different&nbsp;problem.&nbsp;Use&nbsp;it&nbsp;as&nbsp;a&nbsp;tool&nbsp;to&nbsp;learn&nbsp;faster,&nbsp;not&nbsp;to&nbsp;skip&nbsp;learning&nbsp;entirely.</p><h2><strong>Who&nbsp;Should&nbsp;Learn&nbsp;This?</strong></h2><p>If&nbsp;you&#39;re&nbsp;a&nbsp;data&nbsp;analytics&nbsp;student,&nbsp;a&nbsp;working&nbsp;professional&nbsp;in&nbsp;India&nbsp;looking&nbsp;to&nbsp;upskill,&nbsp;or&nbsp;someone&nbsp;preparing&nbsp;for&nbsp;a&nbsp;data&nbsp;analyst&nbsp;role&nbsp;—&nbsp;knowing&nbsp;how&nbsp;to&nbsp;work&nbsp;with&nbsp;AI&nbsp;tools&nbsp;like&nbsp;ChatGPT&nbsp;is&nbsp;now&nbsp;a&nbsp;baseline&nbsp;expectation,&nbsp;not&nbsp;a&nbsp;bonus.</p><p>Hiring&nbsp;managers&nbsp;in&nbsp;2026&nbsp;aren&#39;t&nbsp;just&nbsp;looking&nbsp;for&nbsp;people&nbsp;who&nbsp;can&nbsp;code.&nbsp;They&nbsp;want&nbsp;people&nbsp;who&nbsp;can&nbsp;get&nbsp;results&nbsp;efficiently&nbsp;—&nbsp;and&nbsp;that&nbsp;means&nbsp;knowing&nbsp;which&nbsp;tools&nbsp;to&nbsp;use&nbsp;and&nbsp;when.</p><p>At&nbsp;NIDADS,&nbsp;our&nbsp;courses&nbsp;cover&nbsp;AI&nbsp;tools&nbsp;alongside&nbsp;Python,&nbsp;SQL,&nbsp;Power&nbsp;BI,&nbsp;and&nbsp;machine&nbsp;learning&nbsp;—&nbsp;so&nbsp;you&nbsp;graduate&nbsp;job-ready,&nbsp;not&nbsp;just&nbsp;certificate-ready.&nbsp;If&nbsp;you&#39;re&nbsp;figuring&nbsp;out&nbsp;where&nbsp;to&nbsp;start,<u><a href="https://www.nidads.com/course" rel="noopener noreferrer" target="_blank">&nbsp;explore&nbsp;our&nbsp;Data&nbsp;Analytics&nbsp;programs&nbsp;here.</a></u></p><h2><strong>Final&nbsp;Thoughts</strong></h2><p>ChatGPT&nbsp;for&nbsp;data&nbsp;analysis&nbsp;isn&#39;t&nbsp;magic&nbsp;—&nbsp;but&nbsp;used&nbsp;well,&nbsp;it&#39;s&nbsp;one&nbsp;of&nbsp;the&nbsp;most&nbsp;practical&nbsp;productivity&nbsp;tools&nbsp;available&nbsp;to&nbsp;analysts&nbsp;today.</p><p>Start&nbsp;with&nbsp;one&nbsp;use&nbsp;case.&nbsp;Pick&nbsp;the&nbsp;messiest,&nbsp;most&nbsp;time-consuming&nbsp;part&nbsp;of&nbsp;your&nbsp;current&nbsp;workflow&nbsp;—&nbsp;whether&nbsp;that&#39;s&nbsp;writing&nbsp;code,&nbsp;cleaning&nbsp;data,&nbsp;or&nbsp;building&nbsp;reports&nbsp;—&nbsp;and&nbsp;try&nbsp;a&nbsp;prompt&nbsp;for&nbsp;it&nbsp;this&nbsp;week.</p><p>Once&nbsp;it&nbsp;clicks,&nbsp;you&nbsp;won&#39;t&nbsp;go&nbsp;back.</p><h2>About&nbsp;the&nbsp;Author</h2><p><strong>Quick&nbsp;facts</strong></p><p><strong>Name:</strong>&nbsp;Deepanshu</p><p><strong>From:</strong>&nbsp;Delhi</p><p><strong>Education:</strong>&nbsp;MCA</p><p><strong>Program:</strong>&nbsp;Data&nbsp;Science&nbsp;and&nbsp;Data&nbsp;Analytics</p><p><strong>Placed&nbsp;in:</strong>&nbsp;NIDADS&nbsp;(National&nbsp;Institute&nbsp;of&nbsp;Data&nbsp;Analytics&nbsp;&amp;&nbsp;Data&nbsp;Science)</p><p><strong>Covers&nbsp;topics:&nbsp;</strong>Data&nbsp;Science,&nbsp;Data&nbsp;Analytics,&nbsp;Artificial&nbsp;Intelligence,&nbsp;Machine&nbsp;Learning,&nbsp;Data&nbsp;Engineering,&nbsp;Deep&nbsp;Learning</p><p><strong>Currently&nbsp;working&nbsp;as:&nbsp;</strong>Senior&nbsp;Data&nbsp;Analyst</p><p><strong>In&nbsp;his&nbsp;words:&nbsp;</strong>&quot;Data&nbsp;doesn&#39;t&nbsp;just&nbsp;tell&nbsp;you&nbsp;what&nbsp;happened&nbsp;—&nbsp;it&nbsp;tells&nbsp;you&nbsp;what&nbsp;to&nbsp;build&nbsp;next.&nbsp;My&nbsp;job&nbsp;is&nbsp;to&nbsp;turn&nbsp;numbers&nbsp;into&nbsp;decisions&nbsp;that&nbsp;actually&nbsp;move&nbsp;the&nbsp;needle.&quot;</p>
+      </div>
+    </div>
+  
+</body>
+</html>

@@ -1,0 +1,382 @@
+﻿<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+  <meta charset="utf-8" />
+  <title>How Digital Marketers in India Are Using Data Analytics to Get Better Results</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <w:WordDocument>
+      <w:View>Print</w:View>
+      <w:Zoom>100</w:Zoom>
+      <w:DoNotOptimizeForBrowser/>
+    </w:WordDocument>
+  </xml>
+  <![endif]-->
+  <style>
+    @page {
+      size: 21cm 29.7cm;
+      margin: 2cm;
+    }
+    body {
+      font-family: Arial, Calibri, sans-serif;
+      font-size: 11pt;
+      color: #0f172a;
+      line-height: 1.5;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 10px 0;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f1f5f9;
+      font-weight: bold;
+    }
+    h1 { font-size: 20pt; color: #0f172a; margin-top: 16pt; margin-bottom: 8pt; }
+    h2 { font-size: 15pt; color: #1e293b; margin-top: 14pt; margin-bottom: 6pt; }
+    h3 { font-size: 13pt; color: #334155; margin-top: 12pt; margin-bottom: 4pt; }
+    h4 { font-size: 11.5pt; color: #475569; margin-top: 10pt; margin-bottom: 4pt; }
+    p { margin-top: 0; margin-bottom: 8pt; }
+    ul, ol { margin-top: 4pt; margin-bottom: 8pt; padding-left: 24pt; }
+    li { margin-bottom: 4pt; }
+    blockquote {
+      border-left: 3pt solid #0284c7;
+      padding-left: 10pt;
+      margin-left: 0;
+      color: #334155;
+      font-style: italic;
+    }
+    a { color: #0284c7; text-decoration: underline; }
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+  
+    <div class="blog-post-wrapper" style="page-break-after: always; margin-bottom: 40px;">
+      <h1 style="font-size: 22pt; color: #0f172a; border-bottom: 3px solid #0284c7; padding-bottom: 8px; margin-bottom: 16px;">
+        How Digital Marketers in India Are Using Data Analytics to Get Better Results
+      </h1>
+
+      <h2 style="font-size: 14pt; color: #0369a1; margin-top: 20px; margin-bottom: 10px;">
+        1. Blog Form Fields (Copy &amp; Paste into Form)
+      </h2>
+
+      <table border="1" cellspacing="0" cellpadding="8" style="width: 100%; border-collapse: collapse; border: 1px solid #cbd5e1; font-family: Arial, sans-serif; font-size: 10.5pt;">
+        <tbody>
+          <tr>
+            <td style="width: 28%; font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Title</td>
+            <td style="width: 72%; color: #0f172a;">How Digital Marketers in India Are Using Data Analytics to Get Better Results</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Slug</td>
+            <td style="color: #0f172a; font-family: Consolas, monospace;">data-analytics-in-digital-marketing-india</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Meta Title (SEO)</td>
+            <td style="color: #0f172a;">Data Analytics in Digital Marketing: How India Gets Results</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Meta Description (SEO)</td>
+            <td style="color: #0f172a;">How Digital Marketers in India Are Using Data Analytics to Get Better Results: Discover smarter campaigns, deeper insights, higher conversions, and better ROI</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Publisher</td>
+            <td style="color: #0f172a;">Team Nidads</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Author Name</td>
+            <td style="color: #0f172a;">Team Nidads</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Author Role</td>
+            <td style="color: #0f172a;"></td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Author Bio</td>
+            <td style="color: #0f172a;"></td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Author Photo URL</td>
+            <td style="color: #0284c7; word-break: break-all;"></td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Category</td>
+            <td style="color: #0f172a;">Data Analytics</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Tags (Comma-separated)</td>
+            <td style="color: #0f172a;">data analytics in digital marketing</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Keywords (SEO)</td>
+            <td style="color: #0f172a;">data analytics in digital marketing</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">Cover Image URL</td>
+            <td style="color: #0284c7; word-break: break-all;">https://i.ibb.co/Y7JGcmQt/data-analytics-in-digital-marketing-india.webp</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold; background-color: #f1f5f9; color: #1e293b;">OG Image URL (Social Sharing)</td>
+            <td style="color: #0284c7; word-break: break-all;"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 style="font-size: 14pt; color: #0369a1; margin-top: 24px; margin-bottom: 10px;">
+        2. Structured Data Schemas (JSON-LD)
+      </h2>
+      
+          <div style="margin-bottom: 14px;">
+            <p style="font-weight: bold; margin-bottom: 4px; color: #1e293b;">Schema 1:</p>
+            <pre style="background-color: #f8fafc; border: 1px solid #cbd5e1; padding: 10px; font-family: Consolas, monospace; font-size: 9pt; white-space: pre-wrap; word-wrap: break-word;">{
+  &quot;@graph&quot;: [
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/data-analytics-in-digital-marketing-india#blogposting&quot;,
+      &quot;url&quot;: &quot;https://www.nidads.com/blog/data-analytics-in-digital-marketing-india&quot;,
+      &quot;@type&quot;: &quot;BlogPosting&quot;,
+      &quot;image&quot;: {
+        &quot;url&quot;: &quot;https://i.ibb.co/Y7JGcmQt/data-analytics-in-digital-marketing-india.webp&quot;,
+        &quot;@type&quot;: &quot;ImageObject&quot;
+      },
+      &quot;author&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/blog/data-analytics-in-digital-marketing-india#author&quot;
+      },
+      &quot;headline&quot;: &quot;How Digital Marketers in India Are Using Data Analytics to Get Better Results&quot;,
+      &quot;keywords&quot;: &quot;data analytics in digital marketing&quot;,
+      &quot;publisher&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/#organization&quot;
+      },
+      &quot;speakable&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/blog/data-analytics-in-digital-marketing-india#speakable&quot;
+      },
+      &quot;description&quot;: &quot;How Digital Marketers in India Are Using Data Analytics to Get Better Results: Discover smarter campaigns, deeper insights, higher conversions, and better ROI&quot;,
+      &quot;dateModified&quot;: &quot;2026-09-03&quot;,
+      &quot;datePublished&quot;: &quot;2026-05-31&quot;,
+      &quot;articleSection&quot;: &quot;Data Analytics&quot;,
+      &quot;mainEntityOfPage&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/blog/data-analytics-in-digital-marketing-india&quot;,
+        &quot;@type&quot;: &quot;WebPage&quot;
+      }
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/data-analytics-in-digital-marketing-india#author&quot;,
+      &quot;name&quot;: &quot;Shagun&quot;,
+      &quot;@type&quot;: &quot;Person&quot;,
+      &quot;gender&quot;: &quot;Female&quot;,
+      &quot;alumniOf&quot;: {
+        &quot;name&quot;: &quot;B.Tech Program&quot;,
+        &quot;@type&quot;: &quot;CollegeOrUniversity&quot;
+      },
+      &quot;jobTitle&quot;: &quot;Senior Data Science Trainer&quot;,
+      &quot;worksFor&quot;: {
+        &quot;@id&quot;: &quot;https://www.nidads.com/#organization&quot;
+      },
+      &quot;knowsAbout&quot;: [
+        &quot;Data Science&quot;,
+        &quot;Data Analytics&quot;,
+        &quot;Artificial Intelligence&quot;,
+        &quot;Machine Learning&quot;,
+        &quot;Data Engineering&quot;,
+        &quot;Deep Learning&quot;
+      ],
+      &quot;description&quot;: &quot;Shagun completed her program in Data Science and Data Analytics and was placed at NIDADS (National Institute of Data Analytics &amp; Data Science). She now works as a Senior Data Science Trainer, covering Data Science, Data Analytics, Artificial Intelligence, Machine Learning, Data Engineering, and Deep Learning.&quot;,
+      &quot;homeLocation&quot;: {
+        &quot;name&quot;: &quot;Delhi&quot;,
+        &quot;@type&quot;: &quot;Place&quot;
+      }
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/#organization&quot;,
+      &quot;url&quot;: &quot;https://www.nidads.com/&quot;,
+      &quot;logo&quot;: {
+        &quot;url&quot;: &quot;https://www.nidads.com/Nidads-2.webp&quot;,
+        &quot;@type&quot;: &quot;ImageObject&quot;
+      },
+      &quot;name&quot;: &quot;NIDADS&quot;,
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;sameAs&quot;: [
+        &quot;https://www.instagram.com/nidads_official/&quot;,
+        &quot;https://www.linkedin.com/in/national-institute-of-data-analytics-and-data-science-28b709381/&quot;
+      ],
+      &quot;legalName&quot;: &quot;National Institute of Data Analytics &amp; Data Science&quot;
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/data-analytics-in-digital-marketing-india#breadcrumb&quot;,
+      &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+      &quot;itemListElement&quot;: [
+        {
+          &quot;item&quot;: &quot;https://www.nidads.com/&quot;,
+          &quot;name&quot;: &quot;Home&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 1
+        },
+        {
+          &quot;item&quot;: &quot;https://www.nidads.com/blog&quot;,
+          &quot;name&quot;: &quot;Blog&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 2
+        },
+        {
+          &quot;item&quot;: &quot;https://www.nidads.com/blog/data-analytics-in-digital-marketing-india&quot;,
+          &quot;name&quot;: &quot;Data Analytics in Digital Marketing India&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 3
+        }
+      ]
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/data-analytics-in-digital-marketing-india#ways-marketers-use-analytics&quot;,
+      &quot;name&quot;: &quot;4 Ways Indian Marketers Are Using Data Analytics Right Now&quot;,
+      &quot;@type&quot;: &quot;ItemList&quot;,
+      &quot;itemListElement&quot;: [
+        {
+          &quot;name&quot;: &quot;Audience segmentation that actually converts&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 1
+        },
+        {
+          &quot;name&quot;: &quot;Attribution modelling — stop crediting the wrong channel&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 2
+        },
+        {
+          &quot;name&quot;: &quot;Real-time campaign monitoring&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 3
+        },
+        {
+          &quot;name&quot;: &quot;Customer lifetime value (CLV) optimisation&quot;,
+          &quot;@type&quot;: &quot;ListItem&quot;,
+          &quot;position&quot;: 4
+        }
+      ]
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/data-analytics-in-digital-marketing-india#faq&quot;,
+      &quot;@type&quot;: &quot;FAQPage&quot;,
+      &quot;mainEntity&quot;: [
+        {
+          &quot;name&quot;: &quot;What is data analytics in digital marketing?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;It's the process of collecting and interpreting campaign and customer data to make better marketing decisions. This includes tracking ad performance, analysing website behaviour, measuring ROI, and using insights to optimise future campaigns. In short — it replaces guesswork with evidence.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        },
+        {
+          &quot;name&quot;: &quot;How does data analytics improve digital marketing ROI in India?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;By showing exactly which channels, creatives, and audience segments drive real conversions — and which waste budget. Indian brands implementing structured data analytics in digital marketing typically see CAC drop 25–45% within 60–90 days, simply by stopping misallocated spend.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        },
+        {
+          &quot;name&quot;: &quot;Which tools are best for marketing data analytics in India?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;For most teams: Google Analytics 4 (free, excellent), Meta Ads Manager (free), and Google Looker Studio for dashboards. For D2C brands needing retention marketing: CleverTap or WebEngage. For affordable BI: Zoho Analytics from ₹1,000/month.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        },
+        {
+          &quot;name&quot;: &quot;Do I need a technical background to use data analytics in digital marketing?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;No. Start with GA4 and one Looker Studio dashboard. Spend 30 minutes weekly reviewing your core metrics. You'll spot patterns within 4–6 weeks. Analytical thinking matters far more than technical skills.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        },
+        {
+          &quot;name&quot;: &quot;Is data analytics useful for small businesses and startups in India?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;Absolutely — arguably more so. When every rupee counts, knowing what's working is critical. Most essential tools are free. A ₹50,000/month budget managed with solid analytics will consistently outperform a ₹5 lakh budget run on instinct.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        },
+        {
+          &quot;name&quot;: &quot;What's the difference between web analytics and marketing analytics?&quot;,
+          &quot;@type&quot;: &quot;Question&quot;,
+          &quot;acceptedAnswer&quot;: {
+            &quot;text&quot;: &quot;Web analytics tracks what happens on your website — sessions, bounce rates, page views. Marketing analytics is broader — it measures performance across all channels (ads, email, SEO, social) and ties activity to revenue outcomes. Web analytics feeds into marketing analytics, not the other way around.&quot;,
+            &quot;@type&quot;: &quot;Answer&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/data-analytics-in-digital-marketing-india#speakable&quot;,
+      &quot;@type&quot;: &quot;SpeakableSpecification&quot;,
+      &quot;xpath&quot;: [
+        &quot;/html/head/title&quot;,
+        &quot;//*[@id='quick-answer']&quot;,
+        &quot;//*[@id='faq']&quot;
+      ],
+      &quot;cssSelector&quot;: [
+        &quot;h1&quot;,
+        &quot;.quick-answer&quot;,
+        &quot;.faq-section&quot;
+      ]
+    },
+    {
+      &quot;@id&quot;: &quot;https://www.nidads.com/blog/data-analytics-in-digital-marketing-india#howto&quot;,
+      &quot;name&quot;: &quot;How to Build Your First Analytics Workflow&quot;,
+      &quot;step&quot;: [
+        {
+          &quot;name&quot;: &quot;Pick your North Star metric&quot;,
+          &quot;text&quot;: &quot;Choose the one number that defines success right now — ROAS for e-commerce, CPL for lead generation, MQL-to-SQL rate for SaaS.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 1
+        },
+        {
+          &quot;name&quot;: &quot;Audit your tracking&quot;,
+          &quot;text&quot;: &quot;Check that GA4 conversion events are firing correctly — purchases, form fills, clicks to call.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 2
+        },
+        {
+          &quot;name&quot;: &quot;Build one weekly dashboard&quot;,
+          &quot;text&quot;: &quot;Use Looker Studio to display 5–7 key metrics and share it with your team every Monday.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 3
+        },
+        {
+          &quot;name&quot;: &quot;Run one A/B test per month&quot;,
+          &quot;text&quot;: &quot;Test one variable — a subject line, a landing page headline, an ad creative — and wait for at least 100 conversions per variant.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 4
+        },
+        {
+          &quot;name&quot;: &quot;Review cohorts quarterly&quot;,
+          &quot;text&quot;: &quot;Check which month's customer cohort retained the longest and which channel produced them, then shift budget accordingly.&quot;,
+          &quot;@type&quot;: &quot;HowToStep&quot;,
+          &quot;position&quot;: 5
+        }
+      ],
+      &quot;@type&quot;: &quot;HowTo&quot;,
+      &quot;description&quot;: &quot;A five-step process for setting up a marketing analytics workflow.&quot;
+    }
+  ],
+  &quot;@context&quot;: &quot;https://schema.org&quot;
+}</pre>
+          </div>
+        
+
+      <h2 style="font-size: 14pt; color: #0369a1; margin-top: 24px; margin-bottom: 10px;">
+        3. Content (Rich Text — Copy &amp; Paste Directly into Blog Editor)
+      </h2>
+      <div class="blog-rich-content" style="border: 1px solid #cbd5e1; padding: 18px; background-color: #ffffff; font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #0f172a;">
+        <h2><strong>Table&nbsp;of&nbsp;Contents</strong></h2><ol><li>Quick&nbsp;Answer</li><li>Why&nbsp;Data&nbsp;Analytics&nbsp;in&nbsp;Digital&nbsp;Marketing&nbsp;Matters&nbsp;for&nbsp;Indian&nbsp;Brands</li><li>4&nbsp;Ways&nbsp;Indian&nbsp;Marketers&nbsp;Are&nbsp;Using&nbsp;Data&nbsp;Analytics&nbsp;Right&nbsp;Now</li><li>Top&nbsp;Tools&nbsp;for&nbsp;Data&nbsp;Analytics&nbsp;in&nbsp;Digital&nbsp;Marketing&nbsp;—&nbsp;India&nbsp;Edition</li><li>Step-by-Step:&nbsp;Build&nbsp;Your&nbsp;First&nbsp;Analytics&nbsp;Workflow</li><li>Real&nbsp;Case&nbsp;Study:&nbsp;Delhi&nbsp;D2C&nbsp;Brand&nbsp;Drops&nbsp;CAC&nbsp;by&nbsp;40%</li><li>FAQ</li><li>The&nbsp;Bottom&nbsp;Line</li><li>SEO&nbsp;Notes</li></ol><h2><strong>Quick&nbsp;Answer</strong></h2><p><strong>TL;DR:</strong>&nbsp;Data&nbsp;analytics&nbsp;in&nbsp;digital&nbsp;marketing&nbsp;helps&nbsp;Indian&nbsp;marketers&nbsp;identify&nbsp;which&nbsp;campaigns&nbsp;generate&nbsp;real&nbsp;ROI,&nbsp;which&nbsp;audiences&nbsp;convert,&nbsp;and&nbsp;where&nbsp;budget&nbsp;is&nbsp;being&nbsp;wasted.&nbsp;Teams&nbsp;using&nbsp;structured&nbsp;analytics&nbsp;workflows&nbsp;—&nbsp;with&nbsp;tools&nbsp;like&nbsp;GA4,&nbsp;Meta&nbsp;Ads&nbsp;Manager,&nbsp;and&nbsp;CleverTap&nbsp;—&nbsp;typically&nbsp;reduce&nbsp;cost-per-lead&nbsp;by&nbsp;30–50%&nbsp;within&nbsp;90&nbsp;days.&nbsp;You&nbsp;don&#39;t&nbsp;need&nbsp;a&nbsp;data&nbsp;science&nbsp;background&nbsp;to&nbsp;start.</p><h2><strong>Why&nbsp;Data&nbsp;Analytics&nbsp;in&nbsp;Digital&nbsp;Marketing&nbsp;Matters&nbsp;for&nbsp;Indian&nbsp;Brands&nbsp;</strong></h2><p>Indian&nbsp;digital&nbsp;ad&nbsp;spend&nbsp;crossed&nbsp;₹50,000&nbsp;crore&nbsp;in&nbsp;2024,&nbsp;according&nbsp;to&nbsp;the&nbsp;IAMAI-Kantar&nbsp;Report.&nbsp;Every&nbsp;rupee&nbsp;of&nbsp;that&nbsp;is&nbsp;competing&nbsp;for&nbsp;the&nbsp;same&nbsp;consumer&#39;s&nbsp;attention.&nbsp;The&nbsp;brands&nbsp;winning&nbsp;aren&#39;t&nbsp;outspending&nbsp;everyone&nbsp;—&nbsp;they&#39;re&nbsp;outwitting&nbsp;them&nbsp;with&nbsp;better&nbsp;data.</p><p>Data&nbsp;analytics&nbsp;in&nbsp;digital&nbsp;marketing&nbsp;gives&nbsp;you&nbsp;visibility&nbsp;that&nbsp;gut&nbsp;feel&nbsp;simply&nbsp;can&#39;t.&nbsp;You&nbsp;stop&nbsp;guessing&nbsp;which&nbsp;₹100&nbsp;of&nbsp;ad&nbsp;spend&nbsp;is&nbsp;working.&nbsp;You&nbsp;know.</p><p>Most&nbsp;Indian&nbsp;marketing&nbsp;teams&nbsp;still&nbsp;run&nbsp;campaigns&nbsp;on&nbsp;instinct&nbsp;—&nbsp;checking&nbsp;results&nbsp;weekly,&nbsp;optimising&nbsp;based&nbsp;on&nbsp;whoever&nbsp;speaks&nbsp;loudest&nbsp;in&nbsp;the&nbsp;meeting.&nbsp;The&nbsp;shift&nbsp;to&nbsp;evidence-based&nbsp;decision-making&nbsp;isn&#39;t&nbsp;just&nbsp;a&nbsp;trend.&nbsp;It&#39;s&nbsp;now&nbsp;the&nbsp;baseline&nbsp;for&nbsp;competitive&nbsp;performance.</p><h2><strong>4&nbsp;Ways&nbsp;Indian&nbsp;Marketers&nbsp;Are&nbsp;Using&nbsp;Data&nbsp;Analytics&nbsp;Right&nbsp;Now&nbsp;</strong></h2><h3><strong>1.&nbsp;Audience&nbsp;Segmentation&nbsp;That&nbsp;Actually&nbsp;Converts</strong></h3><p>Sending&nbsp;the&nbsp;same&nbsp;message&nbsp;to&nbsp;every&nbsp;user&nbsp;wastes&nbsp;budget&nbsp;and&nbsp;hurts&nbsp;relevance&nbsp;scores.&nbsp;Data&nbsp;analytics&nbsp;in&nbsp;digital&nbsp;marketing&nbsp;lets&nbsp;you&nbsp;split&nbsp;audiences&nbsp;by&nbsp;real&nbsp;behavior&nbsp;—&nbsp;people&nbsp;who&nbsp;visited&nbsp;your&nbsp;pricing&nbsp;page&nbsp;three&nbsp;times&nbsp;without&nbsp;buying,&nbsp;customers&nbsp;who&nbsp;bought&nbsp;once&nbsp;six&nbsp;months&nbsp;ago,&nbsp;users&nbsp;who&nbsp;clicked&nbsp;but&nbsp;bounced&nbsp;in&nbsp;under&nbsp;10&nbsp;seconds.</p><p>Each&nbsp;group&nbsp;needs&nbsp;a&nbsp;different&nbsp;message.&nbsp;GA4&nbsp;and&nbsp;Meta&nbsp;Custom&nbsp;Audiences&nbsp;handle&nbsp;this&nbsp;for&nbsp;free.&nbsp;According&nbsp;to&nbsp;HubSpot&#39;s&nbsp;2024&nbsp;State&nbsp;of&nbsp;Marketing&nbsp;Report,&nbsp;segmented&nbsp;email&nbsp;campaigns&nbsp;generate&nbsp;760%&nbsp;more&nbsp;revenue&nbsp;per&nbsp;email&nbsp;than&nbsp;unsegmented&nbsp;ones.</p><h3><strong>2.&nbsp;Attribution&nbsp;Modelling&nbsp;—&nbsp;Stop&nbsp;Crediting&nbsp;the&nbsp;Wrong&nbsp;Channel</strong></h3><p>Most&nbsp;Indian&nbsp;marketing&nbsp;teams&nbsp;default&nbsp;to&nbsp;last-click&nbsp;attribution.&nbsp;That&nbsp;means&nbsp;a&nbsp;customer&nbsp;who&nbsp;found&nbsp;you&nbsp;through&nbsp;a&nbsp;blog&nbsp;post,&nbsp;saw&nbsp;your&nbsp;YouTube&nbsp;ad&nbsp;twice,&nbsp;then&nbsp;converted&nbsp;via&nbsp;Google&nbsp;Search&nbsp;—&nbsp;gives&nbsp;100%&nbsp;credit&nbsp;to&nbsp;Search.&nbsp;The&nbsp;blog&nbsp;and&nbsp;YouTube&nbsp;look&nbsp;worthless.&nbsp;You&nbsp;cut&nbsp;them.&nbsp;Results&nbsp;slowly&nbsp;fall&nbsp;apart.</p><p>Multi-touch&nbsp;attribution&nbsp;shows&nbsp;how&nbsp;each&nbsp;touchpoint&nbsp;actually&nbsp;contributed.&nbsp;Google&nbsp;Analytics&nbsp;4&nbsp;now&nbsp;uses&nbsp;data-driven&nbsp;attribution&nbsp;as&nbsp;its&nbsp;default.&nbsp;Switching&nbsp;to&nbsp;it&nbsp;is&nbsp;often&nbsp;the&nbsp;single&nbsp;highest-ROI&nbsp;change&nbsp;a&nbsp;team&nbsp;can&nbsp;make.&nbsp;We&#39;ve&nbsp;seen&nbsp;brands&nbsp;reallocate&nbsp;₹2–3&nbsp;lakhs&nbsp;of&nbsp;monthly&nbsp;budget&nbsp;more&nbsp;accurately&nbsp;—&nbsp;just&nbsp;by&nbsp;fixing&nbsp;attribution.&nbsp;<a href="https://www.nidads.com/blog/data-analytics-course-with-placement" rel="noopener noreferrer" target="_blank">data&nbsp;analytics&nbsp;course&nbsp;with&nbsp;placement</a></p><h3><strong>3.&nbsp;Real-Time&nbsp;Campaign&nbsp;Monitoring</strong></h3><p>A&nbsp;₹5&nbsp;lakh&nbsp;campaign&nbsp;running&nbsp;for&nbsp;30&nbsp;days&nbsp;with&nbsp;weekly&nbsp;check-ins&nbsp;is&nbsp;a&nbsp;gamble.&nbsp;Real-time&nbsp;data&nbsp;analytics&nbsp;in&nbsp;digital&nbsp;marketing&nbsp;catches&nbsp;problems&nbsp;on&nbsp;day&nbsp;2,&nbsp;not&nbsp;week&nbsp;4.</p><p>One&nbsp;team&nbsp;we&nbsp;worked&nbsp;with&nbsp;found&nbsp;their&nbsp;Facebook&nbsp;ads&nbsp;targeting&nbsp;Mumbai&nbsp;were&nbsp;pulling&nbsp;in&nbsp;Tier-3&nbsp;traffic&nbsp;with&nbsp;zero&nbsp;purchase&nbsp;intent.&nbsp;Caught&nbsp;early,&nbsp;they&nbsp;fixed&nbsp;targeting&nbsp;and&nbsp;saved&nbsp;₹80,000.&nbsp;Without&nbsp;daily&nbsp;monitoring,&nbsp;that&nbsp;runs&nbsp;the&nbsp;full&nbsp;month.</p><h3><strong>4.&nbsp;Customer&nbsp;Lifetime&nbsp;Value&nbsp;(CLV)&nbsp;Optimisation</strong></h3><p>Acquiring&nbsp;a&nbsp;new&nbsp;customer&nbsp;in&nbsp;Indian&nbsp;e-commerce&nbsp;costs&nbsp;5–7x&nbsp;more&nbsp;than&nbsp;retaining&nbsp;one,&nbsp;per&nbsp;Netcore&nbsp;Cloud&#39;s&nbsp;2024&nbsp;data.&nbsp;Yet&nbsp;most&nbsp;brands&nbsp;pour&nbsp;80%&nbsp;of&nbsp;their&nbsp;budget&nbsp;into&nbsp;acquisition.</p><p>CLV&nbsp;analytics&nbsp;tells&nbsp;you&nbsp;which&nbsp;channels&nbsp;bring&nbsp;your&nbsp;highest-value&nbsp;customers&nbsp;—&nbsp;not&nbsp;just&nbsp;the&nbsp;most&nbsp;customers.&nbsp;Brands&nbsp;like&nbsp;Mamaearth&nbsp;and&nbsp;boAt&nbsp;have&nbsp;made&nbsp;this&nbsp;a&nbsp;growth&nbsp;pillar.&nbsp;It&#39;s&nbsp;why&nbsp;they&nbsp;scale&nbsp;efficiently&nbsp;while&nbsp;smaller&nbsp;brands&nbsp;burn&nbsp;through&nbsp;budgets&nbsp;chasing&nbsp;volume.</p><h2><strong>Top&nbsp;Tools&nbsp;for&nbsp;Data&nbsp;Analytics&nbsp;in&nbsp;Digital&nbsp;Marketing&nbsp;—&nbsp;India&nbsp;Edition</strong></h2><p class="ql-align-center"><strong>Tool</strong></p><p class="ql-align-center"><strong>Best&nbsp;For</strong></p><p class="ql-align-center"><strong>Cost</strong></p><p class="ql-align-center"><strong>India&nbsp;Fit</strong></p><p><strong>Google&nbsp;Analytics&nbsp;4</strong></p><p>Website&nbsp;&amp;&nbsp;conversion&nbsp;tracking</p><p>Free</p><p>Excellent</p><p><strong>Meta&nbsp;Ads&nbsp;Manager</strong></p><p>Facebook/Instagram&nbsp;performance</p><p>Free</p><p>Excellent</p><p><strong>CleverTap</strong></p><p>App&nbsp;retention&nbsp;&amp;&nbsp;push&nbsp;automation</p><p>From&nbsp;₹15,000/mo</p><p>Strong&nbsp;for&nbsp;D2C</p><p><strong>WebEngage</strong></p><p>Lifecycle&nbsp;&amp;&nbsp;cross-channel&nbsp;marketing</p><p>Custom&nbsp;pricing</p><p>Popular&nbsp;in&nbsp;fintech/e-com</p><p><strong>Zoho&nbsp;Analytics</strong></p><p>Custom&nbsp;dashboards,&nbsp;BI&nbsp;reports</p><p>From&nbsp;₹1,000/mo</p><p>Best&nbsp;for&nbsp;SMEs</p><p><strong>Google&nbsp;Looker&nbsp;Studio</strong></p><p>Free&nbsp;visual&nbsp;dashboarding</p><p>Free</p><p>Widely&nbsp;used</p><h2><strong>Step-by-Step:&nbsp;Build&nbsp;Your&nbsp;First&nbsp;Analytics&nbsp;Workflow&nbsp;</strong></h2><p><strong>Step&nbsp;1&nbsp;—&nbsp;Pick&nbsp;your&nbsp;North&nbsp;Star&nbsp;metric.</strong>&nbsp;Choose&nbsp;the&nbsp;one&nbsp;number&nbsp;that&nbsp;defines&nbsp;success&nbsp;right&nbsp;now:&nbsp;ROAS&nbsp;for&nbsp;e-commerce,&nbsp;CPL&nbsp;for&nbsp;lead&nbsp;generation,&nbsp;MQL-to-SQL&nbsp;rate&nbsp;for&nbsp;SaaS.&nbsp;Everything&nbsp;else&nbsp;gives&nbsp;context&nbsp;to&nbsp;that&nbsp;number.</p><p><strong>Step&nbsp;2&nbsp;—&nbsp;Audit&nbsp;your&nbsp;tracking.</strong>&nbsp;Check&nbsp;that&nbsp;GA4&nbsp;conversion&nbsp;events&nbsp;are&nbsp;firing&nbsp;correctly&nbsp;—&nbsp;purchases,&nbsp;form&nbsp;fills,&nbsp;clicks&nbsp;to&nbsp;call.&nbsp;Bad&nbsp;data&nbsp;in&nbsp;means&nbsp;bad&nbsp;decisions&nbsp;out.&nbsp;This&nbsp;single&nbsp;step&nbsp;fixes&nbsp;more&nbsp;problems&nbsp;than&nbsp;any&nbsp;new&nbsp;tool&nbsp;will.&nbsp;<a href="https://www.nidads.com/blog/big-data-analytics" rel="noopener noreferrer" target="_blank">big&nbsp;data&nbsp;analytics</a></p><p><strong>Step&nbsp;3&nbsp;—&nbsp;Build&nbsp;one&nbsp;weekly&nbsp;dashboard.</strong>&nbsp;Use&nbsp;Looker&nbsp;Studio&nbsp;to&nbsp;display&nbsp;5–7&nbsp;key&nbsp;metrics.&nbsp;Share&nbsp;it&nbsp;with&nbsp;your&nbsp;team&nbsp;every&nbsp;Monday.&nbsp;Data&nbsp;accountability&nbsp;starts&nbsp;with&nbsp;everyone&nbsp;looking&nbsp;at&nbsp;the&nbsp;same&nbsp;numbers.</p><p><strong>Step&nbsp;4&nbsp;—&nbsp;Run&nbsp;one&nbsp;A/B&nbsp;test&nbsp;per&nbsp;month.</strong>&nbsp;Test&nbsp;one&nbsp;variable&nbsp;—&nbsp;a&nbsp;subject&nbsp;line,&nbsp;a&nbsp;landing&nbsp;page&nbsp;headline,&nbsp;an&nbsp;ad&nbsp;creative.&nbsp;Wait&nbsp;for&nbsp;at&nbsp;least&nbsp;100&nbsp;conversions&nbsp;per&nbsp;variant&nbsp;before&nbsp;reading&nbsp;results.&nbsp;Over&nbsp;12&nbsp;months,&nbsp;this&nbsp;produces&nbsp;12&nbsp;validated&nbsp;improvements&nbsp;that&nbsp;compound.</p><p><strong>Step&nbsp;5&nbsp;—&nbsp;Review&nbsp;cohorts&nbsp;quarterly.</strong>&nbsp;Which&nbsp;month&#39;s&nbsp;customer&nbsp;cohort&nbsp;retained&nbsp;the&nbsp;longest?&nbsp;Which&nbsp;channel&nbsp;produced&nbsp;them?&nbsp;Shift&nbsp;more&nbsp;budget&nbsp;there&nbsp;next&nbsp;quarter.&nbsp;This&nbsp;is&nbsp;data&nbsp;analytics&nbsp;in&nbsp;digital&nbsp;marketing&nbsp;working&nbsp;as&nbsp;a&nbsp;self-improving&nbsp;system.</p><p><strong><em><u><a href="https://dizitaladda.com/data-analytics-and-data-science" rel="noopener noreferrer" target="_blank">Learn&nbsp;Data&nbsp;analytics&nbsp;in&nbsp;digital&nbsp;marketing&nbsp;course&nbsp;</a></u></em></strong></p><h2><strong>Real&nbsp;Case&nbsp;Study:&nbsp;Delhi&nbsp;D2C&nbsp;Brand&nbsp;Drops&nbsp;CAC&nbsp;by&nbsp;40%</strong></h2><p><strong>Brand:</strong>&nbsp;Delhi-based&nbsp;skincare&nbsp;D2C,&nbsp;₹12&nbsp;lakh/month&nbsp;ad&nbsp;budget&nbsp;across&nbsp;Meta,&nbsp;Google,&nbsp;and&nbsp;influencers.</p><p><strong>Problem:</strong>&nbsp;CAC&nbsp;had&nbsp;climbed&nbsp;from&nbsp;₹380&nbsp;to&nbsp;₹620&nbsp;over&nbsp;8&nbsp;months.&nbsp;No&nbsp;one&nbsp;knew&nbsp;why.</p><p><strong>What&nbsp;the&nbsp;data&nbsp;revealed:</strong></p><ul><li>Last-click&nbsp;attribution&nbsp;was&nbsp;over-crediting&nbsp;Google&nbsp;Search&nbsp;and&nbsp;starving&nbsp;Meta&nbsp;remarketing&nbsp;—&nbsp;which&nbsp;was&nbsp;actually&nbsp;closing&nbsp;most&nbsp;sales</li><li>38%&nbsp;of&nbsp;ad&nbsp;spend&nbsp;targeted&nbsp;segments&nbsp;with&nbsp;under&nbsp;5%&nbsp;repeat&nbsp;purchase&nbsp;history</li><li>Their&nbsp;top&nbsp;creative&nbsp;had&nbsp;been&nbsp;running&nbsp;7&nbsp;months;&nbsp;ad&nbsp;fatigue&nbsp;had&nbsp;halved&nbsp;its&nbsp;CTR,&nbsp;unnoticed</li></ul><p><strong>What&nbsp;changed:</strong>&nbsp;Switched&nbsp;to&nbsp;GA4&nbsp;data-driven&nbsp;attribution.&nbsp;Rebuilt&nbsp;Meta&nbsp;audiences&nbsp;around&nbsp;high-CLV&nbsp;lookalikes.&nbsp;Refreshed&nbsp;creatives.&nbsp;Cut&nbsp;₹4.8&nbsp;lakhs&nbsp;in&nbsp;confirmed&nbsp;dead&nbsp;spend.&nbsp;<a href="https://developers.google.com/analytics?utm_source=chatgpt.com" rel="noopener noreferrer" target="_blank">Google&nbsp;Analytics&nbsp;4</a></p><p><strong>Result&nbsp;in&nbsp;90&nbsp;days:</strong>&nbsp;CAC&nbsp;fell&nbsp;from&nbsp;₹620&nbsp;to&nbsp;₹370.&nbsp;ROAS&nbsp;jumped&nbsp;from&nbsp;2.1x&nbsp;to&nbsp;3.8x.&nbsp;Conversions&nbsp;went&nbsp;up&nbsp;despite&nbsp;a&nbsp;smaller&nbsp;budget.</p><p>Data&nbsp;analytics&nbsp;in&nbsp;digital&nbsp;marketing&nbsp;didn&#39;t&nbsp;change&nbsp;the&nbsp;product.&nbsp;It&nbsp;stopped&nbsp;the&nbsp;bleeding.</p><h2><strong>FAQ</strong></h2><p><strong>What&nbsp;is&nbsp;data&nbsp;analytics&nbsp;in&nbsp;digital&nbsp;marketing?</strong></p><p>It&#39;s&nbsp;the&nbsp;process&nbsp;of&nbsp;collecting&nbsp;and&nbsp;interpreting&nbsp;campaign&nbsp;and&nbsp;customer&nbsp;data&nbsp;to&nbsp;make&nbsp;better&nbsp;marketing&nbsp;decisions.&nbsp;This&nbsp;includes&nbsp;tracking&nbsp;ad&nbsp;performance,&nbsp;analysing&nbsp;website&nbsp;behaviour,&nbsp;measuring&nbsp;ROI,&nbsp;and&nbsp;using&nbsp;insights&nbsp;to&nbsp;optimise&nbsp;future&nbsp;campaigns.&nbsp;In&nbsp;short&nbsp;—&nbsp;it&nbsp;replaces&nbsp;guesswork&nbsp;with&nbsp;evidence.</p><p><strong>How&nbsp;does&nbsp;data&nbsp;analytics&nbsp;improve&nbsp;digital&nbsp;marketing&nbsp;ROI&nbsp;in&nbsp;India?</strong></p><p>By&nbsp;showing&nbsp;exactly&nbsp;which&nbsp;channels,&nbsp;creatives,&nbsp;and&nbsp;audience&nbsp;segments&nbsp;drive&nbsp;real&nbsp;conversions&nbsp;—&nbsp;and&nbsp;which&nbsp;waste&nbsp;budget.&nbsp;Indian&nbsp;brands&nbsp;implementing&nbsp;structured&nbsp;data&nbsp;analytics&nbsp;in&nbsp;digital&nbsp;marketing&nbsp;typically&nbsp;see&nbsp;CAC&nbsp;drop&nbsp;25–45%&nbsp;within&nbsp;60–90&nbsp;days,&nbsp;simply&nbsp;by&nbsp;stopping&nbsp;misallocated&nbsp;spend.</p><p><strong>Which&nbsp;tools&nbsp;are&nbsp;best&nbsp;for&nbsp;marketing&nbsp;data&nbsp;analytics&nbsp;in&nbsp;India?</strong></p><p>For&nbsp;most&nbsp;teams:&nbsp;Google&nbsp;Analytics&nbsp;4&nbsp;(free,&nbsp;excellent),&nbsp;Meta&nbsp;Ads&nbsp;Manager&nbsp;(free),&nbsp;and&nbsp;Google&nbsp;Looker&nbsp;Studio&nbsp;for&nbsp;dashboards.&nbsp;For&nbsp;D2C&nbsp;brands&nbsp;needing&nbsp;retention&nbsp;marketing:&nbsp;CleverTap&nbsp;or&nbsp;WebEngage.&nbsp;For&nbsp;affordable&nbsp;BI:&nbsp;Zoho&nbsp;Analytics&nbsp;from&nbsp;₹1,000/month.</p><p><strong>Do&nbsp;I&nbsp;need&nbsp;a&nbsp;technical&nbsp;background&nbsp;to&nbsp;use&nbsp;data&nbsp;analytics&nbsp;in&nbsp;digital&nbsp;marketing?</strong></p><p>No.&nbsp;Start&nbsp;with&nbsp;GA4&nbsp;and&nbsp;one&nbsp;Looker&nbsp;Studio&nbsp;dashboard.&nbsp;Spend&nbsp;30&nbsp;minutes&nbsp;weekly&nbsp;reviewing&nbsp;your&nbsp;core&nbsp;metrics.&nbsp;You&#39;ll&nbsp;spot&nbsp;patterns&nbsp;within&nbsp;4–6&nbsp;weeks.&nbsp;Analytical&nbsp;thinking&nbsp;matters&nbsp;far&nbsp;more&nbsp;than&nbsp;technical&nbsp;skills.</p><p><strong>Is&nbsp;data&nbsp;analytics&nbsp;useful&nbsp;for&nbsp;small&nbsp;businesses&nbsp;and&nbsp;startups&nbsp;in&nbsp;India?</strong></p><p>Absolutely&nbsp;—&nbsp;arguably&nbsp;more&nbsp;so.&nbsp;When&nbsp;every&nbsp;rupee&nbsp;counts,&nbsp;knowing&nbsp;what&#39;s&nbsp;working&nbsp;is&nbsp;critical.&nbsp;Most&nbsp;essential&nbsp;tools&nbsp;are&nbsp;free.&nbsp;A&nbsp;₹50,000/month&nbsp;budget&nbsp;managed&nbsp;with&nbsp;solid&nbsp;analytics&nbsp;will&nbsp;consistently&nbsp;outperform&nbsp;a&nbsp;₹5&nbsp;lakh&nbsp;budget&nbsp;run&nbsp;on&nbsp;instinct.</p><p><strong>What&#39;s&nbsp;the&nbsp;difference&nbsp;between&nbsp;web&nbsp;analytics&nbsp;and&nbsp;marketing&nbsp;analytics?</strong></p><p>Web&nbsp;analytics&nbsp;tracks&nbsp;what&nbsp;happens&nbsp;on&nbsp;your&nbsp;website&nbsp;—&nbsp;sessions,&nbsp;bounce&nbsp;rates,&nbsp;page&nbsp;views.&nbsp;Marketing&nbsp;analytics&nbsp;is&nbsp;broader&nbsp;—&nbsp;it&nbsp;measures&nbsp;performance&nbsp;across&nbsp;all&nbsp;channels&nbsp;(ads,&nbsp;email,&nbsp;SEO,&nbsp;social)&nbsp;and&nbsp;ties&nbsp;activity&nbsp;to&nbsp;revenue&nbsp;outcomes.&nbsp;Web&nbsp;analytics&nbsp;feeds&nbsp;into&nbsp;marketing&nbsp;analytics,&nbsp;not&nbsp;the&nbsp;other&nbsp;way&nbsp;around.</p><h2><strong>The&nbsp;Bottom&nbsp;Line&nbsp;</strong></h2><p>Data&nbsp;analytics&nbsp;in&nbsp;digital&nbsp;marketing&nbsp;isn&#39;t&nbsp;a&nbsp;tool&nbsp;—&nbsp;it&#39;s&nbsp;a&nbsp;decision-making&nbsp;habit.&nbsp;Indian&nbsp;marketers&nbsp;who&#39;ve&nbsp;made&nbsp;the&nbsp;shift&nbsp;report&nbsp;lower&nbsp;CAC,&nbsp;better&nbsp;ROAS,&nbsp;and&nbsp;campaigns&nbsp;that&nbsp;actually&nbsp;improve&nbsp;over&nbsp;time&nbsp;instead&nbsp;of&nbsp;slowly&nbsp;eroding.</p><p>Start&nbsp;with&nbsp;your&nbsp;tracking.&nbsp;Build&nbsp;one&nbsp;dashboard.&nbsp;Run&nbsp;one&nbsp;test.&nbsp;The&nbsp;compounding&nbsp;effect&nbsp;is&nbsp;real&nbsp;—&nbsp;and&nbsp;it&nbsp;starts&nbsp;on&nbsp;day&nbsp;one.</p><p><strong>Want&nbsp;a&nbsp;data&nbsp;analytics&nbsp;setup&nbsp;that&nbsp;your&nbsp;team&nbsp;will&nbsp;actually&nbsp;use?</strong>&nbsp;At&nbsp;<strong><u><a href="https://digitaladdaagency.com/" rel="noopener noreferrer" target="_blank">DigitalAdda</a></u></strong>,&nbsp;we&nbsp;help&nbsp;Indian&nbsp;brands&nbsp;and&nbsp;agencies&nbsp;build&nbsp;analytics&nbsp;workflows,&nbsp;fix&nbsp;attribution,&nbsp;and&nbsp;turn&nbsp;raw&nbsp;data&nbsp;into&nbsp;decisions.</p><h2>About&nbsp;the&nbsp;Author</h2><p>Quick&nbsp;facts</p><p><strong>Name:</strong>&nbsp;Shagun</p><p><strong>From:</strong>&nbsp;Delhi</p><p><strong>Education:</strong>&nbsp;B.Tech</p><p><strong>Program:</strong>&nbsp;Data&nbsp;Science&nbsp;and&nbsp;Data&nbsp;Analytics</p><p><strong>Placed&nbsp;in:</strong>&nbsp;NIDADS&nbsp;(National&nbsp;Institute&nbsp;of&nbsp;Data&nbsp;Analytics&nbsp;&amp;&nbsp;Data&nbsp;Science)</p><p><strong>Covers&nbsp;topics:</strong>&nbsp;Data&nbsp;Science,&nbsp;Data&nbsp;Analytics,&nbsp;Artificial&nbsp;Intelligence,&nbsp;Machine&nbsp;Learning,&nbsp;Data&nbsp;Engineering,&nbsp;Deep&nbsp;Learning</p><p><strong>Currently&nbsp;working&nbsp;as:&nbsp;</strong>Senior&nbsp;Data&nbsp;Science&nbsp;Trainer</p><p><strong>In&nbsp;her&nbsp;words</strong>:&nbsp;&quot;The&nbsp;best&nbsp;way&nbsp;to&nbsp;learn&nbsp;data&nbsp;science&nbsp;isn&#39;t&nbsp;just&nbsp;solving&nbsp;problems&nbsp;—&nbsp;it&#39;s&nbsp;understanding&nbsp;why&nbsp;the&nbsp;solution&nbsp;works.&nbsp;That&#39;s&nbsp;what&nbsp;I&nbsp;try&nbsp;to&nbsp;teach&nbsp;every&nbsp;single&nbsp;day.&quot;</p>
+      </div>
+    </div>
+  
+</body>
+</html>
