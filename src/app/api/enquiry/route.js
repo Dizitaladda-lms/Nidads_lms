@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 
-const CRM_URL =
-  process.env.CRM_LEADS_URL ||
-  "https://leads.dizitaladda.com/api/public/leads";
+const CRM_URL = process.env.CRM_LEADS_URL;
 
 const CRM_DOMAIN = process.env.CRM_DOMAIN || "nidads";
 const CRM_SOURCE = process.env.CRM_SOURCE || "main website";
@@ -93,7 +91,15 @@ export async function POST(request) {
       remarks: normalized.details || undefined,
     };
 
-    // 2. Submit to DizitalAdda CRM
+    if (!CRM_URL) {
+      console.error("CRM_LEADS_URL is not configured in environment variables");
+      return NextResponse.json(
+        { error: "Lead service is not configured" },
+        { status: 500 }
+      );
+    }
+
+    // 2. Submit to CRM
     const crmResponse = await fetch(CRM_URL, {
       method: "POST",
       headers: {
