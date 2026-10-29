@@ -19,7 +19,11 @@ const ensureStrongAdminPassword = () => {
 };
 
 const getSecret = () => {
-  const secret = process.env.ADMIN_SESSION_SECRET;
+  const secret =
+    process.env.ADMIN_SESSION_SECRET ||
+    (process.env.NODE_ENV !== "production"
+      ? "dev-only-session-secret-key-32-chars-minimum-length"
+      : null);
   if (!secret) {
     throw new Error("ADMIN_SESSION_SECRET is required for admin authentication");
   }
@@ -43,8 +47,21 @@ const safeEqual = (a, b) => {
 
 export const validateAdminCredentials = (username, password) => {
   const adminUser = process.env.ADMIN_USERNAME || "admin@example.com";
-  const adminPass = process.env.ADMIN_PASSWORD || "";
-  return username === adminUser && password === adminPass;
+  const adminPass = process.env.ADMIN_PASSWORD;
+
+  if (!adminPass) {
+    console.warn(
+      "[auth] Warning: ADMIN_PASSWORD is not set in your .env / .env.local file. Admin login will fail."
+    );
+    return false;
+  }
+
+  return (
+    typeof username === "string" &&
+    typeof password === "string" &&
+    username.trim().toLowerCase() === adminUser.trim().toLowerCase() &&
+    password === adminPass
+  );
 };
 
 export const createSessionToken = () => {
