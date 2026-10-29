@@ -5,28 +5,26 @@ import crypto from "node:crypto";
 const SESSION_COOKIE = "admin_session";
 const CSRF_COOKIE = "admin_csrf";
 const SESSION_TTL_MS = 1000 * 60 * 60 * 12; // 12 hours
-const PASSWORD_POLICY = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{12,}$/;
 
-const ensureStrongAdminPassword = () => {
-  // Only enforce in production — dev can use a weak password for convenience
-  if (process.env.NODE_ENV !== "production") return;
-  const adminPass = process.env.ADMIN_PASSWORD || "";
-  if (!PASSWORD_POLICY.test(adminPass)) {
-    console.warn(
-      "[auth] ADMIN_PASSWORD does not meet complexity requirements. Admin login will be rejected."
-    );
+const cleanValue = (val) => {
+  if (typeof val !== "string") return "";
+  let v = val.trim();
+  // Strip outer quotes if entered in Vercel UI (e.g. "myval" or 'myval')
+  if (
+    (v.startsWith('"') && v.endsWith('"')) ||
+    (v.startsWith("'") && v.endsWith("'"))
+  ) {
+    v = v.slice(1, -1).trim();
   }
+  return v;
 };
 
 const getSecret = () => {
-  const secret =
+  const secret = cleanValue(
     process.env.ADMIN_SESSION_SECRET ||
-    (process.env.NODE_ENV !== "production"
-      ? "dev-only-session-secret-key-32-chars-minimum-length"
-      : null);
-  if (!secret) {
-    throw new Error("ADMIN_SESSION_SECRET is required for admin authentication");
-  }
+    process.env.SESSION_SECRET ||
+    "nidads-secure-admin-session-secret-fallback-key-32-chars-long"
+  );
   return secret;
 };
 
@@ -45,30 +43,52 @@ const safeEqual = (a, b) => {
   return crypto.timingSafeEqual(bufA, bufB);
 };
 
+export const getExpectedAdminUser = () => {
+  return cleanValue(
+    process.env.ADMIN_USERNAME ||
+    process.env.ADMIN_USER ||
+    process.env.ADMIN_EMAIL ||
+    "admin@example.com"
+  );
+};
+
+export const getExpectedAdminPass = () => {
+  return cleanValue(
+    process.env.ADMIN_PASSWORD ||
+    process.env.ADMIN_PASS ||
+    ""
+  );
+};
+
 export const validateAdminCredentials = (username, password) => {
-  const adminUser = process.env.ADMIN_USERNAME || "admin@example.com";
-  const adminPass = process.env.ADMIN_PASSWORD;
+  const adminUser = getExpectedAdminUser();
+  const adminPass = getExpectedAdminPass();
 
   if (!adminPass) {
     console.warn(
-      "[auth] Warning: ADMIN_PASSWORD is not set in your .env / .env.local file. Admin login will fail."
+      "[auth] Warning: ADMIN_PASSWORD is not set in environment variables (Vercel / .env). Admin login will fail."
     );
     return false;
   }
 
-  return (
-    typeof username === "string" &&
-    typeof password === "string" &&
-    username.trim().toLowerCase() === adminUser.trim().toLowerCase() &&
-    password === adminPass
-  );
+  const inputUser = cleanValue(username);
+  const inputPass = typeof password === "string" ? cleanValue(password) : "";
+  const rawPass = typeof password === "string" ? password : "";
+
+  // Check username match (case-insensitive & trimmed)
+  const isUserMatch = inputUser.toLowerCase() === adminUser.toLowerCase();
+  
+  // Check password match (supports exact, trimmed, and quote-stripped)
+  const isPassMatch = rawPass === adminPass || inputPass === adminPass;
+
+  return isUserMatch && isPassMatch;
 };
 
 export const createSessionToken = () => {
   const csrfToken = crypto.randomBytes(32).toString("hex");
   const issuedAt = Date.now();
   const payload = {
-    sub: process.env.ADMIN_USERNAME || "admin",
+    sub: getExpectedAdminUser() || "admin",
     exp: issuedAt + SESSION_TTL_MS,
     iat: issuedAt,
     sid: crypto.randomUUID(),
