@@ -1,18 +1,16 @@
 import { NextResponse } from "next/server";
 import {
+  checkAdminCredentials,
   clearAdminSessionCookie,
   ensureAdminApi,
-  getExpectedAdminPass,
-  getExpectedAdminUser,
   setAdminSessionCookie,
-  validateAdminCredentials,
 } from "@/lib/auth";
 import { rateLimit } from "@/lib/rate-limit";
 import { recordAudit } from "@/lib/audit";
 import { getClientIp } from "@/lib/request-info";
 
 const LOGIN_WINDOW_MS = 60_000;
-const LOGIN_ATTEMPT_LIMIT = 5;
+const LOGIN_ATTEMPT_LIMIT = 10;
 
 export async function POST(request) {
   try {
@@ -25,7 +23,7 @@ export async function POST(request) {
 
     if (!isAllowed) {
       return NextResponse.json(
-        { error: "Too many login attempts. Please try again shortly." },
+        { error: "Too many login attempts. Please wait a minute and try again." },
         { status: 429 }
       );
     }
@@ -33,29 +31,17 @@ export async function POST(request) {
     const body = await request.json().catch(() => ({}));
     const { username, password } = body;
 
-    const expectedPass = getExpectedAdminPass();
-    if (!expectedPass) {
-      console.error("[auth] ADMIN_PASSWORD environment variable is missing on Vercel.");
-      return NextResponse.json(
-        {
-          error:
-            "Vercel Environment Variable 'ADMIN_PASSWORD' set nahi hai! Kripya Vercel Dashboard -> Settings -> Environment Variables me ADMIN_PASSWORD add karein aur project ko Redeploy karein.",
-        },
-        { status: 500 }
-      );
-    }
+    const check = checkAdminCredentials(username, password);
 
-    if (!validateAdminCredentials(username, password)) {
+    if (!check.ok) {
       try {
         await recordAudit("admin.login.failed", { actor: username, ip });
-      } catch (e) {
-        console.error("Audit log failed:", e);
+      } catch (auditErr) {
+        console.error("Audit log failed:", auditErr);
       }
 
-      return NextResponse.json(
-        { error: "Invalid username or password. Please verify your credentials." },
-        { status: 401 }
-      );
+      const status = check.reason === "MISSING_ENV_PASSWORD" ? 500 : 401;
+      return NextResponse.json({ error: check.message }, { status });
     }
 
     const response = NextResponse.json({ ok: true });
@@ -63,8 +49,8 @@ export async function POST(request) {
 
     try {
       await recordAudit("admin.login.success", { actor: username, ip });
-    } catch (e) {
-      console.error("Audit log failed:", e);
+    } catch (auditErr) {
+      console.error("Audit log failed:", auditErr);
     }
 
     return response;

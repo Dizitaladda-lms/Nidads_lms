@@ -44,12 +44,13 @@ const safeEqual = (a, b) => {
 };
 
 export const getExpectedAdminUser = () => {
-  return cleanValue(
+  const configured = cleanValue(
     process.env.ADMIN_USERNAME ||
     process.env.ADMIN_USER ||
     process.env.ADMIN_EMAIL ||
-    "admin@example.com"
+    ""
   );
+  return configured || "admin";
 };
 
 export const getExpectedAdminPass = () => {
@@ -60,28 +61,72 @@ export const getExpectedAdminPass = () => {
   );
 };
 
-export const validateAdminCredentials = (username, password) => {
-  const adminUser = getExpectedAdminUser();
-  const adminPass = getExpectedAdminPass();
+export const checkAdminCredentials = (username, password) => {
+  const rawAdminPass = process.env.ADMIN_PASSWORD || process.env.ADMIN_PASS || "";
+  const cleanAdminPass = cleanValue(rawAdminPass);
 
-  if (!adminPass) {
-    console.warn(
-      "[auth] Warning: ADMIN_PASSWORD is not set in environment variables (Vercel / .env). Admin login will fail."
-    );
-    return false;
+  if (!rawAdminPass && !cleanAdminPass) {
+    return {
+      ok: false,
+      reason: "MISSING_ENV_PASSWORD",
+      message:
+        "Vercel Environment Variable 'ADMIN_PASSWORD' set nahi hai! Kripya Vercel Dashboard -> Settings -> Environment Variables me ADMIN_PASSWORD add karein aur project ko Redeploy karein.",
+    };
   }
 
+  const rawAdminUser =
+    process.env.ADMIN_USERNAME ||
+    process.env.ADMIN_USER ||
+    process.env.ADMIN_EMAIL ||
+    "";
+  const cleanAdminUser = cleanValue(rawAdminUser);
+
   const inputUser = cleanValue(username);
-  const inputPass = typeof password === "string" ? cleanValue(password) : "";
-  const rawPass = typeof password === "string" ? password : "";
+  const inputPass = typeof password === "string" ? password : "";
 
-  // Check username match (case-insensitive & trimmed)
-  const isUserMatch = inputUser.toLowerCase() === adminUser.toLowerCase();
-  
-  // Check password match (supports exact, trimmed, and quote-stripped)
-  const isPassMatch = rawPass === adminPass || inputPass === adminPass;
+  // Check username
+  let isUserMatch = false;
+  if (cleanAdminUser) {
+    // If username is explicitly configured in Vercel
+    isUserMatch =
+      inputUser.toLowerCase() === cleanAdminUser.toLowerCase() ||
+      inputUser.toLowerCase() === rawAdminUser.trim().toLowerCase();
+  } else {
+    // Fallback: If ADMIN_USERNAME was not explicitly configured in Vercel, allow "admin", "admin@example.com", or "admin@nidads.com"
+    const allowedDefaults = ["admin", "admin@example.com", "admin@nidads.com"];
+    isUserMatch = allowedDefaults.includes(inputUser.toLowerCase());
+  }
 
-  return isUserMatch && isPassMatch;
+  if (!isUserMatch) {
+    const expected = cleanAdminUser || "admin ya admin@example.com";
+    return {
+      ok: false,
+      reason: "USER_MISMATCH",
+      message: `Username match nahi hua! Aapne daala: "${username}", lekin system me configured username hai: "${expected}".`,
+    };
+  }
+
+  // Check password
+  const isPassMatch =
+    inputPass === rawAdminPass ||
+    inputPass === cleanAdminPass ||
+    inputPass.trim() === rawAdminPass ||
+    inputPass.trim() === cleanAdminPass;
+
+  if (!isPassMatch) {
+    return {
+      ok: false,
+      reason: "PASSWORD_MISMATCH",
+      message:
+        "Username sahi hai, lekin Password match nahi ho raha hai! Kripya Vercel me set kiya hua ADMIN_PASSWORD dobara check karein.",
+    };
+  }
+
+  return { ok: true };
+};
+
+export const validateAdminCredentials = (username, password) => {
+  return checkAdminCredentials(username, password).ok;
 };
 
 export const createSessionToken = () => {
