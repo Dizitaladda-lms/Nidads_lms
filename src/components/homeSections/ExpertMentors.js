@@ -42,7 +42,6 @@ export default function ExpertMentors() {
 
   const handleStartPlay = () => {
     setIsPlaying(true);
-    // Smooth scroll to the spotlight if not in view
     const elem = document.getElementById("trainer-spotlight-video");
     if (elem) {
       elem.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -99,23 +98,20 @@ export default function ExpertMentors() {
                   type="button"
                   className={styles.watchDemoBtn}
                   onClick={handleStartPlay}
-                  aria-label="Watch Miss Shagun in action"
+                  aria-label="Watch Miss Shagun's teaching demo"
                 >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                  <span>Watch Miss Shagun in Action (1-Min Demo)</span>
+                  <span>Watch Teaching Demo</span>
                 </button>
               )}
             </article>
           ))}
         </div>
 
-        {/* Featured Trainer Spotlight Video Banner */}
+        {/* Featured Large Trainer Spotlight Video Banner */}
         <div className={styles.spotlightBanner} id="trainer-spotlight-video">
           <div className={styles.spotlightContent}>
             <span className={styles.spotlightBadge}>
-              ⚡ Live Trainer Challenge
+              LIVE TRAINER CHALLENGE
             </span>
             <h3 className={styles.spotlightTitle}>
               &ldquo;Is Your Data Knowledge Enough for a Job? Take This 60-Sec Test!&rdquo;
@@ -129,28 +125,26 @@ export default function ExpertMentors() {
                 className={styles.playActionBtn}
                 onClick={() => setIsPlaying(true)}
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-                {isPlaying ? "Video Playing Below" : "Watch 1-Min Assessment Video"}
+                {isPlaying ? "Video Playing" : "Watch Assessment Video"}
               </button>
               <PopupButton
                 className="btn btn--secondary"
                 style={{
-                  padding: "12px 24px",
-                  fontSize: "14px",
+                  padding: "14px 28px",
+                  fontSize: "15px",
                   borderRadius: "999px",
                   background: "rgba(255,255,255,0.08)",
                   color: "#fff",
-                  border: "1px solid rgba(255,255,255,0.2)",
+                  border: "1px solid rgba(255,255,255,0.25)",
+                  fontWeight: "600",
                 }}
               >
-                Join Miss Shagun&apos;s Next Batch →
+                Join Next Batch
               </PopupButton>
             </div>
           </div>
 
-          {/* Interactive Playable Video Card */}
+          {/* Large Interactive Playable Video Card */}
           <div
             className={styles.spotlightCard}
             onClick={() => !isPlaying && setIsPlaying(true)}
@@ -172,7 +166,7 @@ export default function ExpertMentors() {
                   }}
                   aria-label="Close video"
                 >
-                  ✕ Close
+                  Close
                 </button>
                 <iframe
                   className={styles.spotlightIframe}
@@ -191,13 +185,11 @@ export default function ExpertMentors() {
                   loading="lazy"
                 />
                 <div className={styles.spotlightOverlay} />
-                <div className={styles.spotlightPlayIcon}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
+                <div className={styles.spotlightPlayPill}>
+                  <span>PLAY VIDEO</span>
                 </div>
                 <div className={styles.spotlightCardLabel}>
-                  <span>Tap to Play 60-Sec Demo ▶</span>
+                  <span>Click to Play Demo</span>
                 </div>
               </>
             )}

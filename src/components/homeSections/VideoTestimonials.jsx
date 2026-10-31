@@ -7,13 +7,13 @@ import PopupButton from "@/components/PopupButton";
 const VIDEOS = [
   {
     id: "GX9GQUE0xjo",
-    name: "Miss Shagun (Lead Trainer)",
+    name: "Miss Shagun",
     role: "Lead Data Science & AI Trainer",
-    title: "Is Your Data Knowledge Enough for a Job? Take This Test!",
-    badge: "🔥 Trainer Challenge",
+    title: "Is Your Data Knowledge Enough for a Job? Take This Test",
+    badge: "Trainer Spotlight",
     course: "Data Science & AI",
     startTime: 0,
-    rating: 5,
+    rating: "5.0 Rating",
   },
   {
     id: "pgg6p_TfrN8",
@@ -23,7 +23,7 @@ const VIDEOS = [
     badge: "Student Review",
     course: "Data Analytics & AI",
     startTime: 0,
-    rating: 5,
+    rating: "5.0 Rating",
   },
   {
     id: "miVSa95wPdg",
@@ -33,7 +33,7 @@ const VIDEOS = [
     badge: "Alumni Story",
     course: "Data Science & Analytics",
     startTime: 0,
-    rating: 5,
+    rating: "5.0 Rating",
   },
   {
     id: "GAphkSNI1Ao",
@@ -43,7 +43,7 @@ const VIDEOS = [
     badge: "Verified Review",
     course: "Data Science & ML",
     startTime: 0,
-    rating: 5,
+    rating: "5.0 Rating",
   },
   {
     id: "fKCxptOFfic",
@@ -53,7 +53,7 @@ const VIDEOS = [
     badge: "Student Testimonial",
     course: "Data Science Master Program",
     startTime: 0,
-    rating: 5,
+    rating: "5.0 Rating",
   },
   {
     id: "4N0PKy5xj2o",
@@ -63,7 +63,7 @@ const VIDEOS = [
     badge: "Campus & Mentorship",
     course: "Practical Industry Training",
     startTime: 11, // Starts at 0:11 (11s) as requested
-    rating: 5,
+    rating: "5.0 Rating",
   },
 ];
 
@@ -82,7 +82,7 @@ export default function VideoTestimonials() {
 
   const scroll = (direction) => {
     if (!trackRef.current) return;
-    const cardWidth = 300;
+    const cardWidth = 340;
     const offset = direction === "left" ? -cardWidth * 1.5 : cardWidth * 1.5;
     trackRef.current.scrollBy({ left: offset, behavior: "smooth" });
   };
@@ -95,7 +95,6 @@ export default function VideoTestimonials() {
         {/* Header */}
         <div className={styles.header}>
           <div className={styles.badge}>
-            <span className={styles.badgeDot} />
             <span className={styles.badgeText}>Real Stories & Trainer Insights</span>
           </div>
 
@@ -110,22 +109,18 @@ export default function VideoTestimonials() {
           {/* Trust Highlights */}
           <div className={styles.trustBar}>
             <div className={styles.trustItem}>
-              <span className={styles.trustIcon}>⭐</span>
-              <span><strong>4.9 / 5</strong> Student Satisfaction</span>
+              <span><strong>4.9 / 5</strong> Student Rating</span>
             </div>
             <div className={styles.trustDivider} />
             <div className={styles.trustItem}>
-              <span className={styles.trustIcon}>🎯</span>
               <span><strong>25,000+</strong> Trained Learners</span>
             </div>
             <div className={styles.trustDivider} />
             <div className={styles.trustItem}>
-              <span className={styles.trustIcon}>💼</span>
               <span><strong>100%</strong> Practical Placement Support</span>
             </div>
             <div className={styles.trustDivider} />
             <div className={styles.trustItem}>
-              <span className={styles.trustIcon}>🏢</span>
               <span><strong>18+</strong> Top Hiring Partners</span>
             </div>
           </div>
@@ -134,23 +129,22 @@ export default function VideoTestimonials() {
         {/* Slider Controls Header */}
         <div className={styles.sliderHeader}>
           <div className={styles.sliderHint}>
-            <span>👉</span>
-            <span>Click any video to play directly right here</span>
+            <span>Select any video to play directly right here</span>
           </div>
           <div className={styles.controls}>
             <button
               className={styles.controlBtn}
               onClick={() => scroll("left")}
-              aria-label="Scroll reviews left"
+              aria-label="Scroll left"
             >
-              ❮
+              Previous
             </button>
             <button
               className={styles.controlBtn}
               onClick={() => scroll("right")}
-              aria-label="Scroll reviews right"
+              aria-label="Scroll right"
             >
-              ❯
+              Next
             </button>
           </div>
         </div>
@@ -184,7 +178,7 @@ export default function VideoTestimonials() {
                       onClick={handleClose}
                       aria-label="Close video player"
                     >
-                      ✕ Close
+                      Close
                     </button>
                     <iframe
                       className={styles.iframePlayer}
@@ -207,27 +201,17 @@ export default function VideoTestimonials() {
                     {/* Top Badges */}
                     <div className={styles.cardTopRow}>
                       <span className={styles.tagBadge}>{item.badge}</span>
-                      <span className={styles.shortIconBadge}>
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
-                        </svg>
-                        Short
-                      </span>
+                      <span className={styles.shortIconBadge}>Shorts</span>
                     </div>
 
-                    {/* Glowing Play Button */}
+                    {/* Clean Play Pill Button */}
                     <div className={styles.playBtnWrapper}>
-                      <div className={styles.playCircle}>
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                      <span className={styles.playTextHint}>Tap to Play</span>
+                      <div className={styles.playPill}>PLAY</div>
                     </div>
 
                     {/* Bottom Metadata */}
                     <div className={styles.cardBottom}>
-                      <div className={styles.stars}>{"★".repeat(item.rating)}</div>
+                      <div className={styles.ratingTag}>{item.rating}</div>
                       <h3 className={styles.cardTitle}>{item.title}</h3>
                       <div className={styles.cardMeta}>
                         <span>{item.name}</span>
@@ -247,7 +231,7 @@ export default function VideoTestimonials() {
             Want to transform your career like these learners? <strong>Talk to our mentors today.</strong>
           </p>
           <PopupButton className="btn btn--primary" style={{ padding: "14px 34px", fontSize: "16px" }}>
-            Book Free Career Counselling →
+            Book Free Career Counselling
           </PopupButton>
         </div>
       </div>
