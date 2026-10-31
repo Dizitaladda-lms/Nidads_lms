@@ -18,7 +18,8 @@ import ProjectsShowcase from "@/components/homeSections/ProjectShowcase";
 import PostGraduationProgram from "@/components/homeSections/PostGraduationProgram";
 import CertificateSection from "@/components/homeSections/CertificateSection";
 import FormEnd from "@/components/homeSections/formend.jsx";
-import CourseSection2 from "../components/CourseSection/CourseSection2"
+import VideoTestimonials from "@/components/homeSections/VideoTestimonials";
+import CourseSection2 from "../components/CourseSection/CourseSection2";
 import { buildMeta } from "@/lib/seo";
 
 const _baseMeta = buildMeta({
@@ -132,6 +133,7 @@ export default function Home() {
       <Videostest />
 
       <Hero9 />
+      <VideoTestimonials />
       <FormEnd />
       <Hero8 />
     </>
