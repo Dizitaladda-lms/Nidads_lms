@@ -6,16 +6,6 @@ import PopupButton from "@/components/PopupButton";
 
 const VIDEOS = [
   {
-    id: "GX9GQUE0xjo",
-    name: "Miss Shagun",
-    role: "Lead Data Science & AI Trainer",
-    title: "Is Your Data Knowledge Enough for a Job? Take This Test",
-    badge: "Trainer Spotlight",
-    course: "Data Science & AI",
-    startTime: 0,
-    rating: "5.0 Rating",
-  },
-  {
     id: "pgg6p_TfrN8",
     name: "NIDADS Student",
     role: "Data Analytics Trainee",
