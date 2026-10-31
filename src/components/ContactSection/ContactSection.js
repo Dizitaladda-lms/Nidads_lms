@@ -16,6 +16,7 @@ export default function ContactSection() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [isBlocked, setIsBlocked] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,6 +37,7 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isBlocked) return;
     setSubmitError("");
 
     if (!form.firstName || !form.email) {
@@ -63,6 +65,14 @@ export default function ContactSection() {
       });
 
       const payload = await response.json().catch(() => null);
+
+      if (response.status === 429 || payload?.blocked) {
+        setIsBlocked(true);
+        throw new Error(
+          payload?.error ||
+            "Aapki IP address se maximum requests limit (3) exceed ho chuki hai. Is IP ko block kar diya gaya hai."
+        );
+      }
 
       if (!response.ok || !payload?.success) {
         throw new Error(payload?.error || "Unable to submit form");
@@ -105,8 +115,19 @@ export default function ContactSection() {
             )}
 
             {submitError && (
-              <p style={{ color: "#c1121f", marginBottom: "10px" }}>
-                {submitError}
+              <p
+                style={{
+                  color: "#991b1b",
+                  backgroundColor: "#fee2e2",
+                  border: "1px solid #f87171",
+                  borderRadius: "6px",
+                  padding: "10px 14px",
+                  marginBottom: "14px",
+                  fontSize: "14px",
+                  lineHeight: "1.4"
+                }}
+              >
+                ⚠ {submitError}
               </p>
             )}
 
@@ -121,6 +142,7 @@ export default function ContactSection() {
                   placeholder="First name"
                   className={styles.input}
                   required
+                  disabled={loading || isBlocked}
                 />
               </div>
 
@@ -133,6 +155,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   placeholder="Last name"
                   className={styles.input}
+                  disabled={loading || isBlocked}
                 />
               </div>
             </div>
@@ -147,6 +170,7 @@ export default function ContactSection() {
                 placeholder="you@company.com"
                 className={styles.input}
                 required
+                disabled={loading || isBlocked}
               />
             </div>
 
@@ -159,6 +183,7 @@ export default function ContactSection() {
                 onChange={handleChange}
                 placeholder="+91 9876543210"
                 className={styles.input}
+                disabled={loading || isBlocked}
               />
             </div>
 
@@ -171,45 +196,27 @@ export default function ContactSection() {
                 placeholder="Leave us a message..."
                 className={styles.textarea}
                 rows={4}
+                disabled={loading || isBlocked}
               />
             </div>
 
             <div className={styles.inputGroup}>
-              {/* <label className={styles.label}>Enquiry type</label>
-              <div className={styles.checkboxGrid}>
-                {[
-                  "Course info",
-                  "Admissions",
-                  "Scholarship",
-                  "Placement help",
-                  "Other"
-                ].map((item) => (
-                  <label key={item} className={styles.checkboxLabel}>
-                    <input
-                      type="checkbox"
-                      checked={form.enquiryTypes.includes(item)}
-                      onChange={() => handleCheckboxChange(item)}
-                      className={styles.checkbox}
-                    />
-                    <span>{item}</span>
-                  </label>
-                ))}
-              </div> */}
+              {/* Optional enquiry types if needed in future */}
             </div>
 
             <button
               type="submit"
               className={styles.submitBtn}
-              disabled={loading}
+              disabled={loading || isBlocked}
             >
-              {loading ? "Sending..." : "Send message"}
+              {isBlocked ? "Submissions Blocked" : loading ? "Sending..." : "Send message"}
             </button>
           </form>
 
           <div className={styles.contactInfo}>
             <div className={styles.infoBlock}>
               <h3 className={styles.infoTitle}>Chat with us</h3>
-              <p className={styles.infoText}>Speak  to our admission team via live chat.</p>
+              <p className={styles.infoText}>Speak to our admission team via live chat.</p>
               <div className={styles.links}>
                 <a href="#" className={styles.link}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
@@ -237,7 +244,7 @@ export default function ContactSection() {
 
             <div className={styles.infoBlock}>
               <h3 className={styles.infoTitle}>Visit us</h3>
-              <p className={styles.infoText}>Come see our campus  and meet the team in person.</p>
+              <p className={styles.infoText}>Come see our campus and meet the team in person.</p>
               <a href="#" className={styles.link}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
                 Spacetime Management Pvt Ltd Design House, behind Savitri Cinema Complex, Greater Kailash II, Chittaranjan Park, New Delhi, Delhi 110048

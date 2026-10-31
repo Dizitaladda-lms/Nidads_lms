@@ -106,6 +106,7 @@ export default function FormEnd() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [isBlocked, setIsBlocked] = useState(false);
 
   const handleDateSelect = (date) => {
     setSelectedDate(date);
@@ -119,6 +120,7 @@ export default function FormEnd() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isBlocked) return;
     setSubmitError("");
     setLoading(true);
 
@@ -137,6 +139,14 @@ export default function FormEnd() {
       });
 
       const payload = await response.json().catch(() => null);
+
+      if (response.status === 429 || payload?.blocked) {
+        setIsBlocked(true);
+        throw new Error(
+          payload?.error ||
+            "Aapki IP address se maximum requests limit (3) exceed ho chuki hai. Is IP ko block kar diya gaya hai."
+        );
+      }
 
       if (!response.ok || !payload?.success) {
         throw new Error(payload?.error || "Unable to submit form");
@@ -191,28 +201,41 @@ export default function FormEnd() {
                 <p className={styles.colLabel}>Your project details</p>
 
                 {submitError && (
-                  <p style={{ color: "#b91c1c", margin: "0 0 12px" }}>{submitError}</p>
+                  <p
+                    style={{
+                      color: "#b91c1c",
+                      backgroundColor: "#fee2e2",
+                      border: "1px solid #f87171",
+                      borderRadius: "6px",
+                      padding: "10px 14px",
+                      margin: "0 0 16px",
+                      fontSize: "14px",
+                      lineHeight: "1.4",
+                    }}
+                  >
+                    ⚠ {submitError}
+                  </p>
                 )}
 
                 <div className={styles.row}>
                   <div className={styles.field}>
                     <label htmlFor="name">Full Name <span>*</span></label>
-                    <input id="name" name="name" type="text" placeholder="e.g. Rahul Sharma" value={form.name} onChange={handleChange} required />
+                    <input id="name" name="name" type="text" placeholder="e.g. Rahul Sharma" value={form.name} onChange={handleChange} required disabled={loading || isBlocked} />
                   </div>
                   <div className={styles.field}>
                     <label htmlFor="email">Email Address <span>*</span></label>
-                    <input id="email" name="email" type="email" placeholder="you@example.com" value={form.email} onChange={handleChange} required />
+                    <input id="email" name="email" type="email" placeholder="you@example.com" value={form.email} onChange={handleChange} required disabled={loading || isBlocked} />
                   </div>
                 </div>
 
                 <div className={styles.row}>
                   <div className={styles.field}>
                     <label htmlFor="phone">Phone Number <span>*</span></label>
-                    <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" value={form.phone} onChange={handleChange} required />
+                    <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" value={form.phone} onChange={handleChange} required disabled={loading || isBlocked} />
                   </div>
                   <div className={styles.field}>
                     <label htmlFor="experience">Experience Level</label>
-                    <select id="experience" name="experience" value={form.experience} onChange={handleChange}>
+                    <select id="experience" name="experience" value={form.experience} onChange={handleChange} disabled={loading || isBlocked}>
                       <option value="">Select level</option>
                       <option>Beginner (0–1 yr)</option>
                       <option>Intermediate (1–3 yrs)</option>
@@ -224,7 +247,7 @@ export default function FormEnd() {
                 <div className={styles.row}>
                   <div className={styles.field}>
                     <label htmlFor="program">Program of Interest</label>
-                    <select id="program" name="program" value={form.program} onChange={handleChange}>
+                    <select id="program" name="program" value={form.program} onChange={handleChange} disabled={loading || isBlocked}>
                       <option value="">Select program</option>
                       <option>Diploma in Data Science & AI</option>
                       <option>Diploma in Data Analytics & AI</option>
@@ -235,7 +258,7 @@ export default function FormEnd() {
                   </div>
                   <div className={styles.field}>
                     <label htmlFor="domain">Project Domain</label>
-                    <select id="domain" name="domain" value={form.domain} onChange={handleChange}>
+                    <select id="domain" name="domain" value={form.domain} onChange={handleChange} disabled={loading || isBlocked}>
                       <option value="">Select domain</option>
                       <option>Data Science</option>
                       <option>Data Analytics</option>
@@ -258,6 +281,7 @@ export default function FormEnd() {
                     placeholder="Describe your project idea, goals, or any specific topic you want to work on..."
                     value={form.description}
                     onChange={handleChange}
+                    disabled={loading || isBlocked}
                   />
                 </div>
 
@@ -271,11 +295,12 @@ export default function FormEnd() {
                     placeholder="Pick from the calendar"
                     value={form.preferredDate}
                     className={styles.dateInput}
+                    disabled={loading || isBlocked}
                   />
                 </div>
 
-                <button type="submit" className={styles.submitBtn} disabled={loading}>
-                  {loading ? <span className={styles.spinner} /> : "Book My Free Session →"}
+                <button type="submit" className={styles.submitBtn} disabled={loading || isBlocked}>
+                  {isBlocked ? "Submissions Blocked (Max 3 reached)" : loading ? <span className={styles.spinner} /> : "Book My Free Session →"}
                 </button>
               </form>
             )}

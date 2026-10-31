@@ -5,26 +5,35 @@ import {
   ensureAdminApi,
   setAdminSessionCookie,
 } from "@/lib/auth";
-import { rateLimit } from "@/lib/rate-limit";
+import { checkIpRateLimit, recordFormSubmission } from "@/lib/rate-limit";
 import { recordAudit } from "@/lib/audit";
 import { getClientIp } from "@/lib/request-info";
-
-const LOGIN_WINDOW_MS = 60_000;
-const LOGIN_ATTEMPT_LIMIT = 10;
 
 export async function POST(request) {
   try {
     const ip = await getClientIp(request);
-    const isAllowed = rateLimit({
-      key: `admin-login:${ip}`,
-      limit: LOGIN_ATTEMPT_LIMIT,
-      windowMs: LOGIN_WINDOW_MS,
+
+    // Strict Rate Limit: Max 3 requests per IP, block if exceeded
+    const rateCheck = await checkIpRateLimit(ip, {
+      type: "admin_login",
+      limit: 3,
     });
 
-    if (!isAllowed) {
+    if (!rateCheck.allowed) {
       return NextResponse.json(
-        { error: "Too many login attempts. Please wait a minute and try again." },
-        { status: 429 }
+        {
+          error: rateCheck.error,
+          blocked: true,
+          remaining: 0,
+        },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": String(rateCheck.retryAfter || 86400),
+            "X-RateLimit-Limit": String(rateCheck.limit || 3),
+            "X-RateLimit-Remaining": "0",
+          },
+        }
       );
     }
 
@@ -40,8 +49,26 @@ export async function POST(request) {
         console.error("Audit log failed:", auditErr);
       }
 
+      // Record failed attempt towards IP limit
+      await recordFormSubmission(ip, {
+        type: "admin_login_failed",
+        actor: username,
+      });
+
       const status = check.reason === "MISSING_ENV_PASSWORD" ? 500 : 401;
-      return NextResponse.json({ error: check.message }, { status });
+      return NextResponse.json(
+        {
+          error: check.message,
+          remainingAttempts: rateCheck.remaining,
+        },
+        {
+          status,
+          headers: {
+            "X-RateLimit-Limit": String(rateCheck.limit || 3),
+            "X-RateLimit-Remaining": String(rateCheck.remaining),
+          },
+        }
+      );
     }
 
     const response = NextResponse.json({ ok: true });

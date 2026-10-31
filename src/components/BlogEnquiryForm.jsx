@@ -2,44 +2,45 @@
 
 import { useState } from "react";
 
-const BlogEnquiryForm = ({ compact = false, courseOptions = [] }) => {
-  const defaultCourse = courseOptions[0] || "Data Science";
+const DEFAULT_COURSES = [
+  "Advanced Data Science & AI Course",
+  "Data Analytics Master Program",
+  "Python for Data Science",
+  "Machine Learning & AI Bootcamp",
+  "Business Analytics with Power BI & Tableau",
+];
+
+const BlogEnquiryForm = ({ defaultCourse = "", compact = false }) => {
   const [form, setForm] = useState({
     name: "",
     email: "",
     mobile: "",
-    course: defaultCourse,
+    course: defaultCourse || DEFAULT_COURSES[0],
   });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [isBlocked, setIsBlocked] = useState(false);
+
+  const courseOptions = defaultCourse && !DEFAULT_COURSES.includes(defaultCourse)
+    ? [defaultCourse, ...DEFAULT_COURSES]
+    : DEFAULT_COURSES;
 
   const validate = () => {
-    const validation = {};
-    if (!form.name.trim()) {
-      validation.name = "Name is required";
-    } else if (form.name.trim().length < 2) {
-      validation.name = "Name must be at least 2 characters";
+    const errs = {};
+    if (!form.name.trim()) errs.name = "Name is required";
+    if (!form.email.trim() || !/\S+@\S+\.\S+/.test(form.email)) {
+      errs.email = "Valid email is required";
     }
-    if (!form.email.trim()) {
-      validation.email = "Email is required";
-    } else if (!form.email.match(/^\S+@\S+\.\S+$/)) {
-      validation.email = "Please enter a valid email";
+    if (!form.mobile.trim() || !/^\d{10}$/.test(form.mobile.replace(/\D/g, ""))) {
+      errs.mobile = "10-digit mobile number required";
     }
-    if (!form.mobile.trim()) {
-      validation.mobile = "Mobile number is required";
-    } else if (!form.mobile.match(/^\d{10}$/)) {
-      validation.mobile = "Enter a valid 10 digit mobile number";
-    }
-    if (!form.course.trim()) {
-      validation.course = "Course name is required";
-    }
-    return validation;
+    return errs;
   };
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
@@ -48,12 +49,15 @@ const BlogEnquiryForm = ({ compact = false, courseOptions = [] }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (isBlocked) return;
     setSubmitError("");
+
     const validation = validate();
     if (Object.keys(validation).length > 0) {
       setErrors(validation);
       return;
     }
+
     setLoading(true);
     try {
       const response = await fetch("/api/enquiry", {
@@ -62,6 +66,15 @@ const BlogEnquiryForm = ({ compact = false, courseOptions = [] }) => {
         body: JSON.stringify({ ...form, source: "Blog Page Enquiry" }),
       });
       const payload = await response.json().catch(() => null);
+
+      if (response.status === 429 || payload?.blocked) {
+        setIsBlocked(true);
+        throw new Error(
+          payload?.error ||
+            "Aapki IP address se maximum requests limit (3) exceed ho chuki hai. Is IP ko block kar diya gaya hai."
+        );
+      }
+
       if (!response.ok || !payload?.success) {
         throw new Error(payload?.error || "Unable to submit enquiry");
       }
@@ -101,7 +114,12 @@ const BlogEnquiryForm = ({ compact = false, courseOptions = [] }) => {
       )}
 
       {submitError && (
-        <div className="beform__error-banner">{submitError}</div>
+        <div
+          className="beform__error-banner"
+          style={isBlocked ? { backgroundColor: "#fee2e2", color: "#991b1b", borderColor: "#f87171" } : undefined}
+        >
+          {submitError}
+        </div>
       )}
 
       <form className="beform__form" onSubmit={handleSubmit} noValidate>
@@ -116,6 +134,7 @@ const BlogEnquiryForm = ({ compact = false, courseOptions = [] }) => {
             value={form.name}
             onChange={handleChange}
             autoComplete="name"
+            disabled={loading || isBlocked}
           />
           {errors.name && <span className="beform__field-error">⚠ {errors.name}</span>}
         </div>
@@ -131,6 +150,7 @@ const BlogEnquiryForm = ({ compact = false, courseOptions = [] }) => {
             value={form.email}
             onChange={handleChange}
             autoComplete="email"
+            disabled={loading || isBlocked}
           />
           {errors.email && <span className="beform__field-error">⚠ {errors.email}</span>}
         </div>
@@ -138,17 +158,19 @@ const BlogEnquiryForm = ({ compact = false, courseOptions = [] }) => {
         <div className="beform__field">
           <label className="beform__label" htmlFor="beform-mobile">Mobile</label>
           <div className="beform__mobile-wrap">
-            <span className="beform__country-code">+91</span>
+            <span className="beform__mobile-prefix">+91</span>
             <input
               id="beform-mobile"
               className={`beform__input beform__input--mobile${errors.mobile ? " beform__input--err" : ""}`}
               type="tel"
               name="mobile"
-              placeholder="10-digit number"
+              placeholder="98765 43210"
               value={form.mobile}
               onChange={handleChange}
+              autoComplete="tel"
               maxLength={10}
               inputMode="numeric"
+              disabled={loading || isBlocked}
             />
           </div>
           {errors.mobile && <span className="beform__field-error">⚠ {errors.mobile}</span>}
@@ -162,6 +184,7 @@ const BlogEnquiryForm = ({ compact = false, courseOptions = [] }) => {
             name="course"
             value={form.course}
             onChange={handleChange}
+            disabled={loading || isBlocked}
           >
             {courseOptions.map((course) => (
               <option key={course} value={course}>{course}</option>
@@ -173,9 +196,9 @@ const BlogEnquiryForm = ({ compact = false, courseOptions = [] }) => {
         <button
           type="submit"
           className="beform__submit"
-          disabled={loading}
+          disabled={loading || isBlocked}
         >
-          {loading ? "Submitting…" : "Submit Enquiry"}
+          {isBlocked ? "Submissions Blocked" : loading ? "Submitting…" : "Submit Enquiry"}
         </button>
       </form>
     </div>

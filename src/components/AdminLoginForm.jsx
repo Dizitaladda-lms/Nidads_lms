@@ -10,6 +10,7 @@ const AdminLoginForm = () => {
   const [formValues, setFormValues] = useState({ username: "", password: "" });
   const [status, setStatus] = useState({ type: null, message: "" });
   const [submitting, setSubmitting] = useState(false);
+  const [isBlocked, setIsBlocked] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -18,6 +19,8 @@ const AdminLoginForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (isBlocked) return;
+
     setSubmitting(true);
     setStatus({ type: null, message: "" });
 
@@ -28,12 +31,19 @@ const AdminLoginForm = () => {
         body: JSON.stringify(formValues),
       });
       const result = await response.json().catch(() => ({}));
-      if (response.status === 429) {
-        throw new Error(result.error || "Too many login attempts. Please wait a minute.");
+
+      if (response.status === 429 || result.blocked) {
+        setIsBlocked(true);
+        throw new Error(
+          result.error ||
+            "Too many requests. Your IP address has been blocked after exceeding 3 attempts."
+        );
       }
+
       if (!response.ok) {
         throw new Error(result.error || "Invalid credentials");
       }
+
       setStatus({ type: "success", message: "Signed in" });
       router.push("/admin/blog");
       router.refresh();
@@ -60,6 +70,7 @@ const AdminLoginForm = () => {
           value={formValues.username}
           onChange={handleChange}
           required
+          disabled={submitting || isBlocked}
           aria-describedby={hintId}
         />
       </label>
@@ -73,6 +84,7 @@ const AdminLoginForm = () => {
           value={formValues.password}
           onChange={handleChange}
           required
+          disabled={submitting || isBlocked}
           aria-describedby={hintId}
         />
       </label>
@@ -82,13 +94,18 @@ const AdminLoginForm = () => {
           className={`form-status form-status--${status.type}`}
           role={status.type === "error" ? "alert" : "status"}
           aria-live={status.type === "error" ? "assertive" : "polite"}
+          style={isBlocked ? { backgroundColor: "#fee2e2", color: "#991b1b", borderColor: "#f87171" } : undefined}
         >
           {status.message}
         </p>
       ) : null}
 
-      <button type="submit" className="btn btn--primary" disabled={submitting}>
-        {submitting ? "Signing in..." : "Sign In"}
+      <button
+        type="submit"
+        className="btn btn--primary"
+        disabled={submitting || isBlocked}
+      >
+        {isBlocked ? "Access Blocked" : submitting ? "Signing in..." : "Sign In"}
       </button>
     </form>
   );

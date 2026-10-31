@@ -14,6 +14,7 @@ const SimpleNamePopup = ({ open, onClose, selectedCourseId, lockCourse }) => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [isBlocked, setIsBlocked] = useState(false);
 
   useEffect(() => {
     if (open) {
@@ -68,6 +69,7 @@ const SimpleNamePopup = ({ open, onClose, selectedCourseId, lockCourse }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isBlocked) return;
     setSubmitError("");
 
     const errs = validate();
@@ -93,6 +95,14 @@ const SimpleNamePopup = ({ open, onClose, selectedCourseId, lockCourse }) => {
 
       const payload = await response.json().catch(() => null);
 
+      if (response.status === 429 || payload?.blocked) {
+        setIsBlocked(true);
+        throw new Error(
+          payload?.error ||
+            "Aapki IP address se maximum requests limit (3) exceed ho chuki hai. Is IP ko block kar diya gaya hai."
+        );
+      }
+
       if (!response.ok || !payload?.success) {
         throw new Error(payload?.error || "Unable to submit enquiry");
       }
@@ -115,11 +125,10 @@ const SimpleNamePopup = ({ open, onClose, selectedCourseId, lockCourse }) => {
       name: "",
       email: "",
       mobile: "",
-      course: ""
+      course: selectedCourseId || ""
     });
     setErrors({});
     setSubmitted(false);
-    setLoading(false);
     setSubmitError("");
     onClose();
   };
@@ -127,26 +136,30 @@ const SimpleNamePopup = ({ open, onClose, selectedCourseId, lockCourse }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    setForm({ ...form, [name]: value });
+    setForm((prev) => ({
+      ...prev,
+      [name]: value
+    }));
 
     if (errors[name]) {
-      setErrors({ ...errors, [name]: "" });
-    }
-  };
-
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      handleClose();
+      setErrors((prev) => ({
+        ...prev,
+        [name]: ""
+      }));
     }
   };
 
   return (
-    <div className={styles.overlay} onClick={handleOverlayClick}>
-      <div className={styles.popup}>
+    <div className={styles.overlay} onClick={handleClose}>
+      <div
+        className={styles.modal}
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+      >
         <button
           className={styles.closeBtn}
           onClick={handleClose}
-          type="button"
           aria-label="Close"
         >
           ×
@@ -167,8 +180,20 @@ const SimpleNamePopup = ({ open, onClose, selectedCourseId, lockCourse }) => {
             <h2 className={styles.title}>Enquire Now</h2>
 
             {submitError && (
-              <div className={styles.errorMsg} style={{ marginBottom: "12px" }}>
-                {submitError}
+              <div
+                className={styles.errorMsg}
+                style={{
+                  marginBottom: "14px",
+                  padding: "10px 12px",
+                  borderRadius: "6px",
+                  backgroundColor: isBlocked ? "#fee2e2" : "#fef2f2",
+                  color: isBlocked ? "#991b1b" : "#dc2626",
+                  border: isBlocked ? "1px solid #f87171" : "none",
+                  fontSize: "13px",
+                  lineHeight: "1.4"
+                }}
+              >
+                ⚠ {submitError}
               </div>
             )}
 
@@ -185,6 +210,7 @@ const SimpleNamePopup = ({ open, onClose, selectedCourseId, lockCourse }) => {
                   placeholder="Enter your name"
                   value={form.name}
                   onChange={handleChange}
+                  disabled={loading || isBlocked}
                   autoFocus
                 />
                 {errors.name && (
@@ -206,6 +232,7 @@ const SimpleNamePopup = ({ open, onClose, selectedCourseId, lockCourse }) => {
                   placeholder="your.email@gmail.com"
                   value={form.email}
                   onChange={handleChange}
+                  disabled={loading || isBlocked}
                 />
                 {errors.email && (
                   <div className={styles.errorMsg}>
@@ -230,6 +257,7 @@ const SimpleNamePopup = ({ open, onClose, selectedCourseId, lockCourse }) => {
                     onChange={handleChange}
                     maxLength={10}
                     inputMode="numeric"
+                    disabled={loading || isBlocked}
                   />
                 </div>
                 {errors.mobile && (
@@ -258,6 +286,7 @@ const SimpleNamePopup = ({ open, onClose, selectedCourseId, lockCourse }) => {
                     }`}
                     value={form.course}
                     onChange={handleChange}
+                    disabled={loading || isBlocked}
                   >
                     <option value="">Choose a course</option>
                     {courseOptions.map((opt) => (
@@ -279,9 +308,9 @@ const SimpleNamePopup = ({ open, onClose, selectedCourseId, lockCourse }) => {
             <button
               type="submit"
               className={styles.submitBtn}
-              disabled={loading}
+              disabled={loading || isBlocked}
             >
-              {loading ? "Submitting..." : "Submit Enquiry"}
+              {isBlocked ? "Submissions Blocked" : loading ? "Submitting..." : "Submit Enquiry"}
             </button>
           </form>
         )}

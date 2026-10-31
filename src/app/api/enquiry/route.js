@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { getClientIp } from "@/lib/request-info";
+import { checkIpRateLimit, recordFormSubmission } from "@/lib/rate-limit";
 
 const CRM_URL = process.env.CRM_LEADS_URL;
 
@@ -52,6 +54,33 @@ function normalizePayload(payload) {
 
 export async function POST(request) {
   try {
+    // 1. IP extraction & Strict Rate Limiting (Max 3 requests, block if exceeded)
+    const ip = await getClientIp(request);
+    const rateCheck = await checkIpRateLimit(ip, {
+      type: "enquiry_form",
+      limit: 3,
+    });
+
+    if (!rateCheck.allowed) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: rateCheck.error,
+          blocked: true,
+          remaining: 0,
+          limit: rateCheck.limit,
+        },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": String(rateCheck.retryAfter || 86400),
+            "X-RateLimit-Limit": String(rateCheck.limit || 3),
+            "X-RateLimit-Remaining": "0",
+          },
+        }
+      );
+    }
+
     const payload = await request.json().catch(() => null);
 
     if (!payload || typeof payload !== "object") {
@@ -77,7 +106,7 @@ export async function POST(request) {
       );
     }
 
-    // 1. Prepare CRM Payload
+    // 2. Prepare CRM Payload
     const crmPayload = {
       domain: CRM_DOMAIN,
       source: CRM_SOURCE,
@@ -99,7 +128,7 @@ export async function POST(request) {
       );
     }
 
-    // 2. Submit to CRM
+    // 3. Submit to CRM
     const crmResponse = await fetch(CRM_URL, {
       method: "POST",
       headers: {
@@ -119,7 +148,7 @@ export async function POST(request) {
       }
     }
 
-    // 3. Optional fallback / backup to Google Apps Script if configured
+    // 4. Optional fallback / backup to Google Apps Script if configured
     if (SCRIPT_URL) {
       fetch(SCRIPT_URL, {
         method: "POST",
@@ -144,11 +173,28 @@ export async function POST(request) {
       );
     }
 
-    return NextResponse.json({
-      success: true,
-      message: "Lead submitted successfully",
-      leadId: crmResult?.data?.lead?.lead_code || crmResult?.data?.lead?.id,
+    // 5. Record submission against IP rate limit counter
+    await recordFormSubmission(ip, {
+      type: "enquiry_form",
+      source: normalized.source,
+      course: normalized.course,
+      email: normalized.email,
     });
+
+    return NextResponse.json(
+      {
+        success: true,
+        message: "Lead submitted successfully",
+        leadId: crmResult?.data?.lead?.lead_code || crmResult?.data?.lead?.id,
+        remainingAttempts: rateCheck.remaining,
+      },
+      {
+        headers: {
+          "X-RateLimit-Limit": String(rateCheck.limit || 3),
+          "X-RateLimit-Remaining": String(rateCheck.remaining),
+        },
+      }
+    );
   } catch (error) {
     console.error("POST /api/enquiry failed", error);
     return NextResponse.json(
