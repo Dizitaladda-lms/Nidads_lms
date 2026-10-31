@@ -6,6 +6,16 @@ import PopupButton from "@/components/PopupButton";
 
 const VIDEOS = [
   {
+    id: "GX9GQUE0xjo",
+    name: "Miss Shagun (Lead Trainer)",
+    role: "Lead Data Science & AI Trainer",
+    title: "Is Your Data Knowledge Enough for a Job? Take This Test!",
+    badge: "🔥 Trainer Challenge",
+    course: "Data Science & AI",
+    startTime: 0,
+    rating: 5,
+  },
+  {
     id: "pgg6p_TfrN8",
     name: "NIDADS Student",
     role: "Data Analytics Trainee",
@@ -86,16 +96,15 @@ export default function VideoTestimonials() {
         <div className={styles.header}>
           <div className={styles.badge}>
             <span className={styles.badgeDot} />
-            <span className={styles.badgeText}>Real Student Stories</span>
+            <span className={styles.badgeText}>Real Stories & Trainer Insights</span>
           </div>
 
           <h2 className={styles.title}>
-            Watch Verified <span className={styles.highlight}>Student Reviews</span> & Testimonials
+            Watch Our <span className={styles.highlight}>Trainers & Students</span> in Action
           </h2>
 
           <p className={styles.description}>
-            Don&apos;t just take our word for it. Hear directly from real students who learned data science,
-            built hands-on projects, and launched their careers with NIDADS.
+            Don&apos;t just take our word for it. Watch how our expert mentors teach and hear directly from real students who transformed their careers with NIDADS.
           </p>
 
           {/* Trust Highlights */}
@@ -166,7 +175,7 @@ export default function VideoTestimonials() {
                     handlePlay(item.id);
                   }
                 }}
-                aria-label={`Play video review of ${item.name}`}
+                aria-label={`Play video of ${item.name}`}
               >
                 {isPlaying ? (
                   <div className={styles.playerFrameWrapper}>
