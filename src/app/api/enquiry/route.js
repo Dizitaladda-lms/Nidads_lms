@@ -2,13 +2,16 @@ import { NextResponse } from "next/server";
 import { getClientIp } from "@/lib/request-info";
 import { checkIpRateLimit, recordFormSubmission } from "@/lib/rate-limit";
 
-const CRM_URL =
-  process.env.CRM_LEADS_URL ||
-  "https://leads.dizitaladda.com/api/public/leads";
-const CRM_TRUSTED_ORIGIN = "https://www.nidads.com";
+const CRM_API_URL = process.env.CRM_API_URL;
+const SITE_URL =
+  process.env.SITE_URL ||
+  (process.env.NODE_ENV === "development"
+    ? "http://localhost:3000"
+    : "https://www.nidads.com");
+const SITE_ORIGIN = new URL(SITE_URL).origin;
 
 const CRM_DOMAIN = process.env.CRM_DOMAIN || "nidads";
-const CRM_SOURCE = process.env.CRM_SOURCE || "main website";
+const CRM_SOURCE = process.env.SITE_SOURCE || "nidads.com";
 
 const SCRIPT_URL = process.env.GOOGLE_APPS_SCRIPT_URL;
 
@@ -57,6 +60,14 @@ function normalizePayload(payload) {
 
 export async function POST(request) {
   try {
+    if (!CRM_API_URL) {
+      console.error("CRM_API_URL is undefined; configure it in .env.local");
+      return NextResponse.json(
+        { success: false, error: "Lead service is not configured" },
+        { status: 500 }
+      );
+    }
+
     // 1. IP extraction & Strict Rate Limiting (Max 3 requests, block if exceeded)
     const ip = await getClientIp(request);
     const rateCheck = await checkIpRateLimit(ip, {
@@ -123,21 +134,13 @@ export async function POST(request) {
       remarks: normalized.details || undefined,
     };
 
-    if (!CRM_URL) {
-      console.error("CRM_LEADS_URL is not configured in environment variables");
-      return NextResponse.json(
-        { error: "Lead service is not configured" },
-        { status: 500 }
-      );
-    }
-
     // 3. Submit to CRM
-    const crmResponse = await fetch(CRM_URL, {
+    const crmResponse = await fetch(CRM_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Origin: CRM_TRUSTED_ORIGIN,
-        Referer: `${CRM_TRUSTED_ORIGIN}/`,
+        Origin: SITE_ORIGIN,
+        Referer: `${SITE_ORIGIN}/`,
       },
       body: JSON.stringify(crmPayload),
       cache: "no-store",
@@ -169,10 +172,8 @@ export async function POST(request) {
       console.error("CRM response error:", crmResponse.status, crmText);
       return NextResponse.json(
         {
-          error:
-            crmResult?.message ||
-            crmResult?.error ||
-            "Unable to submit enquiry to CRM",
+          success: false,
+          error: "Unable to submit enquiry. Please try again later.",
         },
         { status: 502 }
       );
@@ -181,7 +182,7 @@ export async function POST(request) {
     // 5. Record submission against IP rate limit counter
     await recordFormSubmission(ip, {
       type: "enquiry_form",
-      source: normalized.source,
+      source: CRM_SOURCE,
       course: normalized.course,
       email: normalized.email,
     });
