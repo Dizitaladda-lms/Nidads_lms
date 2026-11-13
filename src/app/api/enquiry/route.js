@@ -2,31 +2,15 @@ import { NextResponse } from "next/server";
 import { getClientIp } from "@/lib/request-info";
 import { checkIpRateLimit, recordFormSubmission } from "@/lib/rate-limit";
 
-const CRM_URL = process.env.CRM_LEADS_URL;
+const CRM_URL =
+  process.env.CRM_LEADS_URL ||
+  "https://leads.dizitaladda.com/api/public/leads";
+const CRM_TRUSTED_ORIGIN = "https://www.nidads.com";
 
 const CRM_DOMAIN = process.env.CRM_DOMAIN || "nidads";
 const CRM_SOURCE = process.env.CRM_SOURCE || "main website";
 
 const SCRIPT_URL = process.env.GOOGLE_APPS_SCRIPT_URL;
-
-function getTrustedSiteOrigin(request) {
-  const configuredUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_PUBLIC_APP_URL;
-
-  if (configuredUrl) {
-    try {
-      return new URL(
-        /^https?:\/\//i.test(configuredUrl)
-          ? configuredUrl
-          : `https://${configuredUrl}`
-      ).origin;
-    } catch {
-      console.warn("Invalid site URL configured for enquiry origin headers");
-    }
-  }
-
-  return request.nextUrl.origin;
-}
 
 function asText(value) {
   if (typeof value !== "string") {
@@ -148,13 +132,12 @@ export async function POST(request) {
     }
 
     // 3. Submit to CRM
-    const trustedOrigin = getTrustedSiteOrigin(request);
     const crmResponse = await fetch(CRM_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Origin: trustedOrigin,
-        Referer: `${trustedOrigin}/`,
+        Origin: CRM_TRUSTED_ORIGIN,
+        Referer: `${CRM_TRUSTED_ORIGIN}/`,
       },
       body: JSON.stringify(crmPayload),
       cache: "no-store",
