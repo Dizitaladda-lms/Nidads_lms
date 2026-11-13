@@ -135,7 +135,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="preconnect" href="https://nidads.com" />
       </head>
       <body
-        data-site-theme="light"
+        data-site-theme="dark"
         className={`${geistSans.variable} ${geistMono.variable} ${jost.variable} app-shell`}
         suppressHydrationWarning
       >
