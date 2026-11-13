@@ -3,17 +3,27 @@
    ===================================================== */
 
 :root {
-  --color-bg: #000000;
-  --color-surface: #0a101e;
-  --color-border: rgba(56, 182, 255, 0.18);
-  --color-text: #e7f1ff;
-  --color-muted: #7a96b4;
+  --color-bg: #ffffff;
+  --color-surface: #f4f7fb;
+  --color-border: rgba(30, 64, 100, 0.16);
+  --color-text: #172b45;
+  --color-muted: #5c6e82;
   --color-accent: #38b6ff;
   --color-accent-strong: #2450ff;
   --color-danger: #dc2626;
   --color-blue-glow: rgba(56, 182, 255, 0.22);
   --radius-md: 0.75rem;
   --radius-lg: 1.5rem;
+  --shadow-card: 0 10px 32px rgba(20, 45, 75, 0.12);
+  --shadow-glow: 0 0 32px rgba(56, 182, 255, 0.12);
+}
+
+body[data-site-theme="dark"] {
+  --color-bg: #000000;
+  --color-surface: #0a101e;
+  --color-border: rgba(56, 182, 255, 0.18);
+  --color-text: #e7f1ff;
+  --color-muted: #7a96b4;
   --shadow-card: 0 10px 32px rgba(0, 0, 0, 0.55);
   --shadow-glow: 0 0 32px rgba(56, 182, 255, 0.22);
 }
@@ -38,7 +48,7 @@ body {
   min-height: 100vh;
   font-family: var(--font-geist-sans, "Inter"), system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #000000;
+  background: var(--color-bg);
   color: var(--color-text);
 }
 
@@ -55,6 +65,69 @@ body::before {
     radial-gradient(ellipse 70% 50% at 95% 15%, rgba(84, 120, 255, 0.09) 0%, transparent 60%),
     radial-gradient(ellipse 60% 45% at 50% 80%, rgba(34, 211, 238, 0.06) 0%, transparent 55%),
     radial-gradient(ellipse 50% 40% at 20% 60%, rgba(56, 182, 255, 0.05) 0%, transparent 50%);
+}
+
+body[data-site-theme="light"]::before {
+  display: none;
+}
+
+body[data-site-theme="light"] .app-shell {
+  background: #fff;
+}
+
+body[data-site-theme="light"]:not(:has(.blog-page)) nav {
+  background: rgba(255, 255, 255, 0.94);
+  color: #172b45;
+  box-shadow: 0 1px 12px rgba(20, 45, 75, 0.1);
+}
+
+body[data-site-theme="light"]:not(:has(.blog-page)) nav a,
+body[data-site-theme="light"]:not(:has(.blog-page)) nav button:not(.site-theme-toggle) {
+  color: #172b45;
+}
+
+body[data-site-theme="light"]:not(:has(.blog-page)) section[class] {
+  background-color: #fff !important;
+  background-image: none !important;
+  color: #172b45 !important;
+}
+
+body[data-site-theme="light"]:not(:has(.blog-page)) section[class] :is(h1, h2, h3, h4, p, li, label, small, blockquote) {
+  color: #172b45 !important;
+}
+
+body[data-site-theme="light"]:not(:has(.blog-page)) section[class] :is(
+  [class*="card"], [class*="Card"], [class*="panel"], [class*="Panel"]
+) {
+  background-color: #f6f9fc !important;
+  border-color: rgba(30, 64, 100, 0.14) !important;
+  box-shadow: 0 8px 24px rgba(20, 45, 75, 0.08) !important;
+}
+
+body[data-site-theme="light"]:not(:has(.blog-page)) section[class] :is(input, textarea, select) {
+  background: #fff !important;
+  color: #172b45 !important;
+  border-color: rgba(30, 64, 100, 0.25) !important;
+}
+
+.site-theme-toggle {
+  flex: 0 0 auto;
+  margin-left: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(30, 64, 100, 0.2);
+  border-radius: 999px;
+  background: #fff;
+  color: #172b45;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+body[data-site-theme="dark"] .site-theme-toggle {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: #0a101e;
+  color: #e7f1ff;
 }
 
 /* ensure page content stays above the fixed glow */

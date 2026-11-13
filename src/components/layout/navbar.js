@@ -3,6 +3,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Style from "./navbar.module.css";
+import SiteThemeToggle from "@/components/SiteThemeToggle";
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -67,6 +68,7 @@ export default function Navbar() {
                     </li>
                 </ul>
             </div>
+            {!pathname?.startsWith("/blog") && <SiteThemeToggle />}
             <button
                 onClick={(e) => {
                     e.preventDefault();
