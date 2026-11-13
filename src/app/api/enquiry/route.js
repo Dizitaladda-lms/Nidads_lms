@@ -9,6 +9,25 @@ const CRM_SOURCE = process.env.CRM_SOURCE || "main website";
 
 const SCRIPT_URL = process.env.GOOGLE_APPS_SCRIPT_URL;
 
+function getTrustedSiteOrigin(request) {
+  const configuredUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_PUBLIC_APP_URL;
+
+  if (configuredUrl) {
+    try {
+      return new URL(
+        /^https?:\/\//i.test(configuredUrl)
+          ? configuredUrl
+          : `https://${configuredUrl}`
+      ).origin;
+    } catch {
+      console.warn("Invalid site URL configured for enquiry origin headers");
+    }
+  }
+
+  return request.nextUrl.origin;
+}
+
 function asText(value) {
   if (typeof value !== "string") {
     return "";
@@ -129,10 +148,13 @@ export async function POST(request) {
     }
 
     // 3. Submit to CRM
+    const trustedOrigin = getTrustedSiteOrigin(request);
     const crmResponse = await fetch(CRM_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Origin: trustedOrigin,
+        Referer: `${trustedOrigin}/`,
       },
       body: JSON.stringify(crmPayload),
       cache: "no-store",
