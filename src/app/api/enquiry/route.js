@@ -3,23 +3,19 @@ import { getClientIp } from "@/lib/request-info";
 import { checkIpRateLimit, recordFormSubmission } from "@/lib/rate-limit";
 
 const CRM_API_URL = process.env.CRM_API_URL;
+const GOOGLE_APPS_SCRIPT_URL = process.env.GOOGLE_APPS_SCRIPT_URL;
 const SITE_URL =
   process.env.SITE_URL ||
   (process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
     : "https://www.nidads.com");
 const SITE_ORIGIN = new URL(SITE_URL).origin;
-
 const CRM_DOMAIN = process.env.CRM_DOMAIN || "nidads";
 const CRM_SOURCE = process.env.SITE_SOURCE || "nidads.com";
-
-const SCRIPT_URL = process.env.GOOGLE_APPS_SCRIPT_URL;
+const DELIVERY_TIMEOUT_MS = 10_000;
 
 function asText(value) {
-  if (typeof value !== "string") {
-    return "";
-  }
-  return value.trim();
+  return typeof value === "string" ? value.trim() : "";
 }
 
 function buildDetails(payload) {
@@ -40,35 +36,96 @@ function buildDetails(payload) {
 function normalizePayload(payload) {
   const firstName = asText(payload.firstName);
   const lastName = asText(payload.lastName);
-  const fullName =
-    asText(payload.name) || [firstName, lastName].filter(Boolean).join(" ");
-  const email = asText(payload.email);
-  const mobile = asText(payload.mobile) || asText(payload.phone);
-  const course =
-    asText(payload.course) || asText(payload.program) || "General Enquiry";
-  const details = buildDetails(payload);
 
   return {
-    name: fullName,
-    email,
-    mobile,
-    course,
-    details,
+    name: asText(payload.name) || [firstName, lastName].filter(Boolean).join(" "),
+    email: asText(payload.email),
+    mobile: asText(payload.mobile) || asText(payload.phone),
+    course: asText(payload.course) || asText(payload.program) || "General Enquiry",
+    details: buildDetails(payload),
     source: asText(payload.source) || CRM_SOURCE,
   };
 }
 
+async function readResponseBody(response) {
+  const text = await response.text();
+  if (!text) return null;
+
+  try {
+    return JSON.parse(text);
+  } catch {
+    return null;
+  }
+}
+
+async function sendToCrm(normalized) {
+  const crmPayload = {
+    domain: CRM_DOMAIN,
+    source: CRM_SOURCE,
+    name: normalized.name,
+    full_name: normalized.name,
+    email: normalized.email,
+    mobile: normalized.mobile,
+    phone: normalized.mobile,
+    course: normalized.course,
+    interested_course: normalized.course,
+    remarks: normalized.details || undefined,
+  };
+
+  const response = await fetch(CRM_API_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Origin: SITE_ORIGIN,
+      Referer: `${SITE_ORIGIN}/`,
+    },
+    body: JSON.stringify(crmPayload),
+    cache: "no-store",
+    signal: AbortSignal.timeout(DELIVERY_TIMEOUT_MS),
+  });
+  const result = await readResponseBody(response);
+
+  if (!response.ok || result?.success === false) {
+    throw new Error(`CRM returned HTTP ${response.status}`);
+  }
+
+  return result;
+}
+
+async function sendToGoogleSheet(normalized) {
+  const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(normalized),
+    cache: "no-store",
+    signal: AbortSignal.timeout(DELIVERY_TIMEOUT_MS),
+  });
+  const result = await readResponseBody(response);
+
+  if (!response.ok || result?.success === false) {
+    throw new Error(`Google Sheets endpoint returned HTTP ${response.status}`);
+  }
+}
+
+async function attemptDelivery(name, deliver) {
+  try {
+    return { name, ok: true, result: await deliver() };
+  } catch (error) {
+    console.error(`[enquiry] ${name} delivery failed:`, error.message);
+    return { name, ok: false };
+  }
+}
+
 export async function POST(request) {
   try {
-    if (!CRM_API_URL) {
-      console.error("CRM_API_URL is undefined; configure it in .env.local");
+    if (!CRM_API_URL && !GOOGLE_APPS_SCRIPT_URL) {
+      console.error("Neither CRM_API_URL nor GOOGLE_APPS_SCRIPT_URL is configured");
       return NextResponse.json(
         { success: false, error: "Lead service is not configured" },
         { status: 500 }
       );
     }
 
-    // 1. IP extraction & Strict Rate Limiting (Max 3 requests, block if exceeded)
     const ip = await getClientIp(request);
     const rateCheck = await checkIpRateLimit(ip, {
       type: "enquiry_form",
@@ -96,80 +153,39 @@ export async function POST(request) {
     }
 
     const payload = await request.json().catch(() => null);
-
-    if (!payload || typeof payload !== "object") {
+    if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
       return NextResponse.json(
-        { error: "Invalid request body" },
+        { success: false, error: "Invalid request body" },
         { status: 400 }
       );
     }
 
     const normalized = normalizePayload(payload);
-
     if (!normalized.name) {
       return NextResponse.json(
-        { error: "Name is required" },
+        { success: false, error: "Name is required" },
         { status: 400 }
       );
     }
 
     if (!normalized.email && !normalized.mobile) {
       return NextResponse.json(
-        { error: "Email or mobile number is required" },
+        { success: false, error: "Email or mobile number is required" },
         { status: 400 }
       );
     }
 
-    // 2. Prepare CRM Payload
-    const crmPayload = {
-      domain: CRM_DOMAIN,
-      source: CRM_SOURCE,
-      name: normalized.name,
-      full_name: normalized.name,
-      email: normalized.email,
-      mobile: normalized.mobile,
-      phone: normalized.mobile,
-      course: normalized.course,
-      interested_course: normalized.course,
-      remarks: normalized.details || undefined,
-    };
+    const deliveries = await Promise.all([
+      CRM_API_URL
+        ? attemptDelivery("CRM", () => sendToCrm(normalized))
+        : Promise.resolve({ name: "CRM", ok: false }),
+      GOOGLE_APPS_SCRIPT_URL
+        ? attemptDelivery("Google Sheets", () => sendToGoogleSheet(normalized))
+        : Promise.resolve({ name: "Google Sheets", ok: false }),
+    ]);
+    const successfulDeliveries = deliveries.filter((delivery) => delivery.ok);
 
-    // 3. Submit to CRM
-    const crmResponse = await fetch(CRM_API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Origin: SITE_ORIGIN,
-        Referer: `${SITE_ORIGIN}/`,
-      },
-      body: JSON.stringify(crmPayload),
-      cache: "no-store",
-    });
-
-    const crmText = await crmResponse.text();
-    let crmResult = null;
-    if (crmText) {
-      try {
-        crmResult = JSON.parse(crmText);
-      } catch {
-        crmResult = null;
-      }
-    }
-
-    // 4. Optional fallback / backup to Google Apps Script if configured
-    if (SCRIPT_URL) {
-      fetch(SCRIPT_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(normalized),
-        cache: "no-store",
-      }).catch((err) => {
-        console.warn("Background Google Sheets sync failed:", err.message);
-      });
-    }
-
-    if (!crmResponse.ok || crmResult?.success === false) {
-      console.error("CRM response error:", crmResponse.status, crmText);
+    if (successfulDeliveries.length === 0) {
       return NextResponse.json(
         {
           success: false,
@@ -179,7 +195,6 @@ export async function POST(request) {
       );
     }
 
-    // 5. Record submission against IP rate limit counter
     await recordFormSubmission(ip, {
       type: "enquiry_form",
       source: CRM_SOURCE,
@@ -187,11 +202,14 @@ export async function POST(request) {
       email: normalized.email,
     });
 
+    const crmDelivery = deliveries.find((delivery) => delivery.name === "CRM");
+    const lead = crmDelivery?.ok ? crmDelivery.result?.data?.lead : null;
+
     return NextResponse.json(
       {
         success: true,
         message: "Lead submitted successfully",
-        leadId: crmResult?.data?.lead?.lead_code || crmResult?.data?.lead?.id,
+        leadId: lead?.lead_code || lead?.id,
         remainingAttempts: rateCheck.remaining,
       },
       {
@@ -204,7 +222,7 @@ export async function POST(request) {
   } catch (error) {
     console.error("POST /api/enquiry failed", error);
     return NextResponse.json(
-      { error: "Unable to submit enquiry" },
+      { success: false, error: "Unable to submit enquiry" },
       { status: 500 }
     );
   }
